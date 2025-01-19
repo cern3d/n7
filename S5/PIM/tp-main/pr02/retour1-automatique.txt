@@ -1,0 +1,105 @@
+% Validation de pr02
+% 2024-11-21 15:46:24.935487
+
+
+################################################################################
+# Modification des fichiers fournis
+################################################################################
+
+
+================================================================================
+## Fichiers qui NE devaient PAS être modifiés
+================================================================================
+
+* Fichier alea.adb non modifié... ok
+* Fichier alea.ads non modifié... ok
+* Fichier exemple_alea.adb non modifié... ok
+* Fichier exemple_unbounded_string.adb non modifié... ok
+* Fichier sda_exceptions.ads non modifié... ok
+* Fichier test_lca.adb non modifié... ok
+
+================================================================================
+## Fichiers qui DEVAIENT être modifiés
+================================================================================
+
+* Fichier lca_sujet.adb modifié... ok
+* Fichier lca.ads modifié... ok
+* Fichier lca.adb modifié... ok
+
+
+################################################################################
+# Nettoyer
+################################################################################
+
+* Running gnatclean... ok
+
+
+################################################################################
+# Exercice 1
+################################################################################
+
+
+================================================================================
+## Modifications de lca.ads
+================================================================================
+
+* Comparaison de lca.ads et fournis/lca.ads... différents
+
+   |                                                                                           >
+   |                                                                                           >  -- Definition de structures de donnees associatives sous forme d'une liste
+   |                                                                                           >  -- chainee associative (LCA).
+   |                                                                                           >          -- Initialiser une Sda.  La Sda est vide.
+   |                                                                                           >          -- Detruire une Sda.  Elle ne devra plus etre utilisee.
+   |                                                                                           >          -- Est-ce qu'une Sda est vide ?
+   |                                                                                           >          -- Obtenir le nombre d'elements d'une Sda. 
+   |                                                                                           >          -- Enregistrer une valeur associee a une Cle dans une Sda.
+   |                                                                                           >          -- Si la cle est deja presente dans la Sda, sa valeur est changee.
+   |                 Post => Cle_Presente (Sda, Cle) and (La_Valeur (Sda, Cle) = Valeur)       |                  Post => Cle_Presente (Sda, Cle) and (La_Valeur (Sda, Cle) = Valeur)   -- 
+   |                                                                                           >          -- Supprimer la valeur associee a une Cle dans une Sda.
+   |                                                                                           >          -- Exception : Cle_Absente_Exception si Cle n'est pas utilisee dans la Sda
+   |                 Post =>  Taille (Sda) = Taille (Sda)'Old - 1                              |                  Post =>  Taille (Sda) = Taille (Sda)'Old - 1 -- un element de moins
+   |                         and not Cle_Presente (Sda, Cle);                                  |                          and not Cle_Presente (Sda, Cle);         -- la cle a ete supprime
+   |                                                                                           <
+   |                                                                                           >          -- Savoir si une Cle est presente dans une Sda.
+   |                                                                                           >          -- Obtenir la valeur associee a une Cle dans la Sda.
+   |                                                                                           >          -- Exception : Cle_Absente_Exception si Cle n'est pas utilisee dans l'Sda
+   |                                                                                           |          -- Appliquer un traitement (Traiter) pour chaque couple d'une Sda.
+   |                                                                                           >          -- Afficher la Sda en revelant sa structure interne.
+   |                                                                                           >          -- Voici un exemple d'affichage.
+   |                                                                                           >          -- -->["un" : 1]-->["deux" : 2]-->["trois" : 3]-->["quatre" : 4]--E
+   |     type T_Cellule;                                                                       <
+   |         type T_LCA is access T_Cellule;                                                   <
+   |         type T_Cellule is                                                                 <
+   |             record                                                                        <
+   |                 Cle : T_Cle;                                                              <
+   |                 Valeur : T_Valeur;                                                        <
+   |                 Suivant : T_LCA;                                                          <
+   |             end record;                                                                   <
+   |                                                                                           <
+   |                                                                                           >          -- TODO : a completer
+
+
+================================================================================
+## Exécution de lca_sujet.adb
+================================================================================
+
+* Compilation de lca_sujet.adb... ok
+* ./lca_sujet... ok
+* valgrind ./lca_sujet... ok
+
+================================================================================
+## Exécution de test_lca.adb
+================================================================================
+
+* Compilation de test_lca.adb... ok
+* ./test_lca... ok
+* valgrind ./test_lca... ok
+
+
+################################################################################
+# Nettoyer
+################################################################################
+
+* Running gnatclean... ok
+
+<!-- vi: set ts=8: -->
