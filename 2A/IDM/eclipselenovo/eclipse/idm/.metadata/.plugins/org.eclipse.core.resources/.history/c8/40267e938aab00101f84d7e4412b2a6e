@@ -1,0 +1,372 @@
+/**
+ */
+package petrinet.impl;
+
+import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
+
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import petrinet.Arc;
+import petrinet.Objet;
+import petrinet.PetrinetPackage;
+
+/**
+ * <!-- begin-user-doc -->
+ * An implementation of the model object '<em><b>Arc</b></em>'.
+ * <!-- end-user-doc -->
+ * <p>
+ * The following features are implemented:
+ * </p>
+ * <ul>
+ *   <li>{@link petrinet.impl.ArcImpl#getToken <em>Token</em>}</li>
+ *   <li>{@link petrinet.impl.ArcImpl#getPredecessor_Place <em>Predecessor Place</em>}</li>
+ *   <li>{@link petrinet.impl.ArcImpl#getSuccessor_Place <em>Successor Place</em>}</li>
+ * </ul>
+ *
+ * @generated
+ */
+public class ArcImpl extends MinimalEObjectImpl.Container implements Arc {
+	/**
+	 * The default value of the '{@link #getToken() <em>Token</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getToken()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final int TOKEN_EDEFAULT = 0;
+
+	/**
+	 * The cached value of the '{@link #getToken() <em>Token</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getToken()
+	 * @generated
+	 * @ordered
+	 */
+	protected int token = TOKEN_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getPredecessor_Place() <em>Predecessor Place</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPredecessor_Place()
+	 * @generated
+	 * @ordered
+	 */
+	protected Objet predecessor_Place;
+
+	/**
+	 * The cached value of the '{@link #getSuccessor_Place() <em>Successor Place</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSuccessor_Place()
+	 * @generated
+	 * @ordered
+	 */
+	protected Objet successor_Place;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ArcImpl() {
+		super();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected EClass eStaticClass() {
+		return PetrinetPackage.Literals.ARC;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public int getToken() {
+		return token;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setToken(int newToken) {
+		int oldToken = token;
+		token = newToken;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, PetrinetPackage.ARC__TOKEN, oldToken, token));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Objet getPredecessor_Place() {
+		if (predecessor_Place != null && predecessor_Place.eIsProxy()) {
+			InternalEObject oldPredecessor_Place = (InternalEObject)predecessor_Place;
+			predecessor_Place = (Objet)eResolveProxy(oldPredecessor_Place);
+			if (predecessor_Place != oldPredecessor_Place) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, PetrinetPackage.ARC__PREDECESSOR_PLACE, oldPredecessor_Place, predecessor_Place));
+			}
+		}
+		return predecessor_Place;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Objet basicGetPredecessor_Place() {
+		return predecessor_Place;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetPredecessor_Place(Objet newPredecessor_Place, NotificationChain msgs) {
+		Objet oldPredecessor_Place = predecessor_Place;
+		predecessor_Place = newPredecessor_Place;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, PetrinetPackage.ARC__PREDECESSOR_PLACE, oldPredecessor_Place, newPredecessor_Place);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setPredecessor_Place(Objet newPredecessor_Place) {
+		if (newPredecessor_Place != predecessor_Place) {
+			NotificationChain msgs = null;
+			if (predecessor_Place != null)
+				msgs = ((InternalEObject)predecessor_Place).eInverseRemove(this, PetrinetPackage.OBJET__SUCCESSOR, Objet.class, msgs);
+			if (newPredecessor_Place != null)
+				msgs = ((InternalEObject)newPredecessor_Place).eInverseAdd(this, PetrinetPackage.OBJET__SUCCESSOR, Objet.class, msgs);
+			msgs = basicSetPredecessor_Place(newPredecessor_Place, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, PetrinetPackage.ARC__PREDECESSOR_PLACE, newPredecessor_Place, newPredecessor_Place));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Objet getSuccessor_Place() {
+		if (successor_Place != null && successor_Place.eIsProxy()) {
+			InternalEObject oldSuccessor_Place = (InternalEObject)successor_Place;
+			successor_Place = (Objet)eResolveProxy(oldSuccessor_Place);
+			if (successor_Place != oldSuccessor_Place) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, PetrinetPackage.ARC__SUCCESSOR_PLACE, oldSuccessor_Place, successor_Place));
+			}
+		}
+		return successor_Place;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Objet basicGetSuccessor_Place() {
+		return successor_Place;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetSuccessor_Place(Objet newSuccessor_Place, NotificationChain msgs) {
+		Objet oldSuccessor_Place = successor_Place;
+		successor_Place = newSuccessor_Place;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, PetrinetPackage.ARC__SUCCESSOR_PLACE, oldSuccessor_Place, newSuccessor_Place);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setSuccessor_Place(Objet newSuccessor_Place) {
+		if (newSuccessor_Place != successor_Place) {
+			NotificationChain msgs = null;
+			if (successor_Place != null)
+				msgs = ((InternalEObject)successor_Place).eInverseRemove(this, PetrinetPackage.OBJET__PREDECESSOR, Objet.class, msgs);
+			if (newSuccessor_Place != null)
+				msgs = ((InternalEObject)newSuccessor_Place).eInverseAdd(this, PetrinetPackage.OBJET__PREDECESSOR, Objet.class, msgs);
+			msgs = basicSetSuccessor_Place(newSuccessor_Place, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, PetrinetPackage.ARC__SUCCESSOR_PLACE, newSuccessor_Place, newSuccessor_Place));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case PetrinetPackage.ARC__PREDECESSOR_PLACE:
+				if (predecessor_Place != null)
+					msgs = ((InternalEObject)predecessor_Place).eInverseRemove(this, PetrinetPackage.OBJET__SUCCESSOR, Objet.class, msgs);
+				return basicSetPredecessor_Place((Objet)otherEnd, msgs);
+			case PetrinetPackage.ARC__SUCCESSOR_PLACE:
+				if (successor_Place != null)
+					msgs = ((InternalEObject)successor_Place).eInverseRemove(this, PetrinetPackage.OBJET__PREDECESSOR, Objet.class, msgs);
+				return basicSetSuccessor_Place((Objet)otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case PetrinetPackage.ARC__PREDECESSOR_PLACE:
+				return basicSetPredecessor_Place(null, msgs);
+			case PetrinetPackage.ARC__SUCCESSOR_PLACE:
+				return basicSetSuccessor_Place(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+		switch (featureID) {
+			case PetrinetPackage.ARC__TOKEN:
+				return getToken();
+			case PetrinetPackage.ARC__PREDECESSOR_PLACE:
+				if (resolve) return getPredecessor_Place();
+				return basicGetPredecessor_Place();
+			case PetrinetPackage.ARC__SUCCESSOR_PLACE:
+				if (resolve) return getSuccessor_Place();
+				return basicGetSuccessor_Place();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public void eSet(int featureID, Object newValue) {
+		switch (featureID) {
+			case PetrinetPackage.ARC__TOKEN:
+				setToken((Integer)newValue);
+				return;
+			case PetrinetPackage.ARC__PREDECESSOR_PLACE:
+				setPredecessor_Place((Objet)newValue);
+				return;
+			case PetrinetPackage.ARC__SUCCESSOR_PLACE:
+				setSuccessor_Place((Objet)newValue);
+				return;
+		}
+		super.eSet(featureID, newValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eUnset(int featureID) {
+		switch (featureID) {
+			case PetrinetPackage.ARC__TOKEN:
+				setToken(TOKEN_EDEFAULT);
+				return;
+			case PetrinetPackage.ARC__PREDECESSOR_PLACE:
+				setPredecessor_Place((Objet)null);
+				return;
+			case PetrinetPackage.ARC__SUCCESSOR_PLACE:
+				setSuccessor_Place((Objet)null);
+				return;
+		}
+		super.eUnset(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case PetrinetPackage.ARC__TOKEN:
+				return token != TOKEN_EDEFAULT;
+			case PetrinetPackage.ARC__PREDECESSOR_PLACE:
+				return predecessor_Place != null;
+			case PetrinetPackage.ARC__SUCCESSOR_PLACE:
+				return successor_Place != null;
+		}
+		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuilder result = new StringBuilder(super.toString());
+		result.append(" (token: ");
+		result.append(token);
+		result.append(')');
+		return result.toString();
+	}
+
+} //ArcImpl

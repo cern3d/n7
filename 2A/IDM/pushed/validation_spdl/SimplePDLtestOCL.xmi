@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simplepdl:Process
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:simplepdl="http://simplepdl"
+    xsi:schemaLocation="http://simplepdl SimplePDL.ecore"
+    name="ExempleProcess1">
+  <processElements
+      xsi:type="simplepdl:WorkDefinition"
+      linksToSuccessors="//@processElements.1"
+      name="A1">
+    <ressourceusage
+        amount="10"
+        resource="//@processElements.7"/>
+  </processElements>
+  <processElements
+      xsi:type="simplepdl:WorkSequence"
+      successor="//@processElements.3"
+      predecessor="//@processElements.0"/>
+  <processElements
+      xsi:type="simplepdl:WorkDefinition"
+      name="A1">
+    <ressourceusage
+        amount="-2"
+        resource="//@processElements.7"/>
+  </processElements>
+  <processElements
+      xsi:type="simplepdl:WorkDefinition"
+      linksToPredecessors="//@processElements.1 //@processElements.4"
+      linksToSuccessors="//@processElements.4"
+      name="A 2"/>
+  <processElements
+      xsi:type="simplepdl:WorkSequence"
+      successor="//@processElements.3"
+      predecessor="//@processElements.3"/>
+  <processElements
+      xsi:type="simplepdl:WorkDefinition"
+      name="A1"/>
+  <processElements
+      xsi:type="simplepdl:Guidance"
+      elements="//@processElements.1"/>
+  <processElements
+      xsi:type="simplepdl:Resource"
+      name="R1"
+      amount="-10"/>
+</simplepdl:Process>

@@ -1,0 +1,179 @@
+V "GNAT Lib v2021"
+M P W=b
+A -gnatwa
+P SS ZX
+
+RN
+RV NO_DIRECT_BOOLEAN_OPERATORS
+RV NO_EXCEPTION_HANDLERS
+RV NO_EXCEPTION_PROPAGATION
+RV NO_EXCEPTIONS
+RV NO_IO
+RV NO_RECURSION
+RV NO_SECONDARY_STACK
+RV NO_STREAMS
+RV NO_DEFAULT_INITIALIZATION
+RV NO_DYNAMIC_SIZED_OBJECTS
+
+U decompresser%b	decompresser.adb	a4f1cc4d NE OO SU
+W ada%s			ada.ads			ada.ali
+W ada.command_line%s	a-comlin.adb		a-comlin.ali
+W ada.io_exceptions%s	a-ioexce.ads		a-ioexce.ali
+W ada.streams%s		a-stream.adb		a-stream.ali
+W ada.streams.stream_io%s  a-ststio.adb		a-ststio.ali
+W ada.strings%s		a-string.ads		a-string.ali
+Z ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
+W ada.strings.unbounded%s  a-strunb.adb		a-strunb.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W arbre_huffman%s	arbre_huffman.adb	arbre_huffman.ali
+W file_priorite%s	file_priorite.adb	file_priorite.ali
+Z system.concat_2%s	s-conca2.adb		s-conca2.ali
+Z system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+Z system.stream_attributes%s  s-stratt.adb	s-stratt.ali
+
+D ada.ads		20210520051130 76789da1 ada%s
+D a-charac.ads		20210520051127 2d3ec45b ada.characters%s
+D a-chlat1.ads		20210520051127 66457d31 ada.characters.latin_1%s
+D a-comlin.ads		20210520051127 4aa66568 ada.command_line%s
+D a-except.ads		20210520051127 946f3014 ada.exceptions%s
+D a-finali.ads		20210520051127 bf4f806b ada.finalization%s
+D a-ioexce.ads		20210520051127 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20210520051128 119b8fb3 ada.streams%s
+D a-ststio.ads		20210520051128 d6d358e8 ada.streams.stream_io%s
+D a-string.ads		20210520051128 90ac6797 ada.strings%s
+D a-strmap.ads		20210520051128 5a88892a ada.strings.maps%s
+D a-sttebu.ads		20210520051128 18209c64 ada.strings.text_buffers%s
+D a-strunb.ads		20210520051128 03325227 ada.strings.unbounded%s
+D a-stuten.ads		20210520051128 808c40ad ada.strings.utf_encoding%s
+D a-tags.ads		20210520051129 9eaa38c6 ada.tags%s
+D a-textio.ads		20210520051129 aef4d56d ada.text_io%s
+D a-unccon.ads		20210520051129 0e9b276f ada.unchecked_conversion%s
+D arbre_huffman.ads	20250115030310 f437205e arbre_huffman%s
+D decompresser.adb	20250115054140 86f26446 decompresser%b
+D file_priorite.ads	20250115023519 03272dfb file_priorite%s
+D file_priorite.adb	20250115023517 6ae8b09f file_priorite%b
+D interfac.ads		20210520051131 edec285f interfaces%s
+D i-cstrea.ads		20210520051131 e53d8b8e interfaces.c_streams%s
+D system.ads		20210520051134 a2da961d system%s
+D s-atocou.ads		20210520051131 b45c2d8d system.atomic_counters%s
+D s-conca2.ads		20210520051131 02a0d7d0 system.concat_2%s
+D s-crtl.ads		20210520051131 0ebbdb71 system.crtl%s
+D s-exctab.ads		20210520051131 54135002 system.exception_table%s
+D s-ficobl.ads		20210520051131 078245e4 system.file_control_block%s
+D s-finroo.ads		20210520051131 4ff27390 system.finalization_root%s
+D s-parame.ads		20210520051133 4752c4cb system.parameters%s
+D s-putima.ads		20210520051133 4e095881 system.put_images%s
+D s-secsta.ads		20210520051133 9b3ab94b system.secondary_stack%s
+D s-soflin.ads		20210520051133 a7318a92 system.soft_links%s
+D s-stache.ads		20210520051133 a37c21ec system.stack_checking%s
+D s-stalib.ads		20210520051133 472fbca8 system.standard_library%s
+D s-stoele.ads		20210520051133 2dc34a04 system.storage_elements%s
+D s-stoele.adb		20210520051133 ed88f8fb system.storage_elements%b
+D s-stratt.ads		20210520051133 7bdda3fa system.stream_attributes%s
+D s-traent.ads		20210520051133 26a8d361 system.traceback_entries%s
+D s-unstyp.ads		20210520051133 2b077493 system.unsigned_types%s
+D s-wchcon.ads		20210520051134 1b7d22d2 system.wch_con%s
+D unchconv.ads		20210520051134 ca2f9e18 unchecked_conversion%s
+G a e
+G c Z b b [decompresser standard 9 11 none]
+G r c none [decompresser standard 9 11 none] [creer_noeud arbre_huffman 7 13 none]
+G r c none [decompresser standard 9 11 none] [affichage_arbre arbre_huffman 22 14 none]
+G r c none [decompresser standard 9 11 none] [obtenir_droit arbre_huffman 15 13 none]
+G r c none [decompresser standard 9 11 none] [obtenir_gauche arbre_huffman 14 13 none]
+G r c none [decompresser standard 9 11 none] [obtenir_symbole arbre_huffman 12 13 none]
+G r c none [decompresser standard 9 11 none] [detruire arbre_huffman 18 14 none]
+X 1 ada.ads
+16K9*Ada 20e8 19|1r6 1r33 2r6 2r33 3r6 3r33 6r6 6r33 7r6 58r12 125r23
+X 4 a-comlin.ads
+36K13*Command_Line 144e21 19|2w10 2r37
+39V13*Argument_Count{natural} 19|225s18
+52V13*Argument{string} 19|226s10 226s33 228s13 228s36 231s32
+X 7 a-ioexce.ads
+18K13*IO_Exceptions 30e22 19|7w10 58r16
+26X4*End_Error 19|58r30
+X 8 a-stream.ads
+36K13*Streams 87e16 19|3r10 3r37 125r27
+X 9 a-ststio.ads
+39K21*Stream_IO 224e26 19|3w18 3r45 125r35
+42P9*Stream_Access(8|39R9) 19|22r23 30r62 64r33 71r25 126r23
+44P9*File_Type 19|125r45
+47n23*In_File{47E9} 19|150r19
+47n32*Out_File{47E9} 19|151r22
+68U14*Create 19|151s7
+74U14*Open 19|150s7
+80U14*Close 19|199s7 200s7 211s13 214s13
+89V13*Is_Open{boolean} 19|210s13 213s13
+92V13*Stream{42P9} 19|152s16 153s16
+X 10 a-string.ads
+16K13*Strings 35e16 19|6r10 6r37
+X 13 a-strunb.ads
+83K21*Unbounded 765e26 19|6w18 6r45
+X 16 a-textio.ads
+58K13*Text_IO 725e16 19|1w10 1r37
+463U14*Put 19|120s7
+506U14*Put_Line 19|137s10 145s10 166s10 204s10 209s10
+X 18 arbre_huffman.ads
+1K9*Arbre_Huffman 34e18 19|4w6 4r33
+4P9*Noeud_Ptr(3R9) 19|98r46 104r38 113r29 130r23 131r23
+7V13*Creer_Noeud{4P9} 19|105s15 117s20
+12V13*Obtenir_Symbole{character} 19|186s31 193s37
+14V13*Obtenir_Gauche{4P9} 19|178s30 182s13
+15V13*Obtenir_Droit{4P9} 19|176s30 183s21
+18U14*Detruire 19|201s7 217s13
+22U14*Affichage_Arbre 19|167s10
+X 19 decompresser.adb
+9U11*Decompresser 9b11 235l5 235t17
+12M9 T_Octet 13r27 20r23 41r10 49r16 64r60 66r7 74r30
+13m4 FIN_FICHIER{12M9}
+16A9 T_Tab_Symboles(character)<integer> 72r25 97r58 127r23
+19R9 T_Bit_Buffer 24e14 30r44 38r39 97r30 133r23
+20m7 Octet_Courant{12M9} 41m46 48r23
+21i7 Position_Bit{integer} 33m14 40r17 42m17 49r40 54m17 54r40
+22p7 Stream{9|42P9} 32m14 41m31
+23b7 Fin_Fichier{boolean} 34m14 59m17 172r24
+27b4 Mode_Bavard{boolean} 136r10 165r10 203r10 227m10 229m10
+30U14 Init_Bit_Buffer 30b14 30<31 30>58 35l8 35t23 159s7
+30r31 Buffer{19R9} 32m7 33m7 34m7
+30p58 S{9|42P9} 32r30
+38V13 Lire_Bit{integer} 38b13 38=23 61l8 61t16 101s10 173s17
+38r23 Buffer{19R9} 40r10 41r24 41m39 41r39 42m10 48r16 49r33 54m10 54r33
+. 59m10
+46i10 Bit{integer} 55r17
+64U14 Lire_Octet 64b14 64>26 64<48 67l8 67t18 77s7 82s7 87s10
+64p26 S{9|42P9} 66r21
+64m48 Octet{12M9} 66m24 66r24
+70U14 Lire_Symboles 70b14 71>7 71<40 72<7 72<41 93l8 93t21 156s7
+71p7 S{9|42P9} 77r19 82r19 87r22
+71i40 Position_FDF{integer} 78m7
+72a7 Symboles{16A9} 83m7 89m10
+72i41 Nb_Symboles{integer} 79m7 83r17 84m7 84r33 89r20 90m10 90r36
+74m7 Octet{12M9} 77m22 78r32 87m25 88r20 89r51 91r36
+74m14 Dernier_Octet{12M9} 82m22 83r48 88r28 91m10
+96V13 Reconstruire_Arbre{18|4P9} 96b13 97=7 97>44 98=7 115s23 116s22 121l8
+. 121t26 163s24
+97r7 Buffer{19R9} 101m20 101r20 115m43 115r43 116m42 116r42
+97a44 Symboles{16A9} 105r28 115r51 116r50
+98i7 Index_Symbole{integer} 105r38 107m13 107r30 115m61 115r61 116m60 116r60
+104p13 Nouveau_Noeud{18|4P9} 108r20
+113p13 Gauche{18|4P9} 115m13 117r55
+113p21 Droit{18|4P9} 116m13 117r63
+124U14 Decompresser_Fichier 124b14 124>36 220l8 220t28 231s10
+124a36 Nom_Fichier{string} 137r43 141r10 142r17 142r30 142r54 150r28 151r32
+125p7 F_In{9|44P9} 150m13 150r13 152r24 199m14 199r14 210r22 211m20 211r20
+125p13 F_Out{9|44P9} 151m15 151r15 153r24 200m14 200r14 213r22 214m20 214r20
+126p7 S_In{9|42P9} 152m7 156r22 159r32
+126p13 S_Out{9|42P9} 153m7 193r30
+127a7 Symboles{16A9} 156m42 163r52 187r30
+128i7 Position_FDF{integer} 156m28 187r40
+129i7 Nb_Symboles{integer} 156m52
+130p7 Arbre{18|4P9} 163m7 167r27 171r24 194r30 201m17 201r17 216r13 217m23
+. 217r23
+131p7 Noeud_Courant{18|4P9} 171m7 176m13 176r45 178m13 178r46 182r29 183r36
+. 186r48 193r54 194m13
+132i7 Index_Symbole{integer} 162m7 163m62 163r62
+133r7 Buffer{19R9} 159m24 163m44 163r44 172r17 173m27 173r27
+134i7 Bit{integer} 173m10 175r13
+225i8 I{integer} 226r20 226r43 228r23 228r46 231r42
+X 20 file_priorite.ads
+4k9*File_Priorite 19|5w6 20|19e18
+

@@ -1,0 +1,124 @@
+V "GNAT Lib v2021"
+A -gnatwa
+P SS ZX
+
+RN
+RV NO_ALLOCATORS
+RV NO_IO
+RV NO_IMPLICIT_CONDITIONALS
+RV NO_LOCAL_ALLOCATORS
+RV NO_RECURSION
+RV NO_SECONDARY_STACK
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_UNCHECKED_DEALLOCATION
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLEMENTATION_ASPECT_SPECIFICATIONS
+RV NO_OBSOLESCENT_FEATURES
+
+U arbre_huffman%b	arbre_huffman.adb	926456e8 NE OO PK
+W ada%s			ada.ads			ada.ali
+Z ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W ada.unchecked_deallocation%s
+Z system.concat_2%s	s-conca2.adb		s-conca2.ali
+Z system.img_int%s	s-imgint.ads		s-imgint.ali
+Z system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+
+U arbre_huffman%s	arbre_huffman.ads	f437205e EE NE OO PK
+Z ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
+
+D ada.ads		20210520051130 76789da1 ada%s
+D a-except.ads		20210520051127 946f3014 ada.exceptions%s
+D a-ioexce.ads		20210520051127 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20210520051128 119b8fb3 ada.streams%s
+D a-string.ads		20210520051128 90ac6797 ada.strings%s
+D a-sttebu.ads		20210520051128 18209c64 ada.strings.text_buffers%s
+D a-stuten.ads		20210520051128 808c40ad ada.strings.utf_encoding%s
+D a-tags.ads		20210520051129 9eaa38c6 ada.tags%s
+D a-textio.ads		20210520051129 aef4d56d ada.text_io%s
+D a-unccon.ads		20210520051129 0e9b276f ada.unchecked_conversion%s
+D a-uncdea.ads		20210520051129 c3a8ac65 ada.unchecked_deallocation%s
+D arbre_huffman.ads	20250115030310 f437205e arbre_huffman%s
+D arbre_huffman.adb	20250115023525 0b0f0fbe arbre_huffman%b
+D interfac.ads		20210520051131 edec285f interfaces%s
+D i-cstrea.ads		20210520051131 e53d8b8e interfaces.c_streams%s
+D system.ads		20210520051134 a2da961d system%s
+D s-conca2.ads		20210520051131 02a0d7d0 system.concat_2%s
+D s-crtl.ads		20210520051131 0ebbdb71 system.crtl%s
+D s-exctab.ads		20210520051131 54135002 system.exception_table%s
+D s-ficobl.ads		20210520051131 078245e4 system.file_control_block%s
+D s-imagei.ads		20210520051132 0d3f86a7 system.image_i%s
+D s-imgint.ads		20210520051132 bdb6f5ec system.img_int%s
+D s-parame.ads		20210520051133 4752c4cb system.parameters%s
+D s-putima.ads		20210520051133 4e095881 system.put_images%s
+D s-secsta.ads		20210520051133 9b3ab94b system.secondary_stack%s
+D s-soflin.ads		20210520051133 a7318a92 system.soft_links%s
+D s-stache.ads		20210520051133 a37c21ec system.stack_checking%s
+D s-stalib.ads		20210520051133 472fbca8 system.standard_library%s
+D s-stoele.ads		20210520051133 2dc34a04 system.storage_elements%s
+D s-stoele.adb		20210520051133 ed88f8fb system.storage_elements%b
+D s-traent.ads		20210520051133 26a8d361 system.traceback_entries%s
+D s-unstyp.ads		20210520051133 2b077493 system.unsigned_types%s
+D s-wchcon.ads		20210520051134 1b7d22d2 system.wch_con%s
+D unchconv.ads		20210520051134 ca2f9e18 unchecked_conversion%s
+G a e
+G c Z s b [creer_noeud arbre_huffman 7 13 none]
+G c Z s b [obtenir_symbole arbre_huffman 12 13 none]
+G c Z s b [obtenir_frequence arbre_huffman 13 13 none]
+G c Z s b [obtenir_gauche arbre_huffman 14 13 none]
+G c Z s b [obtenir_droit arbre_huffman 15 13 none]
+G c Z s b [detruire arbre_huffman 18 14 none]
+G c Z s b [est_feuille arbre_huffman 20 13 none]
+G c Z s b [affichage_arbre arbre_huffman 22 14 none]
+G c Z s s [noeudIP arbre_huffman 28 9 none]
+G c Z b b [free arbre_huffman 7 14 none]
+X 1 ada.ads
+16K9*Ada 20e8 13|1r6 2r6 7r26 69r10 70r10 71r10 72r10 73r10 74r10 75r10 78r10
+. 79r10 80r10 81r10 85r13 87r10 93r13 95r10
+X 9 a-textio.ads
+58K13*Text_IO 725e16 13|1w10 69r14 70r14 71r14 72r14 73r14 74r14 75r14 78r14
+. 79r14 80r14 81r14 85r17 87r14 93r17 95r14
+262U14*New_Line 13|75s22 81s22
+390U14*Put 13|72s22 74s22
+463U14*Put 13|69s22 70s22 71s22 73s22 78s22 79s22 80s22 85s25 87s22 93s25
+. 95s22
+X 11 a-uncdea.ads
+20u15*Unchecked_Deallocation 13|2w10 7r30
+X 12 arbre_huffman.ads
+1K9*Arbre_Huffman 28E9 34l5 34e18 13|4b14 117l5 117t18
+3R9*Noeud 4r33 12r34 13r36 14r33 15r32 20r33 28c9 33e14 13|7r54 16r13 22r34
+. 28r36 34r33 40r32 101r33
+4P9*Noeud_Ptr(3R9) 9r23 9r49 14r47 15r46 18r39 23r26 31r19 32r19 13|7r61
+. 12r23 12r49 34r47 40r46 46r26 107r39
+7V13*Creer_Noeud{4P9} 8>7 8>34 9>7 9>15 13|10b13 19l8 19t19
+8e7 Symbole{character} 13|11b7 17r23
+8i34 Frequence{natural} 13|11b34 17r45
+9p7 Gauche{4P9} 13|12b7 17r66
+9p15 Droit{4P9} 13|12b15 18r23
+12V13*Obtenir_Symbole{character} 12>30 13|22b13 25l8 25t23 73s43
+12r30 N{3R9} 13|22b30 24r14
+13V13*Obtenir_Frequence{natural} 13>32 13|28b13 31l8 31t25
+13r32 N{3R9} 13|28b32 30r14
+14V13*Obtenir_Gauche{4P9} 14>29 13|34b13 37l8 37t22 89s13 103s14
+14r29 N{3R9} 13|34b29 36r14
+15V13*Obtenir_Droit{4P9} 15>28 13|40b13 43l8 43t21 97s13 103s49
+15r28 N{3R9} 13|40b28 42r14
+18U14*Detruire 18=24 13|107b14 110s10 111s10 115l8 115t16
+18p24 Arbre{4P9} 13|107b24 109r10 110r20 111r20 112m16 113m10
+20V13*Est_Feuille{boolean} 20>26 13|68s10 101b13 104l8 104t19
+20r26 N{3R9} 13|101b26 103r30 103r64
+22U14*Affichage_Arbre 23>7 23>37 24>7 13|45b14 88s10 96s10 99l8 99t23
+23p7 Arbre{4P9} 13|46b7 63r10 68r23 70r42 73r60 79r42 89r29 97r28
+23i37 Indice_Droit{integer} 13|46b37 84r24 89r41 97r40
+24i7 Indice_Gauche{integer} 13|47b7 89r59 92r24 97r58
+29e7*Symbole{character} 13|17m12 24r16
+30i7*Frequence{natural} 13|17m32 30r16 70r52 79r52
+31p7*Gauche{4P9} 13|17m56 36r16 110m26
+32p7*Droit{4P9} 13|18m12 42r16 111m26
+X 13 arbre_huffman.adb
+7U14 Free[11|20] 112s10
+49V16 Format_Symbole{string} 49b16 49>32 61l11 61t25 73s27
+49e32 C{character} 51r15 59r28
+84i14 I{integer}
+92i14 I{integer}
+

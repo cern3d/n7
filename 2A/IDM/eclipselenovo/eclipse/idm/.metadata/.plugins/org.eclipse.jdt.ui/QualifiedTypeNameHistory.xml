@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="simplepdl.WorkSequenceType"/>
+    <fullyQualifiedTypeName name="petrinet.PetriNet"/>
+    <fullyQualifiedTypeName name="simplepdl.WorkDefinition"/>
+    <fullyQualifiedTypeName name="org.eclipse.emf.ecore.resource.Resource"/>
+    <fullyQualifiedTypeName name="simplepdl.Resource"/>
+    <fullyQualifiedTypeName name="petrinet.Objet"/>
+    <fullyQualifiedTypeName name="petrinet.PetrinetPackage"/>
+    <fullyQualifiedTypeName name="validation.PetriNetValidator"/>
+    <fullyQualifiedTypeName name="petrinet.Place"/>
+    <fullyQualifiedTypeName name="org.eclipse.emf.ecore.EObject"/>
+    <fullyQualifiedTypeName name="simplepdl.ResourceUsage"/>
+</qualifiedTypeNameHistroy>

@@ -1,0 +1,6 @@
+-- @path SimplePDL=/fr.n7.simplePDL/SimplePDL.ecore
+-- @path TM=/fr.n7.taskmaster/TaskMaster.ecore
+
+module tansformation;
+create OUT : TM from IN : SimplePDL;
+

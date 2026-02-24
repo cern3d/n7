@@ -1,0 +1,72 @@
+[comment encoding = 'UTF-8' /]
+[module totina('http://petrinet')]
+
+[template public generateElement(aPetriNet : PetriNet)]
+[comment @main/]
+[file (aPetriNet.name +('.net'), false, 'UTF-8')]
+
+net [aPetriNet.name/]
+
+[comment --- Places --- /]
+[for (p : Place | aPetriNet.objet->select(oclIsKindOf(Place))->collect(oclAsType(Place)))]
+pl p[p.name /] ([p.token/])
+[/for]
+
+[comment --- Transitions --- /]
+[for (t : Transition | aPetriNet.objet->select(oclIsKindOf(Transition))->collect(oclAsType(Transition)))]
+[t.toTinaTransition()/]
+[/for]
+
+[/file]
+[/template]
+
+
+[template public toTinaTransition(t : Transition)]
+tr t[t.name /] [t.toStateTransitionTime()/] [t.inputPlaces()/] -> [t.outputPlaces()/]
+[/template]
+
+
+[template public toStateTransitionTime(t : Transition)]
+[if (t.temp_min->notEmpty())]
+    ['['/][t.temp_min-> any(true)/]
+        [if (t.temp_max->notEmpty())]
+            ,[t.temp_max-> any(true)/]]
+        [else]
+            ,w['['/]
+        [/if]]
+[else]
+    [if (t.temp_max->notEmpty())]
+        ['['/][t.temp_max-> any(true)/]]
+    [else]
+        ['['/] 0,0[']'/]
+    [/if]
+[/if]
+[/template]
+
+
+[template public inputPlaces(t : Transition)]
+[let inputs : OrderedSet(Place) =
+    t.Predecessor->collect(Predecessor_Place)->flatten()
+        ->select(oclIsKindOf(Place))
+        ->collect(oclAsType(Place))
+        ->asOrderedSet()
+/]
+[for (p : Place | inputs) separator(' ')]
+[p.name/][if (p.token > 1)]*[p.token/][/if]
+[/for]
+[/let]
+[/template]
+
+
+[template public outputPlaces(t : Transition)]
+[let outputs : OrderedSet(Place) =
+    t.Successor->collect(Successor_Place)->flatten()
+        ->select(oclIsKindOf(Place))
+        ->collect(oclAsType(Place))
+        ->asOrderedSet()
+]
+[for (p : Place | outputs) separator(' ')]
+[p.name/][if (p.token > 1)]*[p.token/][/if]
+[/for]
+[/let]
+[/template]

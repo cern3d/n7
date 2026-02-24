@@ -1,0 +1,28 @@
+Quelle est la règle de séparation choisie?: choisit le premier element present dans les objets non selectionne (les objets sont ordonnes par leurs noms );
+
+
+Quelle méthode de calcul de borne supérieure est utilisée?:
+BS = max nombre de fois qu'on peut mettre dans le sac l'objet du meilleur ratio
+    ie capacite/(weight de l'objet du meilleur ratio);
+
+
+Quels sont les tests de sondabilité TA, TO, TR?:
+-TA: capacite<0;
+-TO: BS<= BestProfit (Best BS found);
+-TR: BS> BestProfit (Best BS found);
+
+
+Quelle est la stratégie d'exploration choisie?:
+Le noeud le plus a gauche DFS;
+
+
+(listObjs = liste des objets selectionnes, listVal = liste des bool des obj (1 si selectionne 0 sinon))
+
+
+
+Amelioration:
+-Meilleur Ratio: prix/weight; DONE
+-Meilleur BS: somme des prix des objets du meilleur ratio tq poids totale < capacite;
+-Meilleur Separation: objet du meilleur ratio; DONE
+-Meilleur Exploration: noeud du meilleur BS;
+#-Ajout de borne inf;

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move 5 elements to &apos;TP03_MP_2/src/functions&apos;&#x0A;- Original project: &apos;TP03_MP_2&apos;&#x0A;- Destination element: &apos;TP03_MP_2/src/functions&apos;&#x0A;- Original elements:&#x0A;     StringBufferTest.java&#x0A;     Analyseur.java&#x0A;     ExempleDeprecated.java&#x0A;     ExempleOverride.java&#x0A;     Position.java&#x0A;- Update references to refactored element" description="Move files" destination="/src&lt;functions" element1="StringBufferTest.java" element2="Analyseur.java" element3="ExempleDeprecated.java" element4="ExempleOverride.java" element5="Position.java" files="5" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1763741599651" units="0" version="1.0"/>
+</session>

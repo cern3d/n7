@@ -1,0 +1,96 @@
+/**
+ */
+package Petrinet;
+
+import org.eclipse.emf.ecore.EObject;
+
+/**
+ * <!-- begin-user-doc -->
+ * A representation of the model object '<em><b>Node Definition</b></em>'.
+ * <!-- end-user-doc -->
+ *
+ * <p>
+ * The following features are supported:
+ * </p>
+ * <ul>
+ *   <li>{@link Petrinet.NodeDefinition#getName <em>Name</em>}</li>
+ *   <li>{@link Petrinet.NodeDefinition#getLinkstoSuccessor <em>Linksto Successor</em>}</li>
+ *   <li>{@link Petrinet.NodeDefinition#getLinkstoPredecessor <em>Linksto Predecessor</em>}</li>
+ * </ul>
+ *
+ * @see Petrinet.PetrinetPackage#getNodeDefinition()
+ * @model
+ * @generated
+ */
+public interface NodeDefinition extends EObject {
+	/**
+	 * Returns the value of the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Name</em>' attribute.
+	 * @see #setName(String)
+	 * @see Petrinet.PetrinetPackage#getNodeDefinition_Name()
+	 * @model
+	 * @generated
+	 */
+	String getName();
+
+	/**
+	 * Sets the value of the '{@link Petrinet.NodeDefinition#getName <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Name</em>' attribute.
+	 * @see #getName()
+	 * @generated
+	 */
+	void setName(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Linksto Successor</b></em>' reference.
+	 * It is bidirectional and its opposite is '{@link Petrinet.NodeSequence#getSource <em>Source</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Linksto Successor</em>' reference.
+	 * @see #setLinkstoSuccessor(NodeSequence)
+	 * @see Petrinet.PetrinetPackage#getNodeDefinition_LinkstoSuccessor()
+	 * @see Petrinet.NodeSequence#getSource
+	 * @model opposite="source"
+	 * @generated
+	 */
+	NodeSequence getLinkstoSuccessor();
+
+	/**
+	 * Sets the value of the '{@link Petrinet.NodeDefinition#getLinkstoSuccessor <em>Linksto Successor</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Linksto Successor</em>' reference.
+	 * @see #getLinkstoSuccessor()
+	 * @generated
+	 */
+	void setLinkstoSuccessor(NodeSequence value);
+
+	/**
+	 * Returns the value of the '<em><b>Linksto Predecessor</b></em>' reference.
+	 * It is bidirectional and its opposite is '{@link Petrinet.NodeSequence#getPredecessor <em>Predecessor</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Linksto Predecessor</em>' reference.
+	 * @see #setLinkstoPredecessor(NodeSequence)
+	 * @see Petrinet.PetrinetPackage#getNodeDefinition_LinkstoPredecessor()
+	 * @see Petrinet.NodeSequence#getPredecessor
+	 * @model opposite="predecessor"
+	 * @generated
+	 */
+	NodeSequence getLinkstoPredecessor();
+
+	/**
+	 * Sets the value of the '{@link Petrinet.NodeDefinition#getLinkstoPredecessor <em>Linksto Predecessor</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Linksto Predecessor</em>' reference.
+	 * @see #getLinkstoPredecessor()
+	 * @generated
+	 */
+	void setLinkstoPredecessor(NodeSequence value);
+
+} // NodeDefinition

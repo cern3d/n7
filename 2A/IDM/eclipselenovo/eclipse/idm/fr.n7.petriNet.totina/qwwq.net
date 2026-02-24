@@ -1,0 +1,6 @@
+net qwwq
+pl p1 (0)
+pl p2 (0)
+pl p3 (0)
+tr t1 [1,w[ p1 p2 -> p3
+tr t2 [5,10]  -> 

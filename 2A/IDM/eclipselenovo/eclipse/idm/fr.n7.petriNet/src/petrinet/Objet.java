@@ -1,0 +1,102 @@
+/**
+ */
+package petrinet;
+
+import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.ecore.EObject;
+
+/**
+ * <!-- begin-user-doc -->
+ * A representation of the model object '<em><b>Objet</b></em>'.
+ * <!-- end-user-doc -->
+ *
+ * <p>
+ * The following features are supported:
+ * </p>
+ * <ul>
+ *   <li>{@link petrinet.Objet#getName <em>Name</em>}</li>
+ *   <li>{@link petrinet.Objet#getSuccessor <em>Successor</em>}</li>
+ *   <li>{@link petrinet.Objet#getPredecessor <em>Predecessor</em>}</li>
+ *   <li>{@link petrinet.Objet#getPetrinet <em>Petrinet</em>}</li>
+ * </ul>
+ *
+ * @see petrinet.PetrinetPackage#getObjet()
+ * @model abstract="true"
+ * @generated
+ */
+public interface Objet extends EObject {
+	/**
+	 * Returns the value of the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Name</em>' attribute.
+	 * @see #setName(String)
+	 * @see petrinet.PetrinetPackage#getObjet_Name()
+	 * @model required="true"
+	 * @generated
+	 */
+	String getName();
+
+	/**
+	 * Sets the value of the '{@link petrinet.Objet#getName <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Name</em>' attribute.
+	 * @see #getName()
+	 * @generated
+	 */
+	void setName(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Successor</b></em>' reference list.
+	 * The list contents are of type {@link petrinet.Arc}.
+	 * It is bidirectional and its opposite is '{@link petrinet.Arc#getPredecessor_link <em>Predecessor link</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Successor</em>' reference list.
+	 * @see petrinet.PetrinetPackage#getObjet_Successor()
+	 * @see petrinet.Arc#getPredecessor_link
+	 * @model opposite="Predecessor_link"
+	 * @generated
+	 */
+	EList<Arc> getSuccessor();
+
+	/**
+	 * Returns the value of the '<em><b>Predecessor</b></em>' reference list.
+	 * The list contents are of type {@link petrinet.Arc}.
+	 * It is bidirectional and its opposite is '{@link petrinet.Arc#getSuccessor_link <em>Successor link</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Predecessor</em>' reference list.
+	 * @see petrinet.PetrinetPackage#getObjet_Predecessor()
+	 * @see petrinet.Arc#getSuccessor_link
+	 * @model opposite="Successor_link"
+	 * @generated
+	 */
+	EList<Arc> getPredecessor();
+
+	/**
+	 * Returns the value of the '<em><b>Petrinet</b></em>' container reference.
+	 * It is bidirectional and its opposite is '{@link petrinet.PetriNet#getObjet <em>Objet</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Petrinet</em>' container reference.
+	 * @see #setPetrinet(PetriNet)
+	 * @see petrinet.PetrinetPackage#getObjet_Petrinet()
+	 * @see petrinet.PetriNet#getObjet
+	 * @model opposite="objet" required="true" transient="false"
+	 * @generated
+	 */
+	PetriNet getPetrinet();
+
+	/**
+	 * Sets the value of the '{@link petrinet.Objet#getPetrinet <em>Petrinet</em>}' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Petrinet</em>' container reference.
+	 * @see #getPetrinet()
+	 * @generated
+	 */
+	void setPetrinet(PetriNet value);
+
+} // Objet

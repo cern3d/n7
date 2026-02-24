@@ -1,0 +1,420 @@
+/**
+ */
+package Petrinet.impl;
+
+import Petrinet.Arc;
+import Petrinet.PetrinetPackage;
+import Petrinet.Transition;
+
+import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
+/**
+ * <!-- begin-user-doc -->
+ * An implementation of the model object '<em><b>Transition</b></em>'.
+ * <!-- end-user-doc -->
+ * <p>
+ * The following features are implemented:
+ * </p>
+ * <ul>
+ *   <li>{@link Petrinet.impl.TransitionImpl#getSuccessor <em>Successor</em>}</li>
+ *   <li>{@link Petrinet.impl.TransitionImpl#getPredecessor <em>Predecessor</em>}</li>
+ *   <li>{@link Petrinet.impl.TransitionImpl#getTemp_min <em>Temp min</em>}</li>
+ *   <li>{@link Petrinet.impl.TransitionImpl#getTemp_max <em>Temp max</em>}</li>
+ * </ul>
+ *
+ * @generated
+ */
+public class TransitionImpl extends ObjetImpl implements Transition {
+	/**
+	 * The cached value of the '{@link #getSuccessor() <em>Successor</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSuccessor()
+	 * @generated
+	 * @ordered
+	 */
+	protected Arc successor;
+	/**
+	 * The cached value of the '{@link #getPredecessor() <em>Predecessor</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPredecessor()
+	 * @generated
+	 * @ordered
+	 */
+	protected Arc predecessor;
+	/**
+	 * The default value of the '{@link #getTemp_min() <em>Temp min</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTemp_min()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final int TEMP_MIN_EDEFAULT = 0;
+	/**
+	 * The cached value of the '{@link #getTemp_min() <em>Temp min</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTemp_min()
+	 * @generated
+	 * @ordered
+	 */
+	protected int temp_min = TEMP_MIN_EDEFAULT;
+	/**
+	 * The default value of the '{@link #getTemp_max() <em>Temp max</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTemp_max()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final int TEMP_MAX_EDEFAULT = 0;
+	/**
+	 * The cached value of the '{@link #getTemp_max() <em>Temp max</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTemp_max()
+	 * @generated
+	 * @ordered
+	 */
+	protected int temp_max = TEMP_MAX_EDEFAULT;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected TransitionImpl() {
+		super();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected EClass eStaticClass() {
+		return PetrinetPackage.Literals.TRANSITION;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Arc getSuccessor() {
+		if (successor != null && successor.eIsProxy()) {
+			InternalEObject oldSuccessor = (InternalEObject)successor;
+			successor = (Arc)eResolveProxy(oldSuccessor);
+			if (successor != oldSuccessor) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, PetrinetPackage.TRANSITION__SUCCESSOR, oldSuccessor, successor));
+			}
+		}
+		return successor;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Arc basicGetSuccessor() {
+		return successor;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetSuccessor(Arc newSuccessor, NotificationChain msgs) {
+		Arc oldSuccessor = successor;
+		successor = newSuccessor;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, PetrinetPackage.TRANSITION__SUCCESSOR, oldSuccessor, newSuccessor);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setSuccessor(Arc newSuccessor) {
+		if (newSuccessor != successor) {
+			NotificationChain msgs = null;
+			if (successor != null)
+				msgs = ((InternalEObject)successor).eInverseRemove(this, PetrinetPackage.ARC__PREDECESSOR_TRANSITION, Arc.class, msgs);
+			if (newSuccessor != null)
+				msgs = ((InternalEObject)newSuccessor).eInverseAdd(this, PetrinetPackage.ARC__PREDECESSOR_TRANSITION, Arc.class, msgs);
+			msgs = basicSetSuccessor(newSuccessor, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, PetrinetPackage.TRANSITION__SUCCESSOR, newSuccessor, newSuccessor));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Arc getPredecessor() {
+		if (predecessor != null && predecessor.eIsProxy()) {
+			InternalEObject oldPredecessor = (InternalEObject)predecessor;
+			predecessor = (Arc)eResolveProxy(oldPredecessor);
+			if (predecessor != oldPredecessor) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, PetrinetPackage.TRANSITION__PREDECESSOR, oldPredecessor, predecessor));
+			}
+		}
+		return predecessor;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Arc basicGetPredecessor() {
+		return predecessor;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetPredecessor(Arc newPredecessor, NotificationChain msgs) {
+		Arc oldPredecessor = predecessor;
+		predecessor = newPredecessor;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, PetrinetPackage.TRANSITION__PREDECESSOR, oldPredecessor, newPredecessor);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setPredecessor(Arc newPredecessor) {
+		if (newPredecessor != predecessor) {
+			NotificationChain msgs = null;
+			if (predecessor != null)
+				msgs = ((InternalEObject)predecessor).eInverseRemove(this, PetrinetPackage.ARC__SUCCESSOR_TRANSITION, Arc.class, msgs);
+			if (newPredecessor != null)
+				msgs = ((InternalEObject)newPredecessor).eInverseAdd(this, PetrinetPackage.ARC__SUCCESSOR_TRANSITION, Arc.class, msgs);
+			msgs = basicSetPredecessor(newPredecessor, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, PetrinetPackage.TRANSITION__PREDECESSOR, newPredecessor, newPredecessor));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public int getTemp_min() {
+		return temp_min;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setTemp_min(int newTemp_min) {
+		int oldTemp_min = temp_min;
+		temp_min = newTemp_min;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, PetrinetPackage.TRANSITION__TEMP_MIN, oldTemp_min, temp_min));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public int getTemp_max() {
+		return temp_max;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setTemp_max(int newTemp_max) {
+		int oldTemp_max = temp_max;
+		temp_max = newTemp_max;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, PetrinetPackage.TRANSITION__TEMP_MAX, oldTemp_max, temp_max));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case PetrinetPackage.TRANSITION__SUCCESSOR:
+				if (successor != null)
+					msgs = ((InternalEObject)successor).eInverseRemove(this, PetrinetPackage.ARC__PREDECESSOR_TRANSITION, Arc.class, msgs);
+				return basicSetSuccessor((Arc)otherEnd, msgs);
+			case PetrinetPackage.TRANSITION__PREDECESSOR:
+				if (predecessor != null)
+					msgs = ((InternalEObject)predecessor).eInverseRemove(this, PetrinetPackage.ARC__SUCCESSOR_TRANSITION, Arc.class, msgs);
+				return basicSetPredecessor((Arc)otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case PetrinetPackage.TRANSITION__SUCCESSOR:
+				return basicSetSuccessor(null, msgs);
+			case PetrinetPackage.TRANSITION__PREDECESSOR:
+				return basicSetPredecessor(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+		switch (featureID) {
+			case PetrinetPackage.TRANSITION__SUCCESSOR:
+				if (resolve) return getSuccessor();
+				return basicGetSuccessor();
+			case PetrinetPackage.TRANSITION__PREDECESSOR:
+				if (resolve) return getPredecessor();
+				return basicGetPredecessor();
+			case PetrinetPackage.TRANSITION__TEMP_MIN:
+				return getTemp_min();
+			case PetrinetPackage.TRANSITION__TEMP_MAX:
+				return getTemp_max();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eSet(int featureID, Object newValue) {
+		switch (featureID) {
+			case PetrinetPackage.TRANSITION__SUCCESSOR:
+				setSuccessor((Arc)newValue);
+				return;
+			case PetrinetPackage.TRANSITION__PREDECESSOR:
+				setPredecessor((Arc)newValue);
+				return;
+			case PetrinetPackage.TRANSITION__TEMP_MIN:
+				setTemp_min((Integer)newValue);
+				return;
+			case PetrinetPackage.TRANSITION__TEMP_MAX:
+				setTemp_max((Integer)newValue);
+				return;
+		}
+		super.eSet(featureID, newValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eUnset(int featureID) {
+		switch (featureID) {
+			case PetrinetPackage.TRANSITION__SUCCESSOR:
+				setSuccessor((Arc)null);
+				return;
+			case PetrinetPackage.TRANSITION__PREDECESSOR:
+				setPredecessor((Arc)null);
+				return;
+			case PetrinetPackage.TRANSITION__TEMP_MIN:
+				setTemp_min(TEMP_MIN_EDEFAULT);
+				return;
+			case PetrinetPackage.TRANSITION__TEMP_MAX:
+				setTemp_max(TEMP_MAX_EDEFAULT);
+				return;
+		}
+		super.eUnset(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case PetrinetPackage.TRANSITION__SUCCESSOR:
+				return successor != null;
+			case PetrinetPackage.TRANSITION__PREDECESSOR:
+				return predecessor != null;
+			case PetrinetPackage.TRANSITION__TEMP_MIN:
+				return temp_min != TEMP_MIN_EDEFAULT;
+			case PetrinetPackage.TRANSITION__TEMP_MAX:
+				return temp_max != TEMP_MAX_EDEFAULT;
+		}
+		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuilder result = new StringBuilder(super.toString());
+		result.append(" (temp_min: ");
+		result.append(temp_min);
+		result.append(", temp_max: ");
+		result.append(temp_max);
+		result.append(')');
+		return result.toString();
+	}
+
+} //TransitionImpl

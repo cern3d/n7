@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="NewWizardAction">
+		<item key="NewWizardSelectionPage.STORE_SELECTED_ID" value="org.eclipse.emf.importer.ui.EMFModelWizard"/>
+		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
+			<item value="org.eclipse.acceleo.ide.ui"/>
+			<item value="org.eclipse.emf.codegen.ecore.ui.wizardCategory"/>
+			<item value="org.eclipse.pde.PDE"/>
+			<item value="org.eclipse.ui.Examples"/>
+			<item value="org.eclipse.ui.Examples/org.eclipse.acceleo.examples.category"/>
+			<item value="org.eclipse.ui.Examples/org.eclipse.m2m.atl.examples.category"/>
+			<item value="org.eclipse.ui.Examples/org.eclipse.emf.examples.EMF"/>
+			<item value="org.eclipse.ui.Examples/org.eclipse.emf.validation.examples.category"/>
+		</list>
+	</section>
+	<section name="ImportExportAction">
+		<item key="ImportExportPage.STORE_SELECTED_IMPORT_WIZARD_ID" value="org.eclipse.ui.wizards.import.FileSystem"/>
+		<list key="ImportExportPage.STORE_EXPANDED_IMPORT_CATEGORIES">
+			<item value="org.eclipse.ui.Basic"/>
+		</list>
+	</section>
+	<section name="FileSystemImportWizard">
+		<item key="WizardFileSystemResourceImportPage1.STORE_OVERWRITE_EXISTING_RESOURCES_ID" value="false"/>
+		<item key="WizardFileSystemResourceImportPage1.STORE_CREATE_CONTAINER_STRUCTURE_ID" value="false"/>
+		<list key="WizardFileSystemResourceImportPage1.STORE_SOURCE_NAMES_ID">
+			<item value="C:\Users\abdel\Documents\petrivalidation"/>
+		</list>
+	</section>
+</section>

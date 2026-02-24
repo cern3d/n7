@@ -1,0 +1,57 @@
+V "GNAT Lib v2021"
+A -gnatwa
+P ZX
+
+RN
+RV NO_ALLOCATORS
+RV NO_DIRECT_BOOLEAN_OPERATORS
+RV NO_EXCEPTIONS
+RV NO_LOCAL_ALLOCATORS
+RV NO_STANDARD_STORAGE_POOLS
+
+U file_priorite%b	file_priorite.adb	69cf9d64 NE OO PK GE
+
+U file_priorite%s	file_priorite.ads	03272dfb BN EE NE OO PK GE
+
+D file_priorite.ads	20250115023519 03272dfb file_priorite%s
+D file_priorite.adb	20250115023517 6ae8b09f file_priorite%b
+D system.ads		20210520051134 a2da961d system%s
+G a e
+G c Z s b [file_priorite standard 4 9 none]
+X 1 file_priorite.ads
+2+9 Element_Type 3r42 8r50 9r54 13r56 2|9r50 35r35 48r54 71r32
+3V18 Comparer{boolean} 3>28 3>34 2|33s16 64s12 69s13
+3*28 Left{2+9}
+3*34 Right{2+9}
+4k9*File_Priorite 2z9 3z18 13E9 19l5 19e18 2|1b14 88l5 88t18
+5R9*File 7r35 8r34 9r34 10r27 15c9 18e14 2|3r35 9r34 48r34 83r27
+7U14*Initialiser 7<27 2|3b14 7l8 7t19
+7r27 F{5R9} 2|3b27 5m7 6m7
+8U14*Ajouter 8=23 8>40 2|9b14 46l8 46t15
+8r23 F{5R9} 2|9b23 12r10 12r21 15r45 17r27 18r37 20m13 24m7 24r32 25r7 25r19
+. 28r18 33r26 33r48 35r51 37r19 37r43 38r19
+8*40 Element{2+9} 2|9b40 25r32
+9U14*Retirer 9=23 9<40 2|48b14 81l8 81t15
+9r23 F{5R9} 2|48b23 51r10 55r25 56r7 56r25 56r37 57m7 57r25 61r28 63r22 64r22
+. 64r47 69r23 69r44 71r48 73r16 73r40 74r16
+9*40 Element{2+9} 2|48b40 55m7
+10V13*Est_Vide{boolean} 10>23 2|83b13 86l8 86t16
+10r23 F{5R9} 2|83b23 85r14
+13A9 Tableau_Element(2+9)<integer> 14r42 2|5r25 15r19
+14P9 Tableau_Element_Access(13A9) 16r18 2|14r38
+16p7 Elements{14P9} 2|5m9 12r23 15r47 18r39 20m15 25r9 33r28 33r50 35r53
+. 37r21 37r45 38r21 55r27 56r9 56r27 64r24 64r49 69r25 69r46 71r50 73r18
+. 73r42 74r18
+17i7 Taille{natural} 2|6m9 12r12 17r29 24m9 24r34 25r21 28r20 51r12 56r39
+. 57m9 57r27 61r30 63r24 85r16
+X 2 file_priorite.adb
+10i7 Courant{natural} 28m7 29r13 31r42 33r38 35r63 37r31 40m16
+14p13 Nouvelle_File{1|14P9} 18r16 20r27
+17i17 I{integer} 18r31 18r49
+31i13 Parent{natural} 33r60 37r55 38r31 40r27
+35*19 Temp{1|2+9} 38r43
+49i7 Courant{natural} 60m7 61r13 62r20 69r56 71r60 73r28 76m13
+49i16 Enfant{natural} 62m10 63r13 64r34 64r59 66m13 66r23 69r35 73r52 74r28
+. 76r24
+71*16 Temp{1|2+9} 74r40
+

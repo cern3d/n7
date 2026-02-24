@@ -1,0 +1,13 @@
+strict digraph DiskGraph {
+edge [colorscheme="paired12"]
+nodesep=0.35;
+subgraph cluster_graph {
+color="white";
+6657406497173843607 [label="/\\ CD = 3\n/\\ CG = 0\n/\\ R = \"D\"\n/\\ MD = 3\n/\\ MG = 0",style = filled]
+6657406497173843607 -> 4394655480141756653 [label="",color="2",fontcolor="2"];
+4394655480141756653 [label="/\\ CD = 3\n/\\ CG = 0\n/\\ R = \"G\"\n/\\ MD = 3\n/\\ MG = 0"];
+4394655480141756653 -> 6657406497173843607 [label="",color="2",fontcolor="2"];
+{rank = same; 6657406497173843607;}
+{rank = same; 4394655480141756653;}
+}
+}

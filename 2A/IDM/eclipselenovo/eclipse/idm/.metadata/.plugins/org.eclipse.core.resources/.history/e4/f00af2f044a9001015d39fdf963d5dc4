@@ -1,0 +1,355 @@
+/**
+ */
+package petrinet.impl;
+
+import java.util.Collection;
+import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
+
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
+import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
+import org.eclipse.emf.ecore.util.InternalEList;
+import petrinet.Arc;
+import petrinet.PetrinetPackage;
+import petrinet.Place;
+import petrinet.Transition;
+
+/**
+ * <!-- begin-user-doc -->
+ * An implementation of the model object '<em><b>Arc</b></em>'.
+ * <!-- end-user-doc -->
+ * <p>
+ * The following features are implemented:
+ * </p>
+ * <ul>
+ *   <li>{@link petrinet.impl.ArcImpl#getToken <em>Token</em>}</li>
+ *   <li>{@link petrinet.impl.ArcImpl#getPredecessor_Transition <em>Predecessor Transition</em>}</li>
+ *   <li>{@link petrinet.impl.ArcImpl#getPredecessor_Place <em>Predecessor Place</em>}</li>
+ *   <li>{@link petrinet.impl.ArcImpl#getSuccessor_Place <em>Successor Place</em>}</li>
+ *   <li>{@link petrinet.impl.ArcImpl#getSuccessor_Transition <em>Successor Transition</em>}</li>
+ * </ul>
+ *
+ * @generated
+ */
+public class ArcImpl extends MinimalEObjectImpl.Container implements Arc {
+	/**
+	 * The default value of the '{@link #getToken() <em>Token</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getToken()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final int TOKEN_EDEFAULT = 0;
+
+	/**
+	 * The cached value of the '{@link #getToken() <em>Token</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getToken()
+	 * @generated
+	 * @ordered
+	 */
+	protected int token = TOKEN_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getPredecessor_Transition() <em>Predecessor Transition</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPredecessor_Transition()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Transition> predecessor_Transition;
+
+	/**
+	 * The cached value of the '{@link #getPredecessor_Place() <em>Predecessor Place</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPredecessor_Place()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Place> predecessor_Place;
+
+	/**
+	 * The cached value of the '{@link #getSuccessor_Place() <em>Successor Place</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSuccessor_Place()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Place> successor_Place;
+
+	/**
+	 * The cached value of the '{@link #getSuccessor_Transition() <em>Successor Transition</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSuccessor_Transition()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Transition> successor_Transition;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ArcImpl() {
+		super();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected EClass eStaticClass() {
+		return PetrinetPackage.Literals.ARC;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public int getToken() {
+		return token;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setToken(int newToken) {
+		int oldToken = token;
+		token = newToken;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, PetrinetPackage.ARC__TOKEN, oldToken, token));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EList<Transition> getPredecessor_Transition() {
+		if (predecessor_Transition == null) {
+			predecessor_Transition = new EObjectWithInverseResolvingEList<Transition>(Transition.class, this, PetrinetPackage.ARC__PREDECESSOR_TRANSITION, PetrinetPackage.TRANSITION__SUCCESSOR);
+		}
+		return predecessor_Transition;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EList<Place> getPredecessor_Place() {
+		if (predecessor_Place == null) {
+			predecessor_Place = new EObjectWithInverseResolvingEList<Place>(Place.class, this, PetrinetPackage.ARC__PREDECESSOR_PLACE, PetrinetPackage.PLACE__SUCCESSOR);
+		}
+		return predecessor_Place;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EList<Place> getSuccessor_Place() {
+		if (successor_Place == null) {
+			successor_Place = new EObjectWithInverseResolvingEList<Place>(Place.class, this, PetrinetPackage.ARC__SUCCESSOR_PLACE, PetrinetPackage.PLACE__PREDECESSOR);
+		}
+		return successor_Place;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EList<Transition> getSuccessor_Transition() {
+		if (successor_Transition == null) {
+			successor_Transition = new EObjectWithInverseResolvingEList<Transition>(Transition.class, this, PetrinetPackage.ARC__SUCCESSOR_TRANSITION, PetrinetPackage.TRANSITION__PREDECESSOR);
+		}
+		return successor_Transition;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case PetrinetPackage.ARC__PREDECESSOR_TRANSITION:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getPredecessor_Transition()).basicAdd(otherEnd, msgs);
+			case PetrinetPackage.ARC__PREDECESSOR_PLACE:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getPredecessor_Place()).basicAdd(otherEnd, msgs);
+			case PetrinetPackage.ARC__SUCCESSOR_PLACE:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getSuccessor_Place()).basicAdd(otherEnd, msgs);
+			case PetrinetPackage.ARC__SUCCESSOR_TRANSITION:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getSuccessor_Transition()).basicAdd(otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case PetrinetPackage.ARC__PREDECESSOR_TRANSITION:
+				return ((InternalEList<?>)getPredecessor_Transition()).basicRemove(otherEnd, msgs);
+			case PetrinetPackage.ARC__PREDECESSOR_PLACE:
+				return ((InternalEList<?>)getPredecessor_Place()).basicRemove(otherEnd, msgs);
+			case PetrinetPackage.ARC__SUCCESSOR_PLACE:
+				return ((InternalEList<?>)getSuccessor_Place()).basicRemove(otherEnd, msgs);
+			case PetrinetPackage.ARC__SUCCESSOR_TRANSITION:
+				return ((InternalEList<?>)getSuccessor_Transition()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+		switch (featureID) {
+			case PetrinetPackage.ARC__TOKEN:
+				return getToken();
+			case PetrinetPackage.ARC__PREDECESSOR_TRANSITION:
+				return getPredecessor_Transition();
+			case PetrinetPackage.ARC__PREDECESSOR_PLACE:
+				return getPredecessor_Place();
+			case PetrinetPackage.ARC__SUCCESSOR_PLACE:
+				return getSuccessor_Place();
+			case PetrinetPackage.ARC__SUCCESSOR_TRANSITION:
+				return getSuccessor_Transition();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public void eSet(int featureID, Object newValue) {
+		switch (featureID) {
+			case PetrinetPackage.ARC__TOKEN:
+				setToken((Integer)newValue);
+				return;
+			case PetrinetPackage.ARC__PREDECESSOR_TRANSITION:
+				getPredecessor_Transition().clear();
+				getPredecessor_Transition().addAll((Collection<? extends Transition>)newValue);
+				return;
+			case PetrinetPackage.ARC__PREDECESSOR_PLACE:
+				getPredecessor_Place().clear();
+				getPredecessor_Place().addAll((Collection<? extends Place>)newValue);
+				return;
+			case PetrinetPackage.ARC__SUCCESSOR_PLACE:
+				getSuccessor_Place().clear();
+				getSuccessor_Place().addAll((Collection<? extends Place>)newValue);
+				return;
+			case PetrinetPackage.ARC__SUCCESSOR_TRANSITION:
+				getSuccessor_Transition().clear();
+				getSuccessor_Transition().addAll((Collection<? extends Transition>)newValue);
+				return;
+		}
+		super.eSet(featureID, newValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eUnset(int featureID) {
+		switch (featureID) {
+			case PetrinetPackage.ARC__TOKEN:
+				setToken(TOKEN_EDEFAULT);
+				return;
+			case PetrinetPackage.ARC__PREDECESSOR_TRANSITION:
+				getPredecessor_Transition().clear();
+				return;
+			case PetrinetPackage.ARC__PREDECESSOR_PLACE:
+				getPredecessor_Place().clear();
+				return;
+			case PetrinetPackage.ARC__SUCCESSOR_PLACE:
+				getSuccessor_Place().clear();
+				return;
+			case PetrinetPackage.ARC__SUCCESSOR_TRANSITION:
+				getSuccessor_Transition().clear();
+				return;
+		}
+		super.eUnset(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case PetrinetPackage.ARC__TOKEN:
+				return token != TOKEN_EDEFAULT;
+			case PetrinetPackage.ARC__PREDECESSOR_TRANSITION:
+				return predecessor_Transition != null && !predecessor_Transition.isEmpty();
+			case PetrinetPackage.ARC__PREDECESSOR_PLACE:
+				return predecessor_Place != null && !predecessor_Place.isEmpty();
+			case PetrinetPackage.ARC__SUCCESSOR_PLACE:
+				return successor_Place != null && !successor_Place.isEmpty();
+			case PetrinetPackage.ARC__SUCCESSOR_TRANSITION:
+				return successor_Transition != null && !successor_Transition.isEmpty();
+		}
+		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuilder result = new StringBuilder(super.toString());
+		result.append(" (token: ");
+		result.append(token);
+		result.append(')');
+		return result.toString();
+	}
+
+} //ArcImpl

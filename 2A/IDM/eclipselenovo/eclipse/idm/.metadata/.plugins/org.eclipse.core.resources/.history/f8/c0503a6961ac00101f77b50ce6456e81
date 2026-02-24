@@ -1,0 +1,76 @@
+-- @path SimplePDL=/fr.n7.simplePDL/SimplePDL.ecore
+-- @path PN=/fr.n7.petrinet/PetriNet.ecore
+
+module spdltopetrin;
+create OUT : PN from IN : SimplePDL;
+
+rule Process2PetriNet {
+from process : SimplePDL!Process
+to petrinet : PN!PetriNet(name <- process.name)
+}
+rule WD2Place {
+from wd : SimplePDL!WorkDefinition
+to
+place_ready : PN!Place(petrinet <- wd.getProcess(), name <- wd.name + '_ready',token<-1),
+place_running : PN!Place(petrinet <- wd.getProcess(), name <- wd.name + '_running',token<-0),
+place_started : PN!Place(petrinet <- wd.getProcess(), name <- wd.name + '_started',token<-0),
+place_finished : PN!Place(petrinet <- wd.getProcess(), name <- wd.name + '_finished',token<-0),
+transition_start : PN!Transition(petrinet <- wd.getProcess(), name <- wd.name + '_start'),
+transition_finish : PN!Transition(petrinet <- wd.getProcess(), name <- wd.name + '_finish'),
+arc_ready2start : PN!Arc(petrinet <- wd.getProcess(), Predecessor_link <- place_ready, Successor_link <- transition_start,token<-1),
+arc_running2finish : PN!Arc(petrinet <- wd.getProcess(), Predecessor_link <- place_running, Successor_link <- transition_finish,token<-1),
+arc_start2running : PN!Arc(petrinet <- wd.getProcess(), Predecessor_link <- transition_start, Successor_link <- place_running,token<-1),
+arc_start2started : PN!Arc(petrinet <- wd.getProcess(), Predecessor_link <- transition_start, Successor_link <- place_started,token<-1),
+arc_finish2finished : PN!Arc(petrinet <- wd.getProcess(), Predecessor_link <- transition_finish, Successor_link <- place_finished,token<-1)
+}
+
+rule WS2Arc {
+    from ws : SimplePDL!WorkSequence
+    to arc : PN!Arc (
+    	petrinet <- ws.getProcess(),
+        Predecessor_link <- thisModule.resolveTemp(
+            ws.predecessor,
+            'place_' + (if ws.linkType = #startToStart or ws.linkType = #startToFinish then 'started' else 'finished' endif)
+		
+        ),
+        Successor_link <- thisModule.resolveTemp(
+            ws.successor,
+            'transition_' + (if ws.linkType = #startToStart or ws.linkType = #finishToStart then 'start' else 'finish' endif)
+        )
+		,token<-1
+    )
+}
+
+
+	
+	
+rule R2PetriNet {
+	from r: SimplePDL!Resource
+	to
+  	  place_ressource: PN!Place(
+  	  	petrinet <- r.getProcess(),
+  	  	name <- r.name,
+  	  	token <- r.amount)
+}
+
+rule RU2PetriNet {
+	from rs : SimplePDL!ResourceUsage
+	to
+	arc_demande : PN!Arc(
+  	  Predecessor_link <- rs.resource,
+  	  Successor_link <-thisModule.resolveTemp(rs.user,'transition_start'),
+	  token <- rs.amount
+  	  ),
+	arc_libere :  PN!Arc(
+  	  Successor_link <- rs.resource,
+  	  Predecessor_link <-thisModule.resolveTemp(rs.user,'transition_finish'),
+	  token <- rs.amount
+  	  )
+}
+
+
+
+
+helper context SimplePDL!ProcessElement
+def: getProcess() : SimplePDL!Process =
+SimplePDL!Process.allInstances()->select(e | e.processElements->includes(self));

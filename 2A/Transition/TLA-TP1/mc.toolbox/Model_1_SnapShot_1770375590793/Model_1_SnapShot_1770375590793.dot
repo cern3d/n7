@@ -1,0 +1,9 @@
+strict digraph DiskGraph {
+edge [colorscheme="paired12"]
+nodesep=0.35;
+subgraph cluster_graph {
+color="white";
+-2794971984978474688 [label="/\\ CD = 3\n/\\ CG = 0\n/\\ R = \"D\"\n/\\ MD = 3\n/\\ MG = 0",style = filled]
+{rank = same; -2794971984978474688;}
+}
+}

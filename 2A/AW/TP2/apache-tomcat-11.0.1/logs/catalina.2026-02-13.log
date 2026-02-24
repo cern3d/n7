@@ -1,0 +1,64 @@
+13-Feb-2026 14:24:13.900 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Nom version serveur :              Apache Tomcat/11.0.1
+13-Feb-2026 14:24:13.905 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Serveur compilé :                  Nov 6 2024 19:08:24 UTC
+13-Feb-2026 14:24:13.905 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Version du serveur :               11.0.1.0
+13-Feb-2026 14:24:13.905 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Nom de l'OS :                      Linux
+13-Feb-2026 14:24:13.907 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Version OS :                       6.14.0-37-generic
+13-Feb-2026 14:24:13.907 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture :                     amd64
+13-Feb-2026 14:24:13.907 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home :                        /mnt/n7fs/ens/tp_dh/jdk-17.0.5
+13-Feb-2026 14:24:13.907 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Version JVM :                      17.0.5+9-LTS-191
+13-Feb-2026 14:24:13.907 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Fournisseur de la JVM :            Oracle Corporation
+13-Feb-2026 14:24:13.907 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE :                    /home/abi7287/2A/AW/TP2/apache-tomcat-11.0.1
+13-Feb-2026 14:24:13.907 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME :                    /home/abi7287/2A/AW/TP2/apache-tomcat-11.0.1
+13-Feb-2026 14:24:13.927 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : -Djava.util.logging.config.file=/home/abi7287/2A/AW/TP2/apache-tomcat-11.0.1/conf/logging.properties
+13-Feb-2026 14:24:13.928 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+13-Feb-2026 14:24:13.928 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : -Djdk.tls.ephemeralDHKeySize=2048
+13-Feb-2026 14:24:13.928 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+13-Feb-2026 14:24:13.929 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : --add-opens=java.base/java.lang=ALL-UNNAMED
+13-Feb-2026 14:24:13.930 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : --add-opens=java.base/java.io=ALL-UNNAMED
+13-Feb-2026 14:24:13.931 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : --add-opens=java.base/java.util=ALL-UNNAMED
+13-Feb-2026 14:24:13.931 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+13-Feb-2026 14:24:13.931 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+13-Feb-2026 14:24:13.931 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : --enable-native-access=ALL-UNNAMED
+13-Feb-2026 14:24:13.931 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : -Dcatalina.base=/home/abi7287/2A/AW/TP2/apache-tomcat-11.0.1
+13-Feb-2026 14:24:13.931 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : -Dcatalina.home=/home/abi7287/2A/AW/TP2/apache-tomcat-11.0.1
+13-Feb-2026 14:24:13.931 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande : -Djava.io.tmpdir=/home/abi7287/2A/AW/TP2/apache-tomcat-11.0.1/temp
+13-Feb-2026 14:24:13.937 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent La librairie Apache Tomcat Native basée sur APR qui permet des performances optimales dans les environnements de production n'a pas été trouvée sur le java.library.path : [/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib]
+13-Feb-2026 14:24:14.125 INFO [main] org.apache.coyote.AbstractProtocol.init Initialisation du gestionnaire de protocole ["http-nio-8080"]
+13-Feb-2026 14:24:14.147 INFO [main] org.apache.catalina.startup.Catalina.load L'initialisation du serveur a pris [462] millisecondes
+13-Feb-2026 14:24:14.195 INFO [main] org.apache.catalina.core.StandardService.startInternal Démarrage du service [Catalina]
+13-Feb-2026 14:24:14.195 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Démarrage du moteur de Servlets : [Apache Tomcat/11.0.1]
+13-Feb-2026 14:24:14.214 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Déploiement du répertoire d'application web [/home/abi7287/2A/AW/TP2/apache-tomcat-11.0.1/webapps/ROOT]
+13-Feb-2026 14:24:14.435 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Le déploiement du répertoire [/home/abi7287/2A/AW/TP2/apache-tomcat-11.0.1/webapps/ROOT] de l'application web s'est terminé en [217] ms
+13-Feb-2026 14:24:14.435 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Déploiement du répertoire d'application web [/home/abi7287/2A/AW/TP2/apache-tomcat-11.0.1/webapps/manager]
+13-Feb-2026 14:24:14.481 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Le déploiement du répertoire [/home/abi7287/2A/AW/TP2/apache-tomcat-11.0.1/webapps/manager] de l'application web s'est terminé en [46] ms
+13-Feb-2026 14:24:14.481 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Déploiement du répertoire d'application web [/home/abi7287/2A/AW/TP2/apache-tomcat-11.0.1/webapps/examples]
+13-Feb-2026 14:24:15.208 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Le déploiement du répertoire [/home/abi7287/2A/AW/TP2/apache-tomcat-11.0.1/webapps/examples] de l'application web s'est terminé en [727] ms
+13-Feb-2026 14:24:15.209 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Déploiement du répertoire d'application web [/home/abi7287/2A/AW/TP2/apache-tomcat-11.0.1/webapps/docs]
+13-Feb-2026 14:24:15.254 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Le déploiement du répertoire [/home/abi7287/2A/AW/TP2/apache-tomcat-11.0.1/webapps/docs] de l'application web s'est terminé en [45] ms
+13-Feb-2026 14:24:15.254 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Déploiement du répertoire d'application web [/home/abi7287/2A/AW/TP2/apache-tomcat-11.0.1/webapps/host-manager]
+13-Feb-2026 14:24:15.306 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Le déploiement du répertoire [/home/abi7287/2A/AW/TP2/apache-tomcat-11.0.1/webapps/host-manager] de l'application web s'est terminé en [52] ms
+13-Feb-2026 14:24:15.309 INFO [main] org.apache.coyote.AbstractProtocol.start Démarrage du gestionnaire de protocole ["http-nio-8080"]
+13-Feb-2026 14:24:15.320 INFO [main] org.apache.catalina.startup.Catalina.start Le démarrage du serveur a pris [1172] millisecondes
+13-Feb-2026 15:15:29.534 INFO [Catalina-utility-2] org.apache.catalina.startup.HostConfig.deployWAR Déploiement de l'archive [/home/abi7287/2A/AW/TP2/apache-tomcat-11.0.1/webapps/template.war] de l'application web
+13-Feb-2026 15:15:30.894 INFO [Catalina-utility-2] org.apache.catalina.startup.HostConfig.deployWAR Le déploiement de l'archive de l'application web [/home/abi7287/2A/AW/TP2/apache-tomcat-11.0.1/webapps/template.war] s'est terminé en [1 361] ms
+13-Feb-2026 15:25:11.714 INFO [Catalina-utility-2] org.apache.catalina.startup.HostConfig.undeploy Retrait de l'application web ayant pour chemin de contexte [/template]
+13-Feb-2026 15:25:12.014 INFO [Catalina-utility-2] org.apache.catalina.startup.HostConfig.deployWAR Déploiement de l'archive [/home/abi7287/2A/AW/TP2/apache-tomcat-11.0.1/webapps/template.war] de l'application web
+13-Feb-2026 15:25:13.440 INFO [Catalina-utility-2] org.apache.catalina.startup.HostConfig.deployWAR Le déploiement de l'archive de l'application web [/home/abi7287/2A/AW/TP2/apache-tomcat-11.0.1/webapps/template.war] s'est terminé en [1 427] ms
+13-Feb-2026 15:27:43.627 INFO [Catalina-utility-1] org.apache.catalina.startup.HostConfig.undeploy Retrait de l'application web ayant pour chemin de contexte [/template]
+13-Feb-2026 15:27:43.876 INFO [Catalina-utility-1] org.apache.catalina.startup.HostConfig.deployWAR Déploiement de l'archive [/home/abi7287/2A/AW/TP2/apache-tomcat-11.0.1/webapps/template.war] de l'application web
+13-Feb-2026 15:27:45.031 INFO [Catalina-utility-1] org.apache.catalina.startup.HostConfig.deployWAR Le déploiement de l'archive de l'application web [/home/abi7287/2A/AW/TP2/apache-tomcat-11.0.1/webapps/template.war] s'est terminé en [1 154] ms
+13-Feb-2026 15:29:15.152 INFO [Catalina-utility-2] org.apache.catalina.startup.HostConfig.undeploy Retrait de l'application web ayant pour chemin de contexte [/template]
+13-Feb-2026 15:29:15.371 INFO [Catalina-utility-2] org.apache.catalina.startup.HostConfig.deployWAR Déploiement de l'archive [/home/abi7287/2A/AW/TP2/apache-tomcat-11.0.1/webapps/template.war] de l'application web
+13-Feb-2026 15:29:16.516 INFO [Catalina-utility-2] org.apache.catalina.startup.HostConfig.deployWAR Le déploiement de l'archive de l'application web [/home/abi7287/2A/AW/TP2/apache-tomcat-11.0.1/webapps/template.war] s'est terminé en [1 146] ms
+13-Feb-2026 15:30:56.638 INFO [Catalina-utility-1] org.apache.catalina.startup.HostConfig.undeploy Retrait de l'application web ayant pour chemin de contexte [/template]
+13-Feb-2026 15:30:56.978 INFO [Catalina-utility-1] org.apache.catalina.startup.HostConfig.deployWAR Déploiement de l'archive [/home/abi7287/2A/AW/TP2/apache-tomcat-11.0.1/webapps/template.war] de l'application web
+13-Feb-2026 15:30:58.524 INFO [Catalina-utility-1] org.apache.catalina.startup.HostConfig.deployWAR Le déploiement de l'archive de l'application web [/home/abi7287/2A/AW/TP2/apache-tomcat-11.0.1/webapps/template.war] s'est terminé en [1 545] ms
+13-Feb-2026 15:31:58.600 INFO [Catalina-utility-2] org.apache.catalina.startup.HostConfig.undeploy Retrait de l'application web ayant pour chemin de contexte [/template]
+13-Feb-2026 15:31:58.816 INFO [Catalina-utility-2] org.apache.catalina.startup.HostConfig.deployWAR Déploiement de l'archive [/home/abi7287/2A/AW/TP2/apache-tomcat-11.0.1/webapps/template.war] de l'application web
+13-Feb-2026 15:32:00.056 INFO [Catalina-utility-2] org.apache.catalina.startup.HostConfig.deployWAR Le déploiement de l'archive de l'application web [/home/abi7287/2A/AW/TP2/apache-tomcat-11.0.1/webapps/template.war] s'est terminé en [1 239] ms
+13-Feb-2026 15:34:30.352 INFO [Catalina-utility-2] org.apache.catalina.startup.HostConfig.undeploy Retrait de l'application web ayant pour chemin de contexte [/template]
+13-Feb-2026 15:34:30.678 INFO [Catalina-utility-2] org.apache.catalina.startup.HostConfig.deployWAR Déploiement de l'archive [/home/abi7287/2A/AW/TP2/apache-tomcat-11.0.1/webapps/template.war] de l'application web
+13-Feb-2026 15:34:31.891 INFO [Catalina-utility-2] org.apache.catalina.startup.HostConfig.deployWAR Le déploiement de l'archive de l'application web [/home/abi7287/2A/AW/TP2/apache-tomcat-11.0.1/webapps/template.war] s'est terminé en [1 212] ms
+13-Feb-2026 15:38:52.314 INFO [Catalina-utility-1] org.apache.catalina.startup.HostConfig.undeploy Retrait de l'application web ayant pour chemin de contexte [/template]
+13-Feb-2026 15:38:52.611 INFO [Catalina-utility-1] org.apache.catalina.startup.HostConfig.deployWAR Déploiement de l'archive [/home/abi7287/2A/AW/TP2/apache-tomcat-11.0.1/webapps/template.war] de l'application web
+13-Feb-2026 15:38:53.844 INFO [Catalina-utility-1] org.apache.catalina.startup.HostConfig.deployWAR Le déploiement de l'archive de l'application web [/home/abi7287/2A/AW/TP2/apache-tomcat-11.0.1/webapps/template.war] s'est terminé en [1 233] ms

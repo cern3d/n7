@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="ASCII"?>
+<petrinet:PetriNet xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:petrinet="http://petrinet" name="developpement">
+  <objet xsi:type="petrinet:Place" name="Conception_ready" Successor="//@arc.0"/>
+  <objet xsi:type="petrinet:Place" name="Conception_started" Successor="//@arc.21 //@arc.23" Predecessor="//@arc.1"/>
+  <objet xsi:type="petrinet:Place" name="Conception_running" Successor="//@arc.3" Predecessor="//@arc.2"/>
+  <objet xsi:type="petrinet:Place" name="Conception_finished" Successor="//@arc.20 //@arc.22" Predecessor="//@arc.4"/>
+  <objet xsi:type="petrinet:Transition" name="Conception_start" Successor="//@arc.1 //@arc.2" Predecessor="//@arc.0"/>
+  <objet xsi:type="petrinet:Transition" name="Conception_finish" Successor="//@arc.4" Predecessor="//@arc.3"/>
+  <objet xsi:type="petrinet:Place" name="RedactionDoc_ready" Successor="//@arc.5"/>
+  <objet xsi:type="petrinet:Place" name="RedactionDoc_started" Predecessor="//@arc.6"/>
+  <objet xsi:type="petrinet:Place" name="RedactionDoc_running" Successor="//@arc.8" Predecessor="//@arc.7"/>
+  <objet xsi:type="petrinet:Place" name="RedactionDoc_finished" Predecessor="//@arc.9"/>
+  <objet xsi:type="petrinet:Transition" name="RedactionDoc_start" Successor="//@arc.6 //@arc.7 //@arc.26" Predecessor="//@arc.5 //@arc.21 //@arc.25"/>
+  <objet xsi:type="petrinet:Transition" name="RedactionDoc_finish" Successor="//@arc.9" Predecessor="//@arc.8 //@arc.20"/>
+  <objet xsi:type="petrinet:Place" name="Programmation_ready" Successor="//@arc.10"/>
+  <objet xsi:type="petrinet:Place" name="Programmation_started" Predecessor="//@arc.11"/>
+  <objet xsi:type="petrinet:Place" name="Programmation_running" Successor="//@arc.13" Predecessor="//@arc.12"/>
+  <objet xsi:type="petrinet:Place" name="Programmation_finished" Successor="//@arc.24" Predecessor="//@arc.14"/>
+  <objet xsi:type="petrinet:Transition" name="Programmation_start" Successor="//@arc.11 //@arc.12" Predecessor="//@arc.10 //@arc.22"/>
+  <objet xsi:type="petrinet:Transition" name="Programmation_finish" Successor="//@arc.14" Predecessor="//@arc.13"/>
+  <objet xsi:type="petrinet:Place" name="RedactionTests_ready" Successor="//@arc.15"/>
+  <objet xsi:type="petrinet:Place" name="RedactionTests_started" Predecessor="//@arc.16"/>
+  <objet xsi:type="petrinet:Place" name="RedactionTests_running" Successor="//@arc.18" Predecessor="//@arc.17"/>
+  <objet xsi:type="petrinet:Place" name="RedactionTests_finished" Predecessor="//@arc.19"/>
+  <objet xsi:type="petrinet:Transition" name="RedactionTests_start" Successor="//@arc.16 //@arc.17" Predecessor="//@arc.15 //@arc.23"/>
+  <objet xsi:type="petrinet:Transition" name="RedactionTests_finish" Successor="//@arc.19" Predecessor="//@arc.18 //@arc.24"/>
+  <objet xsi:type="petrinet:Place" name="peep" Successor="//@arc.25" Predecessor="//@arc.26"/>
+  <arc token="1" Predecessor_link="//@objet.0" Successor_link="//@objet.4"/>
+  <arc token="1" Predecessor_link="//@objet.4" Successor_link="//@objet.1"/>
+  <arc token="1" Predecessor_link="//@objet.4" Successor_link="//@objet.2"/>
+  <arc token="1" Predecessor_link="//@objet.2" Successor_link="//@objet.5"/>
+  <arc token="1" Predecessor_link="//@objet.5" Successor_link="//@objet.3"/>
+  <arc token="1" Predecessor_link="//@objet.6" Successor_link="//@objet.10"/>
+  <arc token="1" Predecessor_link="//@objet.10" Successor_link="//@objet.7"/>
+  <arc token="1" Predecessor_link="//@objet.10" Successor_link="//@objet.8"/>
+  <arc token="1" Predecessor_link="//@objet.8" Successor_link="//@objet.11"/>
+  <arc token="1" Predecessor_link="//@objet.11" Successor_link="//@objet.9"/>
+  <arc token="1" Predecessor_link="//@objet.12" Successor_link="//@objet.16"/>
+  <arc token="1" Predecessor_link="//@objet.16" Successor_link="//@objet.13"/>
+  <arc token="1" Predecessor_link="//@objet.16" Successor_link="//@objet.14"/>
+  <arc token="1" Predecessor_link="//@objet.14" Successor_link="//@objet.17"/>
+  <arc token="1" Predecessor_link="//@objet.17" Successor_link="//@objet.15"/>
+  <arc token="1" Predecessor_link="//@objet.18" Successor_link="//@objet.22"/>
+  <arc token="1" Predecessor_link="//@objet.22" Successor_link="//@objet.19"/>
+  <arc token="1" Predecessor_link="//@objet.22" Successor_link="//@objet.20"/>
+  <arc token="1" Predecessor_link="//@objet.20" Successor_link="//@objet.23"/>
+  <arc token="1" Predecessor_link="//@objet.23" Successor_link="//@objet.21"/>
+  <arc token="1" Predecessor_link="//@objet.3" Successor_link="//@objet.11"/>
+  <arc token="1" Predecessor_link="//@objet.1" Successor_link="//@objet.10"/>
+  <arc token="1" Predecessor_link="//@objet.3" Successor_link="//@objet.16"/>
+  <arc token="1" Predecessor_link="//@objet.1" Successor_link="//@objet.22"/>
+  <arc token="1" Predecessor_link="//@objet.15" Successor_link="//@objet.23"/>
+  <arc token="5" Predecessor_link="//@objet.24" Successor_link="//@objet.10"/>
+  <arc token="5" Predecessor_link="//@objet.10" Successor_link="//@objet.24"/>
+</petrinet:PetriNet>

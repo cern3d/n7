@@ -1,0 +1,87 @@
+V "GNAT Lib v2021"
+M P W=b
+P ZX
+
+RN
+RV NO_IO
+
+U tri_selection%b	tri_selection.adb	12650145 NE OO SU
+W ada%s			ada.ads			ada.ali
+W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
+Z ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+
+D ada.ads		20210520051130 76789da1 ada%s
+D a-except.ads		20210520051127 946f3014 ada.exceptions%s
+D a-inteio.ads		20210520051127 f64b89a4 ada.integer_text_io%s
+D a-ioexce.ads		20210520051127 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20210520051128 119b8fb3 ada.streams%s
+D a-string.ads		20210520051128 90ac6797 ada.strings%s
+D a-sttebu.ads		20210520051128 18209c64 ada.strings.text_buffers%s
+D a-stuten.ads		20210520051128 808c40ad ada.strings.utf_encoding%s
+D a-tags.ads		20210520051129 9eaa38c6 ada.tags%s
+D a-textio.ads		20210520051129 aef4d56d ada.text_io%s
+D a-tiinio.ads		20210520051129 390edddb ada.text_io.integer_io%s
+D a-unccon.ads		20210520051129 0e9b276f ada.unchecked_conversion%s
+D interfac.ads		20210520051131 edec285f interfaces%s
+D i-cstrea.ads		20210520051131 e53d8b8e interfaces.c_streams%s
+D system.ads		20210520051134 a2da961d system%s
+D s-crtl.ads		20210520051131 0ebbdb71 system.crtl%s
+D s-exctab.ads		20210520051131 54135002 system.exception_table%s
+D s-ficobl.ads		20210520051131 078245e4 system.file_control_block%s
+D s-parame.ads		20210520051133 4752c4cb system.parameters%s
+D s-putima.ads		20210520051133 4e095881 system.put_images%s
+D s-secsta.ads		20210520051133 9b3ab94b system.secondary_stack%s
+D s-soflin.ads		20210520051133 a7318a92 system.soft_links%s
+D s-stache.ads		20210520051133 a37c21ec system.stack_checking%s
+D s-stalib.ads		20210520051133 472fbca8 system.standard_library%s
+D s-stoele.ads		20210520051133 2dc34a04 system.storage_elements%s
+D s-stoele.adb		20210520051133 ed88f8fb system.storage_elements%b
+D s-traent.ads		20210520051133 26a8d361 system.traceback_entries%s
+D s-unstyp.ads		20210520051133 2b077493 system.unsigned_types%s
+D s-wchcon.ads		20210520051134 1b7d22d2 system.wch_con%s
+D tri_selection.adb	20241009074724 4ada5d8c tri_selection%b
+D unchconv.ads		20210520051134 ca2f9e18 unchecked_conversion%s
+G a e
+G c Z b b [tri_selection standard 12 11 none]
+X 1 ada.ads
+16K9*Ada 20e8 30|5r6 6r5 7r6 8r5
+X 3 a-inteio.ads
+18K13*Integer_Text_IO[11|46] 30|7w10 8r9
+X 10 a-textio.ads
+58K13*Text_IO 725e16 30|5w10 6r9
+262U14*New_Line 30|135s5 141s5
+390U14*Put 30|33s9 46s9
+463U14*Put 30|40s17
+X 11 a-tiinio.ads
+80U14*Put 30|36s13[3|18] 41s17[3|18]
+X 30 tri_selection.adb
+12U11*Tri_Selection 12b11 145l5 145t18
+14i5 Capacite{integer} 16r41
+16A10 T_TableauElements(integer)<integer> 20r23
+18R10 T_Tableau 23e19 31r30 53r41 80r34 103r43 104r20 128r12
+20a13 Elements{16A10} 36r22 41r26 61r28 61r47 65r29 66m21 66r41 67m21 89r35
+. 89r60
+21i13 Taille{integer} 34r16 39r29 57r16 58r29 60r35 84r17 84r32 88r34 93r39
+31U15 Ecrire 31b15 31>22 47l9 47t15 134s5 140s5
+31r22 Tab{18R10} 34r12 36r18 39r25 41r22
+39i17 I{integer} 41r36
+53U15 Tri_selection 53b15 53=29 70l9 70t22 108s13 138s5
+53r29 Tab{18R10} 57r12 58r25 60r31 61r24 61r43 65r25 66m17 66r37 67m17
+54i8 var{integer} 59m13 61r57 62m25 66r50 67r30
+55i8 perm{integer} 65m17 67r38
+58i17 i{integer} 59r20 60r26 65r38 66r31
+60i21 j{integer} 61r38 62r32
+80V15 "="{boolean} 80b15 80>19 80>25 96l10 96t12 109s33
+80r19 Tab1{18R10} 84r12 88r29 89r30 93r34
+80r25 Tab2{18R10} 84r27 89r55
+81b9 Resultat{boolean} 85m13 93m13 95r16
+82i9 Indice{integer} 87m13 88r19 89r45 89r70 91m17 91r27 93r25
+101U15 Tester_Trier 101b15 125l9 125t21 143s5
+103U19 Tester 103b19 103>26 103>31 110l13 110t19 113s9 115s9 117s9 119s9
+. 121s9 123s9
+103r26 Tab{18R10} 106r22
+103r31 Attendu{18R10} 109r35
+104r13 Copie{18R10} 106m13 108m27 108r27 109r27
+128r5 Tab1{18R10} 131m5 134r13 138m19 138r19 140r13
+

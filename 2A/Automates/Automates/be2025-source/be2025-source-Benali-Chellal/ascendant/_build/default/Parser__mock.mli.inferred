@@ -1,0 +1,20 @@
+type token =
+    UL_TERMINAUX of string
+  | UL_PT
+  | UL_PAROUV
+  | UL_PARFER
+  | UL_NNTERMINAUX of string
+  | UL_DOLLAR
+  | UL_DER
+  | UL_CROOUV
+  | UL_CROFER
+  | UL_BAR
+  | UL_ACCOUV
+  | UL_ACCFER
+val menhir_begin_marker : int
+val xv_production : unit
+val xv_int_production : unit
+val xv_grammaire : unit
+val xv_boucle : unit
+val xv_baroupas : unit
+val menhir_end_marker : int

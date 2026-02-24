@@ -1,0 +1,372 @@
+/**
+ */
+package petrinet.impl;
+
+import org.eclipse.emf.common.notify.Notification;
+
+import org.eclipse.emf.common.notify.NotificationChain;
+import org.eclipse.emf.ecore.EClass;
+
+import org.eclipse.emf.ecore.InternalEObject;
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
+import petrinet.Arc;
+import petrinet.Objet;
+import petrinet.PetrinetPackage;
+
+/**
+ * <!-- begin-user-doc -->
+ * An implementation of the model object '<em><b>Objet</b></em>'.
+ * <!-- end-user-doc -->
+ * <p>
+ * The following features are implemented:
+ * </p>
+ * <ul>
+ *   <li>{@link petrinet.impl.ObjetImpl#getName <em>Name</em>}</li>
+ *   <li>{@link petrinet.impl.ObjetImpl#getSuccessor <em>Successor</em>}</li>
+ *   <li>{@link petrinet.impl.ObjetImpl#getPredecessor <em>Predecessor</em>}</li>
+ * </ul>
+ *
+ * @generated
+ */
+public abstract class ObjetImpl extends MinimalEObjectImpl.Container implements Objet {
+	/**
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NAME_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected String name = NAME_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getSuccessor() <em>Successor</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSuccessor()
+	 * @generated
+	 * @ordered
+	 */
+	protected Arc successor;
+
+	/**
+	 * The cached value of the '{@link #getPredecessor() <em>Predecessor</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPredecessor()
+	 * @generated
+	 * @ordered
+	 */
+	protected Arc predecessor;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ObjetImpl() {
+		super();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected EClass eStaticClass() {
+		return PetrinetPackage.Literals.OBJET;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getName() {
+		return name;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setName(String newName) {
+		String oldName = name;
+		name = newName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, PetrinetPackage.OBJET__NAME, oldName, name));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Arc getSuccessor() {
+		if (successor != null && successor.eIsProxy()) {
+			InternalEObject oldSuccessor = (InternalEObject)successor;
+			successor = (Arc)eResolveProxy(oldSuccessor);
+			if (successor != oldSuccessor) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, PetrinetPackage.OBJET__SUCCESSOR, oldSuccessor, successor));
+			}
+		}
+		return successor;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Arc basicGetSuccessor() {
+		return successor;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetSuccessor(Arc newSuccessor, NotificationChain msgs) {
+		Arc oldSuccessor = successor;
+		successor = newSuccessor;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, PetrinetPackage.OBJET__SUCCESSOR, oldSuccessor, newSuccessor);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setSuccessor(Arc newSuccessor) {
+		if (newSuccessor != successor) {
+			NotificationChain msgs = null;
+			if (successor != null)
+				msgs = ((InternalEObject)successor).eInverseRemove(this, PetrinetPackage.ARC__PREDECESSOR_PLACE, Arc.class, msgs);
+			if (newSuccessor != null)
+				msgs = ((InternalEObject)newSuccessor).eInverseAdd(this, PetrinetPackage.ARC__PREDECESSOR_PLACE, Arc.class, msgs);
+			msgs = basicSetSuccessor(newSuccessor, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, PetrinetPackage.OBJET__SUCCESSOR, newSuccessor, newSuccessor));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Arc getPredecessor() {
+		if (predecessor != null && predecessor.eIsProxy()) {
+			InternalEObject oldPredecessor = (InternalEObject)predecessor;
+			predecessor = (Arc)eResolveProxy(oldPredecessor);
+			if (predecessor != oldPredecessor) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, PetrinetPackage.OBJET__PREDECESSOR, oldPredecessor, predecessor));
+			}
+		}
+		return predecessor;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Arc basicGetPredecessor() {
+		return predecessor;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetPredecessor(Arc newPredecessor, NotificationChain msgs) {
+		Arc oldPredecessor = predecessor;
+		predecessor = newPredecessor;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, PetrinetPackage.OBJET__PREDECESSOR, oldPredecessor, newPredecessor);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setPredecessor(Arc newPredecessor) {
+		if (newPredecessor != predecessor) {
+			NotificationChain msgs = null;
+			if (predecessor != null)
+				msgs = ((InternalEObject)predecessor).eInverseRemove(this, PetrinetPackage.ARC__SUCCESSOR_PLACE, Arc.class, msgs);
+			if (newPredecessor != null)
+				msgs = ((InternalEObject)newPredecessor).eInverseAdd(this, PetrinetPackage.ARC__SUCCESSOR_PLACE, Arc.class, msgs);
+			msgs = basicSetPredecessor(newPredecessor, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, PetrinetPackage.OBJET__PREDECESSOR, newPredecessor, newPredecessor));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case PetrinetPackage.OBJET__SUCCESSOR:
+				if (successor != null)
+					msgs = ((InternalEObject)successor).eInverseRemove(this, PetrinetPackage.ARC__PREDECESSOR_PLACE, Arc.class, msgs);
+				return basicSetSuccessor((Arc)otherEnd, msgs);
+			case PetrinetPackage.OBJET__PREDECESSOR:
+				if (predecessor != null)
+					msgs = ((InternalEObject)predecessor).eInverseRemove(this, PetrinetPackage.ARC__SUCCESSOR_PLACE, Arc.class, msgs);
+				return basicSetPredecessor((Arc)otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case PetrinetPackage.OBJET__SUCCESSOR:
+				return basicSetSuccessor(null, msgs);
+			case PetrinetPackage.OBJET__PREDECESSOR:
+				return basicSetPredecessor(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+		switch (featureID) {
+			case PetrinetPackage.OBJET__NAME:
+				return getName();
+			case PetrinetPackage.OBJET__SUCCESSOR:
+				if (resolve) return getSuccessor();
+				return basicGetSuccessor();
+			case PetrinetPackage.OBJET__PREDECESSOR:
+				if (resolve) return getPredecessor();
+				return basicGetPredecessor();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eSet(int featureID, Object newValue) {
+		switch (featureID) {
+			case PetrinetPackage.OBJET__NAME:
+				setName((String)newValue);
+				return;
+			case PetrinetPackage.OBJET__SUCCESSOR:
+				setSuccessor((Arc)newValue);
+				return;
+			case PetrinetPackage.OBJET__PREDECESSOR:
+				setPredecessor((Arc)newValue);
+				return;
+		}
+		super.eSet(featureID, newValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eUnset(int featureID) {
+		switch (featureID) {
+			case PetrinetPackage.OBJET__NAME:
+				setName(NAME_EDEFAULT);
+				return;
+			case PetrinetPackage.OBJET__SUCCESSOR:
+				setSuccessor((Arc)null);
+				return;
+			case PetrinetPackage.OBJET__PREDECESSOR:
+				setPredecessor((Arc)null);
+				return;
+		}
+		super.eUnset(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case PetrinetPackage.OBJET__NAME:
+				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+			case PetrinetPackage.OBJET__SUCCESSOR:
+				return successor != null;
+			case PetrinetPackage.OBJET__PREDECESSOR:
+				return predecessor != null;
+		}
+		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuilder result = new StringBuilder(super.toString());
+		result.append(" (name: ");
+		result.append(name);
+		result.append(')');
+		return result.toString();
+	}
+
+} //ObjetImpl

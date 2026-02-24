@@ -1,0 +1,17 @@
+.metadata/
+bin/
+.settings
+*.class
+.classpath
+.loadpath
+tmp/
+*.tmp
+.settings/
+*.swp
+*.bak
+local.properties
+.factorypath
+src-gen/
+*.xml
+*.zip
+.idea/

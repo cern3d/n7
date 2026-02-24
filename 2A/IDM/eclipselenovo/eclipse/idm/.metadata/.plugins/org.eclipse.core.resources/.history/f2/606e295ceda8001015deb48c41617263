@@ -1,0 +1,17 @@
+/**
+ */
+package Petrinet;
+
+
+/**
+ * <!-- begin-user-doc -->
+ * A representation of the model object '<em><b>Transition</b></em>'.
+ * <!-- end-user-doc -->
+ *
+ *
+ * @see Petrinet.PetrinetPackage#getTransition()
+ * @model
+ * @generated
+ */
+public interface Transition extends NodeDefinition {
+} // Transition

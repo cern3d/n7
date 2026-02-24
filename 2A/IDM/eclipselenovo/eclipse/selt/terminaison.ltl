@@ -1,0 +1,7 @@
+op finished = pConception_finished/\pRedactionDoc_finished/\pProgrammation_finished/\pRedactionTests_finished;
+
+[] (finished => dead);
+<> dead;
+[] (dead => finished);
+<> finished;
+

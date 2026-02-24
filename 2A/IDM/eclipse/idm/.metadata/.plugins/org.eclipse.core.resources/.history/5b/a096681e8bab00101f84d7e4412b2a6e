@@ -1,0 +1,96 @@
+/**
+ */
+package petrinet;
+
+import org.eclipse.emf.ecore.EObject;
+
+/**
+ * <!-- begin-user-doc -->
+ * A representation of the model object '<em><b>Objet</b></em>'.
+ * <!-- end-user-doc -->
+ *
+ * <p>
+ * The following features are supported:
+ * </p>
+ * <ul>
+ *   <li>{@link petrinet.Objet#getName <em>Name</em>}</li>
+ *   <li>{@link petrinet.Objet#getSuccessor <em>Successor</em>}</li>
+ *   <li>{@link petrinet.Objet#getPredecessor <em>Predecessor</em>}</li>
+ * </ul>
+ *
+ * @see petrinet.PetrinetPackage#getObjet()
+ * @model abstract="true"
+ * @generated
+ */
+public interface Objet extends EObject {
+	/**
+	 * Returns the value of the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Name</em>' attribute.
+	 * @see #setName(String)
+	 * @see petrinet.PetrinetPackage#getObjet_Name()
+	 * @model required="true"
+	 * @generated
+	 */
+	String getName();
+
+	/**
+	 * Sets the value of the '{@link petrinet.Objet#getName <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Name</em>' attribute.
+	 * @see #getName()
+	 * @generated
+	 */
+	void setName(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Successor</b></em>' reference.
+	 * It is bidirectional and its opposite is '{@link petrinet.Arc#getPredecessor_link <em>Predecessor link</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Successor</em>' reference.
+	 * @see #setSuccessor(Arc)
+	 * @see petrinet.PetrinetPackage#getObjet_Successor()
+	 * @see petrinet.Arc#getPredecessor_link
+	 * @model opposite="Predecessor_link"
+	 * @generated
+	 */
+	Arc getSuccessor();
+
+	/**
+	 * Sets the value of the '{@link petrinet.Objet#getSuccessor <em>Successor</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Successor</em>' reference.
+	 * @see #getSuccessor()
+	 * @generated
+	 */
+	void setSuccessor(Arc value);
+
+	/**
+	 * Returns the value of the '<em><b>Predecessor</b></em>' reference.
+	 * It is bidirectional and its opposite is '{@link petrinet.Arc#getSuccessor_link <em>Successor link</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Predecessor</em>' reference.
+	 * @see #setPredecessor(Arc)
+	 * @see petrinet.PetrinetPackage#getObjet_Predecessor()
+	 * @see petrinet.Arc#getSuccessor_link
+	 * @model opposite="Successor_link"
+	 * @generated
+	 */
+	Arc getPredecessor();
+
+	/**
+	 * Sets the value of the '{@link petrinet.Objet#getPredecessor <em>Predecessor</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Predecessor</em>' reference.
+	 * @see #getPredecessor()
+	 * @generated
+	 */
+	void setPredecessor(Arc value);
+
+} // Objet

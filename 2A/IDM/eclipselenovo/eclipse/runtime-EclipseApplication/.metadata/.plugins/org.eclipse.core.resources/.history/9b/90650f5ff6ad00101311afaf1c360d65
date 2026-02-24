@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simplepdl:Process xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:simplepdl="http://simplepdl" name="developpement">
+  <processElements xsi:type="simplepdl:WorkDefinition" linksToSuccessors="//@processElements.4 //@processElements.5 //@processElements.6 //@processElements.7" name="Conception"/>
+  <processElements xsi:type="simplepdl:WorkDefinition" linksToPredecessors="//@processElements.4 //@processElements.5" name="RedactionDoc"/>
+  <processElements xsi:type="simplepdl:WorkDefinition" linksToPredecessors="//@processElements.6" linksToSuccessors="//@processElements.8 //@processElements.11" name="Programmation"/>
+  <processElements xsi:type="simplepdl:WorkDefinition" linksToPredecessors="//@processElements.7 //@processElements.8" name="RedactionTests"/>
+  <processElements xsi:type="simplepdl:WorkSequence" successor="//@processElements.1" predecessor="//@processElements.0"/>
+  <processElements xsi:type="simplepdl:WorkSequence" linkType="finishToFinish" successor="//@processElements.1" predecessor="//@processElements.0"/>
+  <processElements xsi:type="simplepdl:WorkSequence" linkType="finishToStart" successor="//@processElements.2" predecessor="//@processElements.0"/>
+  <processElements xsi:type="simplepdl:WorkSequence" successor="//@processElements.3" predecessor="//@processElements.0"/>
+  <processElements xsi:type="simplepdl:WorkSequence" linkType="finishToFinish" successor="//@processElements.3" predecessor="//@processElements.2"/>
+  <processElements xsi:type="simplepdl:Guidance" text="Test de guidance pour Sirius" elements="//@processElements.0"/>
+  <processElements xsi:type="simplepdl:WorkDefinition" linksToPredecessors="//@processElements.11" name="efas"/>
+  <processElements xsi:type="simplepdl:WorkSequence" linkType="finishToFinish" successor="//@processElements.10" predecessor="//@processElements.2"/>
+</simplepdl:Process>

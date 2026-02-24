@@ -1,0 +1,49 @@
+DIGEST dce324d55258901038c90c4ab48a5fcc
+Finductionetu
+R15:24 Coq.extraction.Extraction <> <> lib
+sec 67:75 <> Induction
+var 152:152 Induction A
+ind 172:176 <> liste
+constr 189:191 <> Nil
+constr 203:206 <> Cons
+R195:199 inductionetu <> liste ind
+R211:214 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R220:223 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R224:228 inductionetu <> liste ind
+R215:219 inductionetu <> liste ind
+R210:210 inductionetu <> Induction.A var
+var 282:292 Induction append_spec
+R301:304 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R310:313 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R314:318 inductionetu <> liste ind
+R305:309 inductionetu <> liste ind
+R296:300 inductionetu <> liste ind
+ax 374:383 <> append_Nil
+R399:403 inductionetu <> liste ind
+R424:426 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R407:417 inductionetu <> Induction.append_spec var
+R423:423 inductionetu <> l var
+R419:421 inductionetu <> Nil constr
+R427:427 inductionetu <> l var
+ax 484:494 <> append_Cons
+R510:510 inductionetu <> Induction.A var
+R528:532 inductionetu <> liste ind
+R563:565 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R539:549 inductionetu <> Induction.append_spec var
+R562:562 inductionetu <> l var
+R552:555 inductionetu <> Cons constr
+R559:559 inductionetu <> q var
+R557:557 inductionetu <> t var
+R566:569 inductionetu <> Cons constr
+R574:584 inductionetu <> Induction.append_spec var
+R588:588 inductionetu <> l var
+R586:586 inductionetu <> q var
+R571:571 inductionetu <> t var
+prf 601:616 <> append_Nil_right
+R632:636 inductionetu <> liste ind
+R640:640 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R658:661 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R641:651 inductionetu <> Induction.append_spec var
+R655:657 inductionetu <> Nil constr
+R653:653 inductionetu <> l var
+R662:662 inductionetu <> l var

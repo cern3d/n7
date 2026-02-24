@@ -1,0 +1,7 @@
+
+<expression> ::= 
+             PAROUV <expression> PARFER 
+             | <elementaire> 
+             | <expression>  .
+
+<elementaire> ::= [MINUS] NUMBER .

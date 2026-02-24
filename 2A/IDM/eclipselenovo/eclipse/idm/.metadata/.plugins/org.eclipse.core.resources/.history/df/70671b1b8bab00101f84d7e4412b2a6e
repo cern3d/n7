@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="petrinet" nsURI="http://petrinet" nsPrefix="petrinet">
+  <eClassifiers xsi:type="ecore:EClass" name="Transition" eSuperTypes="#//Objet">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="temp_min" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="temp_max" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Place" eSuperTypes="#//Objet">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="token" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PetriNet">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="objet" upperBound="-1"
+        eType="#//Objet" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="arc" upperBound="-1" eType="#//Arc"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Arc">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="token" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Predecessor_link" eType="#//Objet"
+        eOpposite="#//Objet/Successor"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Successor_link" eType="#//Objet"
+        eOpposite="#//Objet/Predecessor"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Objet" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Successor" eType="#//Arc"
+        eOpposite="#//Arc/Predecessor_link"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Predecessor" eType="#//Arc"
+        eOpposite="#//Arc/Successor_link"/>
+  </eClassifiers>
+</ecore:EPackage>

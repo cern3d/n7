@@ -1,0 +1,331 @@
+/**
+ */
+package simplepdl.impl;
+
+import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
+
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
+import org.eclipse.emf.ecore.util.EcoreUtil;
+
+import simplepdl.Resources;
+import simplepdl.RessourceUsage;
+import simplepdl.SimplepdlPackage;
+import simplepdl.WorkDefinition;
+
+/**
+ * <!-- begin-user-doc -->
+ * An implementation of the model object '<em><b>Ressource Usage</b></em>'.
+ * <!-- end-user-doc -->
+ * <p>
+ * The following features are implemented:
+ * </p>
+ * <ul>
+ *   <li>{@link simplepdl.impl.RessourceUsageImpl#getQuantity <em>Quantity</em>}</li>
+ *   <li>{@link simplepdl.impl.RessourceUsageImpl#getWorkdefinition <em>Workdefinition</em>}</li>
+ *   <li>{@link simplepdl.impl.RessourceUsageImpl#getRessource <em>Ressource</em>}</li>
+ * </ul>
+ *
+ * @generated
+ */
+public class RessourceUsageImpl extends MinimalEObjectImpl.Container implements RessourceUsage {
+	/**
+	 * The default value of the '{@link #getQuantity() <em>Quantity</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getQuantity()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final int QUANTITY_EDEFAULT = 0;
+
+	/**
+	 * The cached value of the '{@link #getQuantity() <em>Quantity</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getQuantity()
+	 * @generated
+	 * @ordered
+	 */
+	protected int quantity = QUANTITY_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getRessource() <em>Ressource</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRessource()
+	 * @generated
+	 * @ordered
+	 */
+	protected Resources ressource;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected RessourceUsageImpl() {
+		super();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected EClass eStaticClass() {
+		return SimplepdlPackage.Literals.RESSOURCE_USAGE;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public int getQuantity() {
+		return quantity;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setQuantity(int newQuantity) {
+		int oldQuantity = quantity;
+		quantity = newQuantity;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, SimplepdlPackage.RESSOURCE_USAGE__QUANTITY, oldQuantity, quantity));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public WorkDefinition getWorkdefinition() {
+		if (eContainerFeatureID() != SimplepdlPackage.RESSOURCE_USAGE__WORKDEFINITION) return null;
+		return (WorkDefinition)eInternalContainer();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetWorkdefinition(WorkDefinition newWorkdefinition, NotificationChain msgs) {
+		msgs = eBasicSetContainer((InternalEObject)newWorkdefinition, SimplepdlPackage.RESSOURCE_USAGE__WORKDEFINITION, msgs);
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setWorkdefinition(WorkDefinition newWorkdefinition) {
+		if (newWorkdefinition != eInternalContainer() || (eContainerFeatureID() != SimplepdlPackage.RESSOURCE_USAGE__WORKDEFINITION && newWorkdefinition != null)) {
+			if (EcoreUtil.isAncestor(this, newWorkdefinition))
+				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
+			NotificationChain msgs = null;
+			if (eInternalContainer() != null)
+				msgs = eBasicRemoveFromContainer(msgs);
+			if (newWorkdefinition != null)
+				msgs = ((InternalEObject)newWorkdefinition).eInverseAdd(this, SimplepdlPackage.WORK_DEFINITION__RESSOURCEUSAGE, WorkDefinition.class, msgs);
+			msgs = basicSetWorkdefinition(newWorkdefinition, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, SimplepdlPackage.RESSOURCE_USAGE__WORKDEFINITION, newWorkdefinition, newWorkdefinition));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Resources getRessource() {
+		if (ressource != null && ressource.eIsProxy()) {
+			InternalEObject oldRessource = (InternalEObject)ressource;
+			ressource = (Resources)eResolveProxy(oldRessource);
+			if (ressource != oldRessource) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SimplepdlPackage.RESSOURCE_USAGE__RESSOURCE, oldRessource, ressource));
+			}
+		}
+		return ressource;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Resources basicGetRessource() {
+		return ressource;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setRessource(Resources newRessource) {
+		Resources oldRessource = ressource;
+		ressource = newRessource;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, SimplepdlPackage.RESSOURCE_USAGE__RESSOURCE, oldRessource, ressource));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case SimplepdlPackage.RESSOURCE_USAGE__WORKDEFINITION:
+				if (eInternalContainer() != null)
+					msgs = eBasicRemoveFromContainer(msgs);
+				return basicSetWorkdefinition((WorkDefinition)otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case SimplepdlPackage.RESSOURCE_USAGE__WORKDEFINITION:
+				return basicSetWorkdefinition(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
+		switch (eContainerFeatureID()) {
+			case SimplepdlPackage.RESSOURCE_USAGE__WORKDEFINITION:
+				return eInternalContainer().eInverseRemove(this, SimplepdlPackage.WORK_DEFINITION__RESSOURCEUSAGE, WorkDefinition.class, msgs);
+		}
+		return super.eBasicRemoveFromContainerFeature(msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+		switch (featureID) {
+			case SimplepdlPackage.RESSOURCE_USAGE__QUANTITY:
+				return getQuantity();
+			case SimplepdlPackage.RESSOURCE_USAGE__WORKDEFINITION:
+				return getWorkdefinition();
+			case SimplepdlPackage.RESSOURCE_USAGE__RESSOURCE:
+				if (resolve) return getRessource();
+				return basicGetRessource();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eSet(int featureID, Object newValue) {
+		switch (featureID) {
+			case SimplepdlPackage.RESSOURCE_USAGE__QUANTITY:
+				setQuantity((Integer)newValue);
+				return;
+			case SimplepdlPackage.RESSOURCE_USAGE__WORKDEFINITION:
+				setWorkdefinition((WorkDefinition)newValue);
+				return;
+			case SimplepdlPackage.RESSOURCE_USAGE__RESSOURCE:
+				setRessource((Resources)newValue);
+				return;
+		}
+		super.eSet(featureID, newValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eUnset(int featureID) {
+		switch (featureID) {
+			case SimplepdlPackage.RESSOURCE_USAGE__QUANTITY:
+				setQuantity(QUANTITY_EDEFAULT);
+				return;
+			case SimplepdlPackage.RESSOURCE_USAGE__WORKDEFINITION:
+				setWorkdefinition((WorkDefinition)null);
+				return;
+			case SimplepdlPackage.RESSOURCE_USAGE__RESSOURCE:
+				setRessource((Resources)null);
+				return;
+		}
+		super.eUnset(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case SimplepdlPackage.RESSOURCE_USAGE__QUANTITY:
+				return quantity != QUANTITY_EDEFAULT;
+			case SimplepdlPackage.RESSOURCE_USAGE__WORKDEFINITION:
+				return getWorkdefinition() != null;
+			case SimplepdlPackage.RESSOURCE_USAGE__RESSOURCE:
+				return ressource != null;
+		}
+		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuilder result = new StringBuilder(super.toString());
+		result.append(" (quantity: ");
+		result.append(quantity);
+		result.append(')');
+		return result.toString();
+	}
+
+} //RessourceUsageImpl

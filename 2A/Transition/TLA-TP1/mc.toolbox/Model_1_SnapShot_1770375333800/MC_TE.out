@@ -1,0 +1,42 @@
+@!@!@STARTMSG 2262:0 @!@!@
+TLC2 Version 2.19 of 08 August 2024 (rev: 5a47802)
+@!@!@ENDMSG 2262 @!@!@
+@!@!@STARTMSG 2187:0 @!@!@
+Running breadth-first search Model-Checking with fp 121 and seed 4862670881889600707 with 10 workers on 20 cores with 1163MB heap and 2612MB offheap memory [pid: 2400387] (Linux 6.14.0-37-generic amd64, AdoptOpenJDK 14.0.1 x86_64, OffHeapDiskFPSet, DiskStateQueue).
+@!@!@ENDMSG 2187 @!@!@
+@!@!@STARTMSG 2220:0 @!@!@
+Starting SANY...
+@!@!@ENDMSG 2220 @!@!@
+Parsing file /home/abi7287/2A/Transition/TLA-TP1/mc.toolbox/Model_1/MC.tla
+Parsing file /home/abi7287/2A/Transition/TLA-TP1/mc.toolbox/Model_1/mc.tla
+Parsing file /mnt/n7fs/tla/toolbox-1.7.4/plugins/org.lamport.tlatools_1.0.0.202408081326/tla2sany/StandardModules/TLC.tla
+Parsing file /mnt/n7fs/tla/toolbox-1.7.4/plugins/org.lamport.tlatools_1.0.0.202408081326/tla2sany/StandardModules/Naturals.tla
+Parsing file /mnt/n7fs/tla/toolbox-1.7.4/plugins/org.lamport.tlatools_1.0.0.202408081326/tla2sany/StandardModules/FiniteSets.tla
+Parsing file /mnt/n7fs/tla/toolbox-1.7.4/plugins/org.lamport.tlatools_1.0.0.202408081326/tla2sany/StandardModules/Sequences.tla
+Semantic processing of module Naturals
+Semantic processing of module Sequences
+Semantic processing of module FiniteSets
+Semantic processing of module mc
+Semantic processing of module TLC
+Semantic processing of module MC
+@!@!@STARTMSG 2219:0 @!@!@
+SANY finished.
+@!@!@ENDMSG 2219 @!@!@
+@!@!@STARTMSG 2185:0 @!@!@
+Starting... (2026-02-06 11:55:32)
+@!@!@ENDMSG 2185 @!@!@
+@!@!@STARTMSG 2189:0 @!@!@
+Computing initial states...
+@!@!@ENDMSG 2189 @!@!@
+@!@!@STARTMSG 2107:1 @!@!@
+Invariant pasMiam is violated by the initial state:
+/\ CD = 3
+/\ CG = 0
+/\ R = "D"
+/\ MD = 3
+/\ MG = 0
+
+@!@!@ENDMSG 2107 @!@!@
+@!@!@STARTMSG 2186:0 @!@!@
+Finished in 875ms at (2026-02-06 11:55:32)
+@!@!@ENDMSG 2186 @!@!@

@@ -1,0 +1,21 @@
+M -> machine ident { SC } | machine endrule
+SC -> Λ | } endrule
+SC -> C SC | event from region endrule
+C -> event ident | event endrule
+C -> from NQ to NQ on ident | from endrule
+NQ -> ident SQ | ident to on endrule
+SQ -> Λ | . endrule
+SQ -> . ident SQ | . endrule
+C -> R | region endrule
+ R -> region ident { E SE } | region endrule
+ SE -> Λ | } endrule
+ SE -> E SE | state endrule
+ E -> state ident ES EE EC | state endrule
+ ES -> Λ | ends {} state endrule
+ ES -> starts | starts endrule
+ EE -> Λ | {} state endrule
+ EE -> ends | ends endrule
+ EC -> Λ | } state endrule
+ EC -> { R SR } | { endrule    
+ SR -> Λ | } endrule
+ SR -> R SR | region endrule

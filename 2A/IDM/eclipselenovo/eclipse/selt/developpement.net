@@ -1,0 +1,27 @@
+net developpement
+pl pConception_ready (1)
+pl pConception_running (0)
+pl pConception_started (0)
+pl pConception_finished (0)
+pl pRedactionDoc_ready (1)
+pl pRedactionDoc_running (0)
+pl pRedactionDoc_started (0)
+pl pRedactionDoc_finished (0)
+pl pProgrammation_ready (1)
+pl pProgrammation_running (0)
+pl pProgrammation_started (0)
+pl pProgrammation_finished (0)
+pl pRedactionTests_ready (1)
+pl pRedactionTests_running (0)
+pl pRedactionTests_started (0)
+pl pRedactionTests_finished (0)
+pl ppeep (10)
+tr tConception_start pConception_ready -> pConception_running pConception_started
+tr tConception_finish pConception_running -> pConception_finished
+tr tRedactionDoc_start pRedactionDoc_ready pConception_started ppeep -> pRedactionDoc_running pRedactionDoc_started
+tr tRedactionDoc_finish pRedactionDoc_running pConception_finished -> pRedactionDoc_finished ppeep
+tr tProgrammation_start pProgrammation_ready pConception_finished -> pProgrammation_running pProgrammation_started
+tr tProgrammation_finish pProgrammation_running -> pProgrammation_finished
+tr tRedactionTests_start pRedactionTests_ready pConception_started -> pRedactionTests_running pRedactionTests_started
+tr tRedactionTests_finish pRedactionTests_running pProgrammation_finished -> pRedactionTests_finished
+

@@ -1,0 +1,36 @@
+/**
+ */
+package Petrinet;
+
+import org.eclipse.emf.common.util.EList;
+
+/**
+ * <!-- begin-user-doc -->
+ * A representation of the model object '<em><b>Place</b></em>'.
+ * <!-- end-user-doc -->
+ *
+ * <p>
+ * The following features are supported:
+ * </p>
+ * <ul>
+ *   <li>{@link Petrinet.Place#getToken <em>Token</em>}</li>
+ * </ul>
+ *
+ * @see Petrinet.PetrinetPackage#getPlace()
+ * @model
+ * @generated
+ */
+public interface Place extends NodeDefinition {
+	/**
+	 * Returns the value of the '<em><b>Token</b></em>' containment reference list.
+	 * The list contents are of type {@link Petrinet.Token}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Token</em>' containment reference list.
+	 * @see Petrinet.PetrinetPackage#getPlace_Token()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<Token> getToken();
+
+} // Place

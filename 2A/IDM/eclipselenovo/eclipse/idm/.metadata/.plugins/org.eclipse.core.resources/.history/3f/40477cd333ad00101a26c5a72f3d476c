@@ -1,0 +1,8 @@
+	net netpe
+   	pl p1 (5)
+   	pl p2 (0)
+   	pl p3 (0)
+    		tr t1     	0
+    		   	0]
+    		 2
+    		  (petrinet.impl.PlaceImpl@54227100 (name: 2) (token: 0))

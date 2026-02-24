@@ -1,0 +1,13 @@
+% Fonction parametres_correlation (exercice_1.m)
+
+function [r,a,b] = parametres_correlation(Vd,Vg)
+    l = lengh(Vd);
+    col1 = ones( l );
+    moyd = sum(Vd)/l;
+    moyg = sum(Vg)/l;
+    tooletd = Vd - moyd*col1(1,:);
+    tooletg = Vg - moyg*col1(1,:);
+    ecarttyped = sqrt(tooletd.*tooletd/l);
+    ecarttypeg = sqrt(tooletg.*tooletg/l);
+    cosigma = tool
+end

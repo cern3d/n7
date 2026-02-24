@@ -1,0 +1,71 @@
+V "GNAT Lib v2021"
+M P W=b
+A -gnatwa
+P ZX
+
+RN
+RV NO_IO
+RV NO_DEFAULT_INITIALIZATION
+
+U test_arbre_huffman%b	test_arbre_huffman.adb	da0b03fc NE OO SU
+W ada%s			ada.ads			ada.ali
+Z ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W arbre_huffman%s	arbre_huffman.adb	arbre_huffman.ali
+
+D ada.ads		20210520051130 76789da1 ada%s
+D a-except.ads		20210520051127 946f3014 ada.exceptions%s
+D a-ioexce.ads		20210520051127 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20210520051128 119b8fb3 ada.streams%s
+D a-string.ads		20210520051128 90ac6797 ada.strings%s
+D a-sttebu.ads		20210520051128 18209c64 ada.strings.text_buffers%s
+D a-stuten.ads		20210520051128 808c40ad ada.strings.utf_encoding%s
+D a-tags.ads		20210520051129 9eaa38c6 ada.tags%s
+D a-textio.ads		20210520051129 aef4d56d ada.text_io%s
+D a-unccon.ads		20210520051129 0e9b276f ada.unchecked_conversion%s
+D arbre_huffman.ads	20250115030310 f437205e arbre_huffman%s
+D interfac.ads		20210520051131 edec285f interfaces%s
+D i-cstrea.ads		20210520051131 e53d8b8e interfaces.c_streams%s
+D system.ads		20210520051134 a2da961d system%s
+D s-crtl.ads		20210520051131 0ebbdb71 system.crtl%s
+D s-exctab.ads		20210520051131 54135002 system.exception_table%s
+D s-ficobl.ads		20210520051131 078245e4 system.file_control_block%s
+D s-parame.ads		20210520051133 4752c4cb system.parameters%s
+D s-putima.ads		20210520051133 4e095881 system.put_images%s
+D s-secsta.ads		20210520051133 9b3ab94b system.secondary_stack%s
+D s-soflin.ads		20210520051133 a7318a92 system.soft_links%s
+D s-stache.ads		20210520051133 a37c21ec system.stack_checking%s
+D s-stalib.ads		20210520051133 472fbca8 system.standard_library%s
+D s-stoele.ads		20210520051133 2dc34a04 system.storage_elements%s
+D s-stoele.adb		20210520051133 ed88f8fb system.storage_elements%b
+D s-traent.ads		20210520051133 26a8d361 system.traceback_entries%s
+D s-unstyp.ads		20210520051133 2b077493 system.unsigned_types%s
+D s-wchcon.ads		20210520051134 1b7d22d2 system.wch_con%s
+D test_arbre_huffman.adb  20250115031039 80c8f6cf test_arbre_huffman%b
+D unchconv.ads		20210520051134 ca2f9e18 unchecked_conversion%s
+G a e
+G c Z b b [test_arbre_huffman standard 4 11 none]
+G r c none [test_arbre_huffman standard 4 11 none] [creer_noeud arbre_huffman 7 13 none]
+G r c none [test_arbre_huffman standard 4 11 none] [affichage_arbre arbre_huffman 22 14 none]
+G r c none [test_arbre_huffman standard 4 11 none] [detruire arbre_huffman 18 14 none]
+X 1 ada.ads
+16K9*Ada 20e8 29|1r6 1r25
+X 9 a-textio.ads
+58K13*Text_IO 725e16 29|1w10 1r29
+506U14*Put_Line 29|11s4 18s4 22s4 27s7 29s7
+X 11 arbre_huffman.ads
+1K9*Arbre_Huffman 34e18 29|2w6 2r25
+4P9*Noeud_Ptr(3R9) 29|6r12 7r14 8r13
+7V13*Creer_Noeud{4P9} 29|13s15 14s14 15s14
+8e7 Symbole{character} 29|13r28 14r27
+8i34 Frequence{natural} 29|13r45 14r43
+9p7 Gauche{4P9} 29|15r54
+9p15 Droit{4P9} 29|15r37
+18U14*Detruire 29|23s4
+22U14*Affichage_Arbre 29|19s4
+X 29 test_arbre_huffman.adb
+4U11*Test_Arbre_Huffman 4b11 32l5 32t23
+6p4 Arbre{11|4P9} 15m4 19r21 23m14 23r14 26r7
+7p4 Gauchee{11|4P9} 13m4 15r64
+8p4 Droitt{11|4P9} 14m4 15r46
+

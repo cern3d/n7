@@ -1,0 +1,10 @@
+process pp {
+	wd prog {
+		starts if foo started
+	}
+	wd concept {
+		starts if prog started
+		finishes if prog started
+	}
+	wd foo {}
+}

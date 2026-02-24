@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="ASCII"?>
+<petrinet:Petrinet xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:petrinet="http://petrinet" name="ExempleProcess1">
+  <arcs linktopredecessor="//@nodes.0" linktosuccessor="//@nodes.4"/>
+  <arcs linktosuccessor="//@nodes.1"/>
+  <arcs linktopredecessor="//@nodes.4" linktosuccessor="//@nodes.2"/>
+  <arcs linktopredecessor="//@nodes.2" linktosuccessor="//@nodes.5"/>
+  <arcs linktopredecessor="//@nodes.5" linktosuccessor="//@nodes.3"/>
+  <arcs linktopredecessor="//@nodes.6" linktosuccessor="//@nodes.10"/>
+  <arcs linktosuccessor="//@nodes.7"/>
+  <arcs linktopredecessor="//@nodes.10" linktosuccessor="//@nodes.8"/>
+  <arcs linktopredecessor="//@nodes.8" linktosuccessor="//@nodes.11"/>
+  <arcs linktopredecessor="//@nodes.11" linktosuccessor="//@nodes.9"/>
+  <arcs linktopredecessor="//@nodes.12" linktosuccessor="//@nodes.16"/>
+  <arcs linktosuccessor="//@nodes.13"/>
+  <arcs linktopredecessor="//@nodes.16" linktosuccessor="//@nodes.14"/>
+  <arcs linktopredecessor="//@nodes.14" linktosuccessor="//@nodes.17"/>
+  <arcs linktopredecessor="//@nodes.17" linktosuccessor="//@nodes.15"/>
+  <arcs linktopredecessor="//@nodes.18" linktosuccessor="//@nodes.22"/>
+  <arcs linktosuccessor="//@nodes.19"/>
+  <arcs linktopredecessor="//@nodes.22" linktosuccessor="//@nodes.20"/>
+  <arcs linktopredecessor="//@nodes.20" linktosuccessor="//@nodes.23"/>
+  <arcs linktopredecessor="//@nodes.23" linktosuccessor="//@nodes.21"/>
+  <nodes xsi:type="petrinet:Place" predecessor="//@arcs.0" name="A1_ready"/>
+  <nodes xsi:type="petrinet:Place" successor="//@arcs.1" name="A1_started"/>
+  <nodes xsi:type="petrinet:Place" successor="//@arcs.2" predecessor="//@arcs.3" name="A1_running"/>
+  <nodes xsi:type="petrinet:Place" successor="//@arcs.4" name="A1_finished"/>
+  <nodes xsi:type="petrinet:Transition" successor="//@arcs.0" predecessor="//@arcs.2" name="A1_start"/>
+  <nodes xsi:type="petrinet:Transition" successor="//@arcs.3" predecessor="//@arcs.4" name="A1_finish"/>
+  <nodes xsi:type="petrinet:Place" predecessor="//@arcs.5" name="A1_ready"/>
+  <nodes xsi:type="petrinet:Place" successor="//@arcs.6" name="A1_started"/>
+  <nodes xsi:type="petrinet:Place" successor="//@arcs.7" predecessor="//@arcs.8" name="A1_running"/>
+  <nodes xsi:type="petrinet:Place" successor="//@arcs.9" name="A1_finished"/>
+  <nodes xsi:type="petrinet:Transition" successor="//@arcs.5" predecessor="//@arcs.7" name="A1_start"/>
+  <nodes xsi:type="petrinet:Transition" successor="//@arcs.8" predecessor="//@arcs.9" name="A1_finish"/>
+  <nodes xsi:type="petrinet:Place" predecessor="//@arcs.10" name="A 2_ready"/>
+  <nodes xsi:type="petrinet:Place" successor="//@arcs.11" name="A 2_started"/>
+  <nodes xsi:type="petrinet:Place" successor="//@arcs.12" predecessor="//@arcs.13" name="A 2_running"/>
+  <nodes xsi:type="petrinet:Place" successor="//@arcs.14" name="A 2_finished"/>
+  <nodes xsi:type="petrinet:Transition" successor="//@arcs.10" predecessor="//@arcs.12" name="A 2_start"/>
+  <nodes xsi:type="petrinet:Transition" successor="//@arcs.13" predecessor="//@arcs.14" name="A 2_finish"/>
+  <nodes xsi:type="petrinet:Place" predecessor="//@arcs.15" name="A1_ready"/>
+  <nodes xsi:type="petrinet:Place" successor="//@arcs.16" name="A1_started"/>
+  <nodes xsi:type="petrinet:Place" successor="//@arcs.17" predecessor="//@arcs.18" name="A1_running"/>
+  <nodes xsi:type="petrinet:Place" successor="//@arcs.19" name="A1_finished"/>
+  <nodes xsi:type="petrinet:Transition" successor="//@arcs.15" predecessor="//@arcs.17" name="A1_start"/>
+  <nodes xsi:type="petrinet:Transition" successor="//@arcs.18" predecessor="//@arcs.19" name="A1_finish"/>
+</petrinet:Petrinet>

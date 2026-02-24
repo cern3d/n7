@@ -1,0 +1,372 @@
+/**
+ */
+package Petrinet.impl;
+
+import Petrinet.NodeDefinition;
+import Petrinet.NodeSequence;
+import Petrinet.PetrinetPackage;
+
+import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
+
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
+/**
+ * <!-- begin-user-doc -->
+ * An implementation of the model object '<em><b>Node Definition</b></em>'.
+ * <!-- end-user-doc -->
+ * <p>
+ * The following features are implemented:
+ * </p>
+ * <ul>
+ *   <li>{@link Petrinet.impl.NodeDefinitionImpl#getName <em>Name</em>}</li>
+ *   <li>{@link Petrinet.impl.NodeDefinitionImpl#getLinkstoSuccessor <em>Linksto Successor</em>}</li>
+ *   <li>{@link Petrinet.impl.NodeDefinitionImpl#getLinkstoPredecessor <em>Linksto Predecessor</em>}</li>
+ * </ul>
+ *
+ * @generated
+ */
+public class NodeDefinitionImpl extends MinimalEObjectImpl.Container implements NodeDefinition {
+	/**
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NAME_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected String name = NAME_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getLinkstoSuccessor() <em>Linksto Successor</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLinkstoSuccessor()
+	 * @generated
+	 * @ordered
+	 */
+	protected NodeSequence linkstoSuccessor;
+
+	/**
+	 * The cached value of the '{@link #getLinkstoPredecessor() <em>Linksto Predecessor</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLinkstoPredecessor()
+	 * @generated
+	 * @ordered
+	 */
+	protected NodeSequence linkstoPredecessor;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected NodeDefinitionImpl() {
+		super();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected EClass eStaticClass() {
+		return PetrinetPackage.Literals.NODE_DEFINITION;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getName() {
+		return name;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setName(String newName) {
+		String oldName = name;
+		name = newName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, PetrinetPackage.NODE_DEFINITION__NAME, oldName, name));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NodeSequence getLinkstoSuccessor() {
+		if (linkstoSuccessor != null && linkstoSuccessor.eIsProxy()) {
+			InternalEObject oldLinkstoSuccessor = (InternalEObject)linkstoSuccessor;
+			linkstoSuccessor = (NodeSequence)eResolveProxy(oldLinkstoSuccessor);
+			if (linkstoSuccessor != oldLinkstoSuccessor) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, PetrinetPackage.NODE_DEFINITION__LINKSTO_SUCCESSOR, oldLinkstoSuccessor, linkstoSuccessor));
+			}
+		}
+		return linkstoSuccessor;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NodeSequence basicGetLinkstoSuccessor() {
+		return linkstoSuccessor;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetLinkstoSuccessor(NodeSequence newLinkstoSuccessor, NotificationChain msgs) {
+		NodeSequence oldLinkstoSuccessor = linkstoSuccessor;
+		linkstoSuccessor = newLinkstoSuccessor;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, PetrinetPackage.NODE_DEFINITION__LINKSTO_SUCCESSOR, oldLinkstoSuccessor, newLinkstoSuccessor);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setLinkstoSuccessor(NodeSequence newLinkstoSuccessor) {
+		if (newLinkstoSuccessor != linkstoSuccessor) {
+			NotificationChain msgs = null;
+			if (linkstoSuccessor != null)
+				msgs = ((InternalEObject)linkstoSuccessor).eInverseRemove(this, PetrinetPackage.NODE_SEQUENCE__SOURCE, NodeSequence.class, msgs);
+			if (newLinkstoSuccessor != null)
+				msgs = ((InternalEObject)newLinkstoSuccessor).eInverseAdd(this, PetrinetPackage.NODE_SEQUENCE__SOURCE, NodeSequence.class, msgs);
+			msgs = basicSetLinkstoSuccessor(newLinkstoSuccessor, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, PetrinetPackage.NODE_DEFINITION__LINKSTO_SUCCESSOR, newLinkstoSuccessor, newLinkstoSuccessor));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NodeSequence getLinkstoPredecessor() {
+		if (linkstoPredecessor != null && linkstoPredecessor.eIsProxy()) {
+			InternalEObject oldLinkstoPredecessor = (InternalEObject)linkstoPredecessor;
+			linkstoPredecessor = (NodeSequence)eResolveProxy(oldLinkstoPredecessor);
+			if (linkstoPredecessor != oldLinkstoPredecessor) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, PetrinetPackage.NODE_DEFINITION__LINKSTO_PREDECESSOR, oldLinkstoPredecessor, linkstoPredecessor));
+			}
+		}
+		return linkstoPredecessor;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NodeSequence basicGetLinkstoPredecessor() {
+		return linkstoPredecessor;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetLinkstoPredecessor(NodeSequence newLinkstoPredecessor, NotificationChain msgs) {
+		NodeSequence oldLinkstoPredecessor = linkstoPredecessor;
+		linkstoPredecessor = newLinkstoPredecessor;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, PetrinetPackage.NODE_DEFINITION__LINKSTO_PREDECESSOR, oldLinkstoPredecessor, newLinkstoPredecessor);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setLinkstoPredecessor(NodeSequence newLinkstoPredecessor) {
+		if (newLinkstoPredecessor != linkstoPredecessor) {
+			NotificationChain msgs = null;
+			if (linkstoPredecessor != null)
+				msgs = ((InternalEObject)linkstoPredecessor).eInverseRemove(this, PetrinetPackage.NODE_SEQUENCE__PREDECESSOR, NodeSequence.class, msgs);
+			if (newLinkstoPredecessor != null)
+				msgs = ((InternalEObject)newLinkstoPredecessor).eInverseAdd(this, PetrinetPackage.NODE_SEQUENCE__PREDECESSOR, NodeSequence.class, msgs);
+			msgs = basicSetLinkstoPredecessor(newLinkstoPredecessor, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, PetrinetPackage.NODE_DEFINITION__LINKSTO_PREDECESSOR, newLinkstoPredecessor, newLinkstoPredecessor));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case PetrinetPackage.NODE_DEFINITION__LINKSTO_SUCCESSOR:
+				if (linkstoSuccessor != null)
+					msgs = ((InternalEObject)linkstoSuccessor).eInverseRemove(this, PetrinetPackage.NODE_SEQUENCE__SOURCE, NodeSequence.class, msgs);
+				return basicSetLinkstoSuccessor((NodeSequence)otherEnd, msgs);
+			case PetrinetPackage.NODE_DEFINITION__LINKSTO_PREDECESSOR:
+				if (linkstoPredecessor != null)
+					msgs = ((InternalEObject)linkstoPredecessor).eInverseRemove(this, PetrinetPackage.NODE_SEQUENCE__PREDECESSOR, NodeSequence.class, msgs);
+				return basicSetLinkstoPredecessor((NodeSequence)otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case PetrinetPackage.NODE_DEFINITION__LINKSTO_SUCCESSOR:
+				return basicSetLinkstoSuccessor(null, msgs);
+			case PetrinetPackage.NODE_DEFINITION__LINKSTO_PREDECESSOR:
+				return basicSetLinkstoPredecessor(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+		switch (featureID) {
+			case PetrinetPackage.NODE_DEFINITION__NAME:
+				return getName();
+			case PetrinetPackage.NODE_DEFINITION__LINKSTO_SUCCESSOR:
+				if (resolve) return getLinkstoSuccessor();
+				return basicGetLinkstoSuccessor();
+			case PetrinetPackage.NODE_DEFINITION__LINKSTO_PREDECESSOR:
+				if (resolve) return getLinkstoPredecessor();
+				return basicGetLinkstoPredecessor();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eSet(int featureID, Object newValue) {
+		switch (featureID) {
+			case PetrinetPackage.NODE_DEFINITION__NAME:
+				setName((String)newValue);
+				return;
+			case PetrinetPackage.NODE_DEFINITION__LINKSTO_SUCCESSOR:
+				setLinkstoSuccessor((NodeSequence)newValue);
+				return;
+			case PetrinetPackage.NODE_DEFINITION__LINKSTO_PREDECESSOR:
+				setLinkstoPredecessor((NodeSequence)newValue);
+				return;
+		}
+		super.eSet(featureID, newValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eUnset(int featureID) {
+		switch (featureID) {
+			case PetrinetPackage.NODE_DEFINITION__NAME:
+				setName(NAME_EDEFAULT);
+				return;
+			case PetrinetPackage.NODE_DEFINITION__LINKSTO_SUCCESSOR:
+				setLinkstoSuccessor((NodeSequence)null);
+				return;
+			case PetrinetPackage.NODE_DEFINITION__LINKSTO_PREDECESSOR:
+				setLinkstoPredecessor((NodeSequence)null);
+				return;
+		}
+		super.eUnset(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case PetrinetPackage.NODE_DEFINITION__NAME:
+				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+			case PetrinetPackage.NODE_DEFINITION__LINKSTO_SUCCESSOR:
+				return linkstoSuccessor != null;
+			case PetrinetPackage.NODE_DEFINITION__LINKSTO_PREDECESSOR:
+				return linkstoPredecessor != null;
+		}
+		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuilder result = new StringBuilder(super.toString());
+		result.append(" (name: ");
+		result.append(name);
+		result.append(')');
+		return result.toString();
+	}
+
+} //NodeDefinitionImpl

@@ -1,0 +1,168 @@
+package validation;
+
+import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.resource.Resource;
+
+import petrinet.Arc;
+import petrinet.Objet;
+import petrinet.PetriNet;
+import petrinet.Place;
+import petrinet.Transition;
+import petrinet.util.PetrinetSwitch;
+
+import validation.ValidationResult;
+
+public class PetriNetValidator extends PetrinetSwitch<Boolean>  {
+	
+	/**
+	 * Expression régulière qui correspond à un identifiant bien formé.
+	 */
+	private static final String IDENT_REGEX = "^[A-Za-z_][A-Za-z0-9_]*$";
+	
+	/**
+	 * Résultat de la validation (état interne réinitialisé à chaque nouvelle validation).
+	 */
+	private ValidationResult result = null;
+	
+	/**
+	 * Lancer la validation et compiler les résultats dans un ValidationResult.
+	 * Cette méthode se charge de créer un résultat de validation vide puis de
+	 *  visiter les process présents dans la ressource.
+	 * @param resource resource à valider
+	 * @return résultat de validation
+	 */
+	
+
+	public PetriNetValidator() {
+		// TODO Auto-generated constructor stub
+		
+	}
+	
+	public ValidationResult validate(Resource resource) {
+		this.result = new ValidationResult();
+		
+		for (EObject object : resource.getContents()) {
+			this.doSwitch(object);
+		}
+		
+		return this.result;
+	}
+	public Boolean casePetrinet(petrinet.PetriNet object) {
+		// Contraintes sur process
+		this.result.recordIfFailed(
+				object.getName() != null && object.getName().matches(IDENT_REGEX), 
+				object, 
+				"Le nom du petrinet ne respecte pas les conventions Java");
+		
+		for (Objet pe : object.getObjet()) {
+			this.doSwitch(pe);
+		}
+		for (Arc pe : object.getArc()) {
+			this.doSwitch(pe);
+		}
+		
+		result.recordIfFailed(
+		        object.getObjet().stream()
+		            .map(Objet::getName)
+		            .distinct()
+		            .count() == object.getObjet().size(),
+		        object,
+		        "Les noms des nœuds doivent être uniques dans le réseau."
+		    );
+		    return null;
+		
+		
+		
+		
+	}
+	
+	public Boolean caseNode(Objet object) {
+		// Contraintes sur process
+		this.result.recordIfFailed(
+				object.getName() != null && object.getName().matches(IDENT_REGEX), 
+				object, 
+				"Le nom du noeud ne respecte pas les conventions Java");
+		return null;
+	}
+	
+	
+	
+	public Boolean casePlace(petrinet.Place object) {
+		// Contraintes sur process
+		
+		
+		result.recordIfFailed(
+		        object.getToken() >= 0,
+		        object,
+		        "Une place ne peut pas contenir un nombre négatif de jetons."
+		    );
+		    return null;
+		
+		
+		
+		
+		
+	
+	}
+	
+	public Boolean caseTransition(petrinet.Transition object) {
+		// Contraintes sur process
+		this.result.recordIfFailed(
+				object.getTemp_max() >=object.getTemp_min() , 
+				object, 
+				"le temps minimal doit etre plus grand que le temps maximal");
+		
+
+		return null;
+	}
+	
+	
+		
+		
+	public Boolean caseArc(petrinet.Arc object) {
+			// Contraintes sur process
+				result.recordIfFailed(
+						object.getToken() > 0,
+						object,
+						"Le poids de l'arc doit être strictement positif."
+					);
+			
+				result.recordIfFailed(
+					    (object.getPredecessor_link() instanceof Place && object.getPredecessor_link() instanceof Transition)
+					    || (object.getSuccessor_link() instanceof Transition && object.getSuccessor_link() instanceof Place),
+					    object,
+					    "Un arc doit relier une place et une transition (et non deux éléments du même type)."
+					);
+				result.recordIfFailed(
+					    object.getPredecessor_link().eContainer() == object.getSuccessor_link().eContainer(),
+					    object,
+					    "L’arc relie des nœuds appartenant à des réseaux différents.");
+			
+			
+			return null;
+		}	
+		
+		
+		
+	
+	
+	/**
+	 * Cas par défaut, lorsque l'objet visité ne correspond pas à un des autres cas.
+	 * Cette méthode est aussi appelée lorsqu'une méthode renvoie null (comme une sorte de
+	 * fallback).
+	 * On pourrait implémenter le switch différemment, en ne renvoyant null dans les autres
+	 * méthodes que si la contrainte ne sert à rien, et se servir de cette méthode pour
+	 * identifier les éléments étrangers (qui de toute façon ne doivent pas exister).
+	 * C'est aussi la méthode appelée si on ne redéfini pas un des caseXXX.
+	 * @param object objet visité
+	 * @return résultat, null ici
+	 */
+	@Override
+	public Boolean defaultCase(EObject object) {
+		return null;
+	}
+	
+	
+	
+
+}

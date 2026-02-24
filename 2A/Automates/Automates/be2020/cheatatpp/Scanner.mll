@@ -1,0 +1,48 @@
+{
+
+(* Partie recopiée dans le fichier CaML généré. *)
+(* Ouverture de modules exploités dans les actions *)
+(* Déclarations de types, de constantes, de fonctions, d'exceptions exploités dans les actions *)
+
+  open Tokens
+  exception Printf
+
+}
+
+(* Déclaration d'expressions régulières exploitées par la suite *)
+let chiffre = ['0' - '9']
+let minuscule = ['a' - 'z']
+let majuscule = ['A' - 'Z']
+let alphabet = minuscule | majuscule
+let alphanum = alphabet | chiffre | '_'
+let commentaire =
+  (* Commentaire fin de ligne *)
+  "#" [^'\n']*
+
+rule scanner = parse
+  | ['\n' '\t' ' ']+					{ (scanner lexbuf) }
+  | commentaire						{ (scanner lexbuf) }
+  | majuscule+ as texte    {(UL_NOM texte)::(scanner lexbuf) }
+  | "->"                    {UL_FLECHE::(scanner lexbuf)}
+  | "Λ"                    {UL_LAMBDA::(scanner lexbuf)}
+  | "endrule"           {UL_ENDRULE::(scanner lexbuf)}
+  | "machine"						{ UL_MACHINE::(scanner lexbuf) }
+  | "event"           { UL_EVENT::(scanner lexbuf) }
+  | "region"           { UL_REGION::(scanner lexbuf) }
+  | "state"           { UL_STATE ::(scanner lexbuf) }
+  | "starts"           { UL_STARTS ::(scanner lexbuf) }
+  | "ends"           { UL_ENDS::(scanner lexbuf) }
+  | "on"           { UL_ON::(scanner lexbuf) }
+  | "to"           { UL_TO::(scanner lexbuf) }
+  | "from"           { UL_FROM::(scanner lexbuf) }
+  | minuscule alphabet* as texte    {(UL_IDENT texte)::(scanner lexbuf) }
+  | "."							{ UL_PT::(scanner lexbuf) }
+  | "{"							{ UL_ACCOUV::(scanner lexbuf) }
+  | "}"							{ UL_ACCFER::(scanner lexbuf) }
+  | "|"                         { UL_BAR::(scanner lexbuf)}
+  | eof							{ [UL_FIN] }
+  | _ as texte				 		{ (print_string "Erreur lexicale : ");(print_char texte);(print_newline ()); (UL_ERREUR::(scanner lexbuf)) }
+
+{
+
+}

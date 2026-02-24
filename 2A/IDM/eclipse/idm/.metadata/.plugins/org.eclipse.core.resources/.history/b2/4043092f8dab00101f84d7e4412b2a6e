@@ -1,0 +1,290 @@
+/**
+ */
+package petrinet.impl;
+
+import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import petrinet.PetrinetPackage;
+import petrinet.Transition;
+
+/**
+ * <!-- begin-user-doc -->
+ * An implementation of the model object '<em><b>Transition</b></em>'.
+ * <!-- end-user-doc -->
+ * <p>
+ * The following features are implemented:
+ * </p>
+ * <ul>
+ *   <li>{@link petrinet.impl.TransitionImpl#getTemp_min <em>Temp min</em>}</li>
+ *   <li>{@link petrinet.impl.TransitionImpl#getTemp_max <em>Temp max</em>}</li>
+ * </ul>
+ *
+ * @generated
+ */
+public class TransitionImpl extends ObjetImpl implements Transition {
+	/**
+	 * The default value of the '{@link #getTemp_min() <em>Temp min</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTemp_min()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final int TEMP_MIN_EDEFAULT = 0;
+
+	/**
+	 * The cached value of the '{@link #getTemp_min() <em>Temp min</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTemp_min()
+	 * @generated
+	 * @ordered
+	 */
+	protected int temp_min = TEMP_MIN_EDEFAULT;
+
+	/**
+	 * This is true if the Temp min attribute has been set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean temp_minESet;
+
+	/**
+	 * The default value of the '{@link #getTemp_max() <em>Temp max</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTemp_max()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final int TEMP_MAX_EDEFAULT = 0;
+
+	/**
+	 * The cached value of the '{@link #getTemp_max() <em>Temp max</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTemp_max()
+	 * @generated
+	 * @ordered
+	 */
+	protected int temp_max = TEMP_MAX_EDEFAULT;
+
+	/**
+	 * This is true if the Temp max attribute has been set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean temp_maxESet;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected TransitionImpl() {
+		super();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected EClass eStaticClass() {
+		return PetrinetPackage.Literals.TRANSITION;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public int getTemp_min() {
+		return temp_min;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setTemp_min(int newTemp_min) {
+		int oldTemp_min = temp_min;
+		temp_min = newTemp_min;
+		boolean oldTemp_minESet = temp_minESet;
+		temp_minESet = true;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, PetrinetPackage.TRANSITION__TEMP_MIN, oldTemp_min, temp_min, !oldTemp_minESet));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void unsetTemp_min() {
+		int oldTemp_min = temp_min;
+		boolean oldTemp_minESet = temp_minESet;
+		temp_min = TEMP_MIN_EDEFAULT;
+		temp_minESet = false;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.UNSET, PetrinetPackage.TRANSITION__TEMP_MIN, oldTemp_min, TEMP_MIN_EDEFAULT, oldTemp_minESet));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean isSetTemp_min() {
+		return temp_minESet;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public int getTemp_max() {
+		return temp_max;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setTemp_max(int newTemp_max) {
+		int oldTemp_max = temp_max;
+		temp_max = newTemp_max;
+		boolean oldTemp_maxESet = temp_maxESet;
+		temp_maxESet = true;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, PetrinetPackage.TRANSITION__TEMP_MAX, oldTemp_max, temp_max, !oldTemp_maxESet));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void unsetTemp_max() {
+		int oldTemp_max = temp_max;
+		boolean oldTemp_maxESet = temp_maxESet;
+		temp_max = TEMP_MAX_EDEFAULT;
+		temp_maxESet = false;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.UNSET, PetrinetPackage.TRANSITION__TEMP_MAX, oldTemp_max, TEMP_MAX_EDEFAULT, oldTemp_maxESet));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean isSetTemp_max() {
+		return temp_maxESet;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+		switch (featureID) {
+			case PetrinetPackage.TRANSITION__TEMP_MIN:
+				return getTemp_min();
+			case PetrinetPackage.TRANSITION__TEMP_MAX:
+				return getTemp_max();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public void eSet(int featureID, Object newValue) {
+		switch (featureID) {
+			case PetrinetPackage.TRANSITION__TEMP_MIN:
+				setTemp_min((Integer)newValue);
+				return;
+			case PetrinetPackage.TRANSITION__TEMP_MAX:
+				setTemp_max((Integer)newValue);
+				return;
+		}
+		super.eSet(featureID, newValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eUnset(int featureID) {
+		switch (featureID) {
+			case PetrinetPackage.TRANSITION__TEMP_MIN:
+				unsetTemp_min();
+				return;
+			case PetrinetPackage.TRANSITION__TEMP_MAX:
+				unsetTemp_max();
+				return;
+		}
+		super.eUnset(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case PetrinetPackage.TRANSITION__TEMP_MIN:
+				return isSetTemp_min();
+			case PetrinetPackage.TRANSITION__TEMP_MAX:
+				return isSetTemp_max();
+		}
+		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuilder result = new StringBuilder(super.toString());
+		result.append(" (temp_min: ");
+		if (temp_minESet) result.append(temp_min); else result.append("<unset>");
+		result.append(", temp_max: ");
+		if (temp_maxESet) result.append(temp_max); else result.append("<unset>");
+		result.append(')');
+		return result.toString();
+	}
+
+} //TransitionImpl

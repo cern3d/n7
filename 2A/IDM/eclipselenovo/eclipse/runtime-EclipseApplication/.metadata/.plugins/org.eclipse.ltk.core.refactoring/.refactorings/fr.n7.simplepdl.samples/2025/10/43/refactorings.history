@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move &apos;extension.xmi&apos; to &apos;fr.n7.simplepdl.samples&apos;" description="Move &apos;extension.xmi&apos; to &apos;fr.n7.simplepdl.samples&apos;" destination="/fr.n7.simplepdl.samples" element1="/fr.n7.simplepdl.design/extension.xmi" flags="7" id="org.eclipse.ltk.core.refactoring.move.resources" resources="1" stamp="1760892393466" updateReferences="true"/>
+</session>
