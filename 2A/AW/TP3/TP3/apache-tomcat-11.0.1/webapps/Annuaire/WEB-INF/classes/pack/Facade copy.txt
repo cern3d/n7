@@ -1,0 +1,39 @@
+package pack;
+
+import java.util.*;
+
+public class Facade {
+
+    private Map<Integer, Personne> personnes = new HashMap<>();
+    private Map<Integer, Adresse> adresses = new HashMap<>();
+
+    private int personneIdCounter = 1;
+    private int adresseIdCounter = 1;
+
+    public void ajoutPersonne(String nom, String prenom) {
+        Personne p = new Personne(personneIdCounter++, nom, prenom);
+        personnes.put(p.getId(), p);
+    }
+
+    public void ajoutAdresse(String rue, String ville) {
+        Adresse a = new Adresse(adresseIdCounter++, rue, ville);
+        adresses.put(a.getId(), a);
+    }
+
+    public Collection<Personne> listePersonnes() {
+        return personnes.values();
+    }
+
+    public Collection<Adresse> listeAdresses() {
+        return adresses.values();
+    }
+
+    public void associer(int personneId, int adresseId) {
+        Personne p = personnes.get(personneId);
+        Adresse a = adresses.get(adresseId);
+
+        if (p != null && a != null) {
+            p.ajouterAdresse(a);
+        }
+    }
+}
