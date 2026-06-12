@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalogue:Catalogue
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:catalogue="https://catalogue">
+  <composant
+      nom="Resistance"
+      marque="ENSEEIHTHQ"
+      port="2"
+      catalogue="/">
+    <empreinte
+        longueur="1000.0"
+        largeur="500.0"
+        TaillePort="2.0"/>
+    <contrainte
+        texte="d(self,Capacite) > 10mm || redundancy(self) >= 2 &amp;&amp; distanceToBoard(self) > 5 mm"/>
+  </composant>
+  <composant
+      nom="Capacite"
+      marque="Google"
+      port="2"
+      catalogue="/">
+    <empreinte
+        longueur="1000.0"
+        largeur="500.0"/>
+  </composant>
+</catalogue:Catalogue>

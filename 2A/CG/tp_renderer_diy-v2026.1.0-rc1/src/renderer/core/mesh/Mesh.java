@@ -9,6 +9,7 @@ import renderer.algebra.Vector;
 /**
  * Defines a triangle based mesh.
  * A mesh is constructed by interpreting the data given in an OFF file.
+ * 
  * @author smondet gg cdehais
  */
 public class Mesh {
@@ -58,10 +59,11 @@ public class Mesh {
     /**
      * Builds a Mesh object by reading in an OFF file.
      * Does not support non triangular meshes.
+     * 
      * @param filename path to OFF file.
      * @throws IOException if the file cannot be read.
      */
-    public Mesh(String filename) throws IOException  {
+    public Mesh(String filename) throws IOException {
         BufferedReader in = new BufferedReader(new FileReader(filename));
 
         String r = nextLine(in);
@@ -124,6 +126,7 @@ public class Mesh {
 
     /**
      * Gets the number of vertices in the mesh.
+     * 
      * @return the number of vertices in the mesh
      */
     public int getNumVertices() {
@@ -132,6 +135,7 @@ public class Mesh {
 
     /**
      * Gets the number of faces in the mesh.
+     * 
      * @return the number of faces in the mesh
      */
     public int getNumFaces() {
@@ -141,6 +145,7 @@ public class Mesh {
     /**
      * Constructs a normal for each vertex of the mesh
      * by averaging the normals of the faces that share the vertex.
+     * 
      * @return an array of Vector containing the normals of each vertex.
      */
     private Vector[] computeNormals() {
@@ -152,16 +157,15 @@ public class Mesh {
         final int numFaceElements = VERTICES_PER_FACE * getNumFaces();
         for (int i = 0; i < numFaceElements; i += VERTICES_PER_FACE) {
             // TODO
-            Vector n = new Vector(3);
+            // --- Calcul de la normale de la face ---
+            Vector v0 = vertices[faces[i]]; // premier sommet
+            Vector v1 = vertices[faces[i + 1]]; // deuxième sommet
+            Vector v2 = vertices[faces[i + 2]]; // troisième sommet
 
+            Vector edge1 = v1.subtract(v0); // vecteur v0->v1
+            Vector edge2 = v2.subtract(v0); // vecteur v0->v2
 
-
-
-
-
-
-
-
+            Vector n = edge1.cross(edge2).normalize(); // normale de la face
 
             // add the calculated normal n to each vertex of the face
             for (int j = 0; j < VERTICES_PER_FACE; j++) {
@@ -171,7 +175,6 @@ public class Mesh {
                     normals[faces[i + j]] = new Vector(n);
                     normals[faces[i + j]].setName("n" + faces[i + j]);
                 } else {
-                    // add() returns a new vector, so we assign the result to the normal.
                     normals[faces[i + j]] = nj.add(n);
                 }
             }
@@ -192,6 +195,7 @@ public class Mesh {
 
     /**
      * Returns the vertices of the mesh.
+     * 
      * @return an array of Vector containing the vertices of the mesh
      */
     public Vector[] getVertices() {
@@ -201,6 +205,7 @@ public class Mesh {
     /**
      * Return the normals associated to the vertices.
      * If the normals have not been computed yet, they are computed.
+     * 
      * @return an array of Vector containing the normals of the mesh
      */
     public Vector[] getNormals() {
@@ -216,6 +221,7 @@ public class Mesh {
      * n the number of faces.
      * Each integer is an index into the array of Vector.
      * The indices are grouped by 3, each group representing a face.
+     * 
      * @return an array of int containing the faces of the mesh
      */
     public int[] getFaces() {
@@ -226,6 +232,7 @@ public class Mesh {
      * Returns the colors of each vertex in the mesh.
      * The returned array contains 3*n doubles, with n the number of vertices.
      * Each group of 3 doubles represents the color of a vertex.
+     * 
      * @return an array of double containing the colors of the mesh
      */
     public double[] getColors() {
@@ -236,6 +243,7 @@ public class Mesh {
      * Returns the texture coordinates of each vertex in the mesh.
      * The returned array contains 2*n doubles, with n the number of vertices.
      * Each group of 2 doubles represents the texture coordinates of a vertex.
+     * 
      * @return an array of double containing the texture coordinates of the mesh
      */
     public double[] getTextureCoordinates() {

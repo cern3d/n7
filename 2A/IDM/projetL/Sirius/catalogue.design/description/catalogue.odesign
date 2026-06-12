@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" name="catalogue" version="12.0.0.2017041100">
+  <ownedViewpoints name="catalogueViewpoint" modelFileExtension="catalogue">
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="CatalogueDiagram" domainClass="catalogue::Catalogue" enablePopupBars="true">
+      <defaultLayer name="Default">
+        <nodeMappings name="ComposantNode" domainClass="catalogue::Composant">
+          <style xsi:type="style:SquareDescription" labelSize="20" labelExpression="feature:nom" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="ContrainteNode" domainClass="catalogue::Contrainte">
+          <style xsi:type="style:NoteDescription" labelSize="25" labelExpression="feature:texte" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_red']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="EmpreinteNode" domainClass="catalogue::Empreinte">
+          <style xsi:type="style:EllipseNodeDescription" labelSize="22" labelExpression="feature:longueur" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelFormat>bold</labelFormat>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_purple']"/>
+          </style>
+        </nodeMappings>
+        <edgeMappings name="ComEmpRelation" sourceMapping="//@ownedViewpoints[name='catalogueViewpoint']/@ownedRepresentations[name='CatalogueDiagram']/@defaultLayer/@nodeMappings[name='ComposantNode']" targetMapping="//@ownedViewpoints[name='catalogueViewpoint']/@ownedRepresentations[name='CatalogueDiagram']/@defaultLayer/@nodeMappings[name='EmpreinteNode']" targetFinderExpression="feature:empreinte">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="CompContRelation" sourceMapping="//@ownedViewpoints[name='catalogueViewpoint']/@ownedRepresentations[name='CatalogueDiagram']/@defaultLayer/@nodeMappings[name='ComposantNode']" targetMapping="//@ownedViewpoints[name='catalogueViewpoint']/@ownedRepresentations[name='CatalogueDiagram']/@defaultLayer/@nodeMappings[name='ContrainteNode']" targetFinderExpression="feature:contrainte">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <toolSections name="CatalogueTools">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="CreateComposant" nodeMappings="//@ownedViewpoints[name='catalogueViewpoint']/@ownedRepresentations[name='CatalogueDiagram']/@defaultLayer/@nodeMappings[name='ComposantNode']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="catalogue::Composant" referenceName="composant"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="CreateContrainte" nodeMappings="//@ownedViewpoints[name='catalogueViewpoint']/@ownedRepresentations[name='CatalogueDiagram']/@defaultLayer/@nodeMappings[name='ContrainteNode']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="catalogue::Contrainte" referenceName="contrainte" variableName="newContrainte"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="CreateEmpreinte" nodeMappings="//@ownedViewpoints[name='catalogueViewpoint']/@ownedRepresentations[name='CatalogueDiagram']/@defaultLayer/@nodeMappings[name='EmpreinteNode']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="catalogue::Empreinte" referenceName="empreinte" variableName="newEmpreinte"/>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+      </defaultLayer>
+    </ownedRepresentations>
+    <ownedJavaExtensions qualifiedClassName="catalogue.design.Services"/>
+  </ownedViewpoints>
+</description:Group>

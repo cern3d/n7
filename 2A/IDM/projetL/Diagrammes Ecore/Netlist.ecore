@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="netlist" nsURI="https://netlist" nsPrefix="netlist">
+  <eClassifiers xsi:type="ecore:EClass" name="Netlist">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="element" upperBound="-1"
+        eType="#//Element" containment="true" eOpposite="#//Element/netlist"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Connexion" eSuperTypes="#//Element">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="porta" eType="#//Port"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="portb" eType="#//Port"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Instancecomp" eSuperTypes="#//Element">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="composant" eType="ecore:EClass ../catalogue/Catalogue.ecore#//Composant"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="port" upperBound="-1" eType="#//Port"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Commentaire" eSuperTypes="#//Element">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="instancecomp" eType="#//Instancecomp"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="texte" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Port">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="connexion" eType="#//Connexion"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nom" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Element" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="netlist" lowerBound="1"
+        eType="#//Netlist" eOpposite="#//Netlist/element"/>
+  </eClassifiers>
+</ecore:EPackage>

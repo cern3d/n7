@@ -27,6 +27,7 @@ public class Texture {
 
     /**
      * Constructs a new Texture with the content of the image at @path.
+     * 
      * @param path the path to the image file
      * @throws IOException if the image file is not found
      */
@@ -39,18 +40,28 @@ public class Texture {
     /**
      * Samples the texture at texture coordinates (u,v), using nearest neighbor
      * interpolation.
-     * u and v are normalized with respect to each image dimension and may be greater
+     * u and v are normalized with respect to each image dimension and may be
+     * greater
      * than 1 when the texture is repeated over a face.
+     * 
      * @param u the u texture coordinate
      * @param v the v texture coordinate
      * @return the color of the texture at (u,v)
      */
     public Color sample(double u, double v) {
-        // TODO
+        // répéter la texture si u,v en dehors de [0,1]
+        u = u - Math.floor(u); // u dans [0,1)
+        v = v - Math.floor(v); // v dans [0,1)
 
+        // coordonnées du pixel dans l'image
+        int x = (int) (u * width);
+        int y = (int) (v * height);
 
+        // clamp pour s'assurer que x et y sont valides
+        x = Math.min(width - 1, Math.max(0, x));
+        y = Math.min(height - 1, Math.max(0, y));
 
+        return new Color(image.getRGB(x, y));
 
-        return new Color (0,0,0);
     }
 }

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<layout:Layout
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:layout="https://layout">
+  <board layout="/">
+    <couche_externe>
+      <piste>
+        <connexion
+            href="Netlist.xmi#//@element.5"/>
+      </piste>
+      <piste>
+        <connexion
+            href="Netlist.xmi#//@element.3"/>
+      </piste>
+      <instancecomp
+          x="500"
+          y="1000"
+          name="R1">
+        <composant
+            href="Netlist.xmi#//@element.0"/>
+      </instancecomp>
+      <instancecomp
+          x="1000"
+          y="2000"
+          name="R2">
+        <composant
+            href="Netlist.xmi#//@element.2"/>
+      </instancecomp>
+      <instancecomp
+          x="1500"
+          y="3000"
+          name="C1">
+        <composant
+            href="Netlist.xmi#//@element.4"/>
+      </instancecomp>
+    </couche_externe>
+  </board>
+</layout:Layout>

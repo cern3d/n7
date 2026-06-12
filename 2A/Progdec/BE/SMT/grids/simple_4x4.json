@@ -1,0 +1,8 @@
+{
+  "name": "simple_4x4",
+  "width": 4,
+  "height": 4,
+  "start": [0, 0],
+  "goal": [3, 3],
+  "obstacles": [[1, 1], [2, 1]]
+}

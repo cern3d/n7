@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:diagram="http://www.eclipse.org/sirius/diagram/1.1.0" xmlns:netlist="https://netlist" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xsi:schemaLocation="http://www.eclipse.org/sirius/description/1.1.0 http://www.eclipse.org/sirius/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/style/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description/style">
+  <viewpoint:DAnalysis uid="_PN5F0OghEfCsdotvCH9OYQ" selectedViews="_3QGagOghEfCsdotvCH9OYQ" version="15.2.0.202303281325">
+    <semanticResources>test.netlist</semanticResources>
+    <ownedViews xmi:type="viewpoint:DView" uid="_3QGagOghEfCsdotvCH9OYQ">
+      <viewpoint xmi:type="description:Viewpoint" href="platform:/resource/netlist.design/description/netlist.odesign#//@ownedViewpoints[name='netlistViewpoint']"/>
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_AGt14OgiEfCsdotvCH9OYQ" name="new NetlistDiagram" repPath="#_AGhooOgiEfCsdotvCH9OYQ" changeId="1767795087867">
+        <description xmi:type="description_1:DiagramDescription" href="platform:/resource/netlist.design/description/netlist.odesign#//@ownedViewpoints[name='netlistViewpoint']/@ownedRepresentations[name='NetlistDiagram']"/>
+        <target xmi:type="netlist:Netlist" href="test.netlist#/"/>
+      </ownedRepresentationDescriptors>
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_3mQ4UO1yEfCCr8Duag4OSQ" name="new NetlistDiagram" repPath="#_3mPqMO1yEfCCr8Duag4OSQ" changeId="1767973900278">
+        <description xmi:type="description_1:DiagramDescription" href="platform:/resource/netlist.design/description/netlist.odesign#//@ownedViewpoints[name='netlistViewpoint']/@ownedRepresentations[name='NetlistDiagram']"/>
+        <target xmi:type="netlist:Netlist" href="test.netlist#/"/>
+      </ownedRepresentationDescriptors>
+    </ownedViews>
+  </viewpoint:DAnalysis>
+  <diagram:DSemanticDiagram uid="_AGhooOgiEfCsdotvCH9OYQ">
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_AG6qMOgiEfCsdotvCH9OYQ" source="GMF_DIAGRAMS">
+      <data xmi:type="notation:Diagram" xmi:id="_AG6qMegiEfCsdotvCH9OYQ" type="Sirius" element="_AGhooOgiEfCsdotvCH9OYQ" measurementUnit="Pixel">
+        <children xmi:type="notation:Node" xmi:id="_NDf_8OgjEfCsdotvCH9OYQ" type="2001" element="_NDZ5UOgjEfCsdotvCH9OYQ">
+          <children xmi:type="notation:Node" xmi:id="_NDhOEOgjEfCsdotvCH9OYQ" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_NDhOEegjEfCsdotvCH9OYQ" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_NDjDQOgjEfCsdotvCH9OYQ" type="3003" element="_NDbugOgjEfCsdotvCH9OYQ">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_NDjDQegjEfCsdotvCH9OYQ" fontName="Segoe UI"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_NDjDQugjEfCsdotvCH9OYQ"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_NDf_8egjEfCsdotvCH9OYQ" fontName="Segoe UI" fontHeight="30"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_NDf_8ugjEfCsdotvCH9OYQ" x="119" y="150" width="151" height="76"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_56SohegkEfCsdotvCH9OYQ" type="2001" element="_551VgegkEfCsdotvCH9OYQ">
+          <children xmi:type="notation:Node" xmi:id="_56SoiOgkEfCsdotvCH9OYQ" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_56SoiegkEfCsdotvCH9OYQ" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_56UdsOgkEfCsdotvCH9OYQ" type="3016" element="_552joOgkEfCsdotvCH9OYQ">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_56UdsegkEfCsdotvCH9OYQ" fontName="Segoe UI"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_56UdsugkEfCsdotvCH9OYQ"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_56SohugkEfCsdotvCH9OYQ" fontName="Segoe UI" fontHeight="30"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_56Soh-gkEfCsdotvCH9OYQ" x="255" y="270" width="92" height="60"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_56Soj-gkEfCsdotvCH9OYQ" type="2001" element="_553xwOgkEfCsdotvCH9OYQ">
+          <children xmi:type="notation:Node" xmi:id="_56SokugkEfCsdotvCH9OYQ" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_56Sok-gkEfCsdotvCH9OYQ" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_56UdtugkEfCsdotvCH9OYQ" type="3013" element="_553xwegkEfCsdotvCH9OYQ">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_56Udt-gkEfCsdotvCH9OYQ" fontName="Segoe UI"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_56UduOgkEfCsdotvCH9OYQ"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_56SokOgkEfCsdotvCH9OYQ" fontName="Segoe UI" fontHeight="15"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_56SokegkEfCsdotvCH9OYQ" x="150" y="75" width="136" height="30"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_iR7nsOu0EfCgUInhCgb_mw" type="2001" element="_iR06Aeu0EfCgUInhCgb_mw">
+          <children xmi:type="notation:Node" xmi:id="_iR8OwOu0EfCgUInhCgb_mw" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_iR8Oweu0EfCgUInhCgb_mw" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_iR810Ou0EfCgUInhCgb_mw" type="3003" element="_iR06Auu0EfCgUInhCgb_mw">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_iR810eu0EfCgUInhCgb_mw" fontName="Segoe UI"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_iR810uu0EfCgUInhCgb_mw"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_iR7nseu0EfCgUInhCgb_mw" fontName="Segoe UI" fontHeight="30"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_iR7nsuu0EfCgUInhCgb_mw" x="540" y="164" width="90" height="60"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_iR8Owuu0EfCgUInhCgb_mw" type="2001" element="_iR2IIuu0EfCgUInhCgb_mw">
+          <children xmi:type="notation:Node" xmi:id="_iR8Oxeu0EfCgUInhCgb_mw" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_iR8Oxuu0EfCgUInhCgb_mw" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_iR810-u0EfCgUInhCgb_mw" type="3016" element="_iR2II-u0EfCgUInhCgb_mw">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_iR811Ou0EfCgUInhCgb_mw" fontName="Segoe UI"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_iR811eu0EfCgUInhCgb_mw"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_iR8Ow-u0EfCgUInhCgb_mw" fontName="Segoe UI" fontHeight="30"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_iR8OxOu0EfCgUInhCgb_mw" x="465" y="284" width="60" height="60"/>
+        </children>
+        <styles xmi:type="notation:DiagramStyle" xmi:id="_AG6qMugiEfCsdotvCH9OYQ"/>
+        <edges xmi:type="notation:Edge" xmi:id="_IyMBcOu1EfCgUInhCgb_mw" type="4001" element="_Iv0p8Ou1EfCgUInhCgb_mw" source="_56SohegkEfCsdotvCH9OYQ" target="_iR8Owuu0EfCgUInhCgb_mw">
+          <children xmi:type="notation:Node" xmi:id="_IyMogOu1EfCgUInhCgb_mw" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_IyMogeu1EfCgUInhCgb_mw" x="-8" y="-11"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_IyQS4Ou1EfCgUInhCgb_mw" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_IyQS4eu1EfCgUInhCgb_mw" x="-13" y="9"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_IyQ58Ou1EfCgUInhCgb_mw" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_IyQ58eu1EfCgUInhCgb_mw" x="-3" y="9"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_IyMBceu1EfCgUInhCgb_mw"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_IyMBcuu1EfCgUInhCgb_mw" fontName="Segoe UI" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_IyMBc-u1EfCgUInhCgb_mw" points="[77, -1, -148, 0]$[195, -1, -30, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_IyUkUOu1EfCgUInhCgb_mw" id="(0.16304347826086957,0.75)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_IyUkUeu1EfCgUInhCgb_mw" id="(0.5,0.5)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_vRSkoOu1EfCgUInhCgb_mw" type="4001" element="_vRO6QOu1EfCgUInhCgb_mw" source="_NDf_8OgjEfCsdotvCH9OYQ" target="_56SohegkEfCsdotvCH9OYQ">
+          <children xmi:type="notation:Node" xmi:id="_vRTLsOu1EfCgUInhCgb_mw" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_vRTLseu1EfCgUInhCgb_mw" x="-31" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_vRTLsuu1EfCgUInhCgb_mw" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_vRTLs-u1EfCgUInhCgb_mw" x="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_vRTLtOu1EfCgUInhCgb_mw" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_vRTLteu1EfCgUInhCgb_mw" x="-10" y="-15"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_vRSkoeu1EfCgUInhCgb_mw" routing="Rectilinear"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_vRSkouu1EfCgUInhCgb_mw" fontName="Segoe UI" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_vRSko-u1EfCgUInhCgb_mw" points="[46, 38, -30, -89]$[46, 120, -30, -7]$[61, 120, -15, -7]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_vRTywOu1EfCgUInhCgb_mw" id="(0.5,0.5)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_vRTyweu1EfCgUInhCgb_mw" id="(0.16304347826086957,0.75)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_vRTywuu1EfCgUInhCgb_mw" type="4001" element="_vRPhUuu1EfCgUInhCgb_mw" source="_iR7nsOu0EfCgUInhCgb_mw" target="_iR8Owuu0EfCgUInhCgb_mw">
+          <children xmi:type="notation:Node" xmi:id="_vRTyxuu1EfCgUInhCgb_mw" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_vRTyx-u1EfCgUInhCgb_mw" x="-21" y="-2"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_vRTyyOu1EfCgUInhCgb_mw" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_vRTyyeu1EfCgUInhCgb_mw" x="42" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_vRTyyuu1EfCgUInhCgb_mw" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_vRTyy-u1EfCgUInhCgb_mw" x="69" y="35"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_vRTyw-u1EfCgUInhCgb_mw" routing="Rectilinear"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_vRTyxOu1EfCgUInhCgb_mw" fontName="Segoe UI" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_vRTyxeu1EfCgUInhCgb_mw" points="[-75, 46, 45, -90]$[-75, 91, 45, -45]$[-120, 91, 0, -45]$[-120, 106, 0, -30]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_vRTyzOu1EfCgUInhCgb_mw" id="(0.8333333333333334,0.24725274725274723)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_vRTyzeu1EfCgUInhCgb_mw" id="(0.5,0.5)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_zYrbUOu2EfCgUInhCgb_mw" type="4001" element="_zYnJ6Ou2EfCgUInhCgb_mw" source="_56Soj-gkEfCsdotvCH9OYQ" target="_NDf_8OgjEfCsdotvCH9OYQ">
+          <children xmi:type="notation:Node" xmi:id="_zYsCYOu2EfCgUInhCgb_mw" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_zYsCYeu2EfCgUInhCgb_mw" x="4" y="6"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_zYsCYuu2EfCgUInhCgb_mw" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_zYsCY-u2EfCgUInhCgb_mw" x="27"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_zYsCZOu2EfCgUInhCgb_mw" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_zYsCZeu2EfCgUInhCgb_mw" x="8"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_zYrbUeu2EfCgUInhCgb_mw" routing="Rectilinear"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_zYrbUuu2EfCgUInhCgb_mw" fontName="Segoe UI" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_zYrbU-u2EfCgUInhCgb_mw" points="[65, 15, 126, -83]$[65, 72, 126, -26]$[15, 72, 76, -26]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_zYspcOu2EfCgUInhCgb_mw" id="(0.7720588235294118,0.5)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_zYspceu2EfCgUInhCgb_mw" id="(0.5,0.5)"/>
+        </edges>
+      </data>
+    </ownedAnnotationEntries>
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_AG-7oOgiEfCsdotvCH9OYQ" source="DANNOTATION_CUSTOMIZATION_KEY">
+      <data xmi:type="diagram:ComputedStyleDescriptionRegistry" uid="_AG-7oegiEfCsdotvCH9OYQ"/>
+    </ownedAnnotationEntries>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_NDZ5UOgjEfCsdotvCH9OYQ" name="5" outgoingEdges="_vRO6QOu1EfCgUInhCgb_mw" incomingEdges="_zYnJ6Ou2EfCgUInhCgb_mw" width="3" height="3" resizeKind="NSEW">
+      <target xmi:type="netlist:Instancecomp" href="test.netlist#//@element.0"/>
+      <semanticElements xmi:type="netlist:Instancecomp" href="test.netlist#//@element.0"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Square" uid="_NDbugOgjEfCsdotvCH9OYQ" labelSize="30" labelPosition="node" color="238,201,142">
+        <description xmi:type="style:SquareDescription" href="platform:/resource/netlist.design/description/netlist.odesign#//@ownedViewpoints[name='netlistViewpoint']/@ownedRepresentations[name='NetlistDiagram']/@defaultLayer/@nodeMappings[name='InstancecompNode']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/netlist.design/description/netlist.odesign#//@ownedViewpoints[name='netlistViewpoint']/@ownedRepresentations[name='NetlistDiagram']/@defaultLayer/@nodeMappings[name='InstancecompNode']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_iR06Aeu0EfCgUInhCgb_mw" name="R2" outgoingEdges="_vRPhUuu1EfCgUInhCgb_mw" width="3" height="3" resizeKind="NSEW">
+      <target xmi:type="netlist:Instancecomp" href="test.netlist#//@element.3"/>
+      <semanticElements xmi:type="netlist:Instancecomp" href="test.netlist#//@element.3"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Square" uid="_iR06Auu0EfCgUInhCgb_mw" labelSize="30" labelPosition="node" color="238,201,142">
+        <description xmi:type="style:SquareDescription" href="platform:/resource/netlist.design/description/netlist.odesign#//@ownedViewpoints[name='netlistViewpoint']/@ownedRepresentations[name='NetlistDiagram']/@defaultLayer/@nodeMappings[name='InstancecompNode']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/netlist.design/description/netlist.odesign#//@ownedViewpoints[name='netlistViewpoint']/@ownedRepresentations[name='NetlistDiagram']/@defaultLayer/@nodeMappings[name='InstancecompNode']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_551VgegkEfCsdotvCH9OYQ" name="1" outgoingEdges="_Iv0p8Ou1EfCgUInhCgb_mw" incomingEdges="_vRO6QOu1EfCgUInhCgb_mw" width="3" height="3" resizeKind="NSEW">
+      <target xmi:type="netlist:Port" href="test.netlist#//@element.0/@port.0"/>
+      <semanticElements xmi:type="netlist:Port" href="test.netlist#//@element.0/@port.0"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Ellipse" uid="_552joOgkEfCsdotvCH9OYQ" labelSize="20" labelPosition="node" color="217,196,215">
+        <description xmi:type="style:EllipseNodeDescription" href="platform:/resource/netlist.design/description/netlist.odesign#//@ownedViewpoints[name='netlistViewpoint']/@ownedRepresentations[name='NetlistDiagram']/@defaultLayer/@nodeMappings[name='PortNode']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/netlist.design/description/netlist.odesign#//@ownedViewpoints[name='netlistViewpoint']/@ownedRepresentations[name='NetlistDiagram']/@defaultLayer/@nodeMappings[name='PortNode']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_iR2IIuu0EfCgUInhCgb_mw" name="2" incomingEdges="_Iv0p8Ou1EfCgUInhCgb_mw _vRPhUuu1EfCgUInhCgb_mw" width="3" height="3" resizeKind="NSEW">
+      <target xmi:type="netlist:Port" href="test.netlist#//@element.3/@port.0"/>
+      <semanticElements xmi:type="netlist:Port" href="test.netlist#//@element.3/@port.0"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Ellipse" uid="_iR2II-u0EfCgUInhCgb_mw" labelSize="20" labelPosition="node" color="217,196,215">
+        <description xmi:type="style:EllipseNodeDescription" href="platform:/resource/netlist.design/description/netlist.odesign#//@ownedViewpoints[name='netlistViewpoint']/@ownedRepresentations[name='NetlistDiagram']/@defaultLayer/@nodeMappings[name='PortNode']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/netlist.design/description/netlist.odesign#//@ownedViewpoints[name='netlistViewpoint']/@ownedRepresentations[name='NetlistDiagram']/@defaultLayer/@nodeMappings[name='PortNode']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_553xwOgkEfCsdotvCH9OYQ" name="GENEKUUUT" outgoingEdges="_zYnJ6Ou2EfCgUInhCgb_mw" width="3" height="3" resizeKind="NSEW">
+      <target xmi:type="netlist:Commentaire" href="test.netlist#//@element.2"/>
+      <semanticElements xmi:type="netlist:Commentaire" href="test.netlist#//@element.2"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Note" uid="_553xwegkEfCsdotvCH9OYQ" labelSize="15" labelPosition="node">
+        <customFeatures>labelSize</customFeatures>
+        <description xmi:type="style:NoteDescription" href="platform:/resource/netlist.design/description/netlist.odesign#//@ownedViewpoints[name='netlistViewpoint']/@ownedRepresentations[name='NetlistDiagram']/@defaultLayer/@nodeMappings[name='CommentaireNode']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/netlist.design/description/netlist.odesign#//@ownedViewpoints[name='netlistViewpoint']/@ownedRepresentations[name='NetlistDiagram']/@defaultLayer/@nodeMappings[name='CommentaireNode']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_Iv0p8Ou1EfCgUInhCgb_mw" sourceNode="_551VgegkEfCsdotvCH9OYQ" targetNode="_iR2IIuu0EfCgUInhCgb_mw">
+      <target xmi:type="netlist:Connexion" href="test.netlist#//@element.1"/>
+      <semanticElements xmi:type="netlist:Connexion" href="test.netlist#//@element.1"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_Iv6wkOu1EfCgUInhCgb_mw" targetArrow="NoDecoration" size="2">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/netlist.design/description/netlist.odesign#//@ownedViewpoints[name='netlistViewpoint']/@ownedRepresentations[name='NetlistDiagram']/@defaultLayer/@edgeMappings[name='ConnexionEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_Iv7XoOu1EfCgUInhCgb_mw" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/netlist.design/description/netlist.odesign#//@ownedViewpoints[name='netlistViewpoint']/@ownedRepresentations[name='NetlistDiagram']/@defaultLayer/@edgeMappings[name='ConnexionEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_vRO6QOu1EfCgUInhCgb_mw" sourceNode="_NDZ5UOgjEfCsdotvCH9OYQ" targetNode="_551VgegkEfCsdotvCH9OYQ">
+      <target xmi:type="netlist:Instancecomp" href="test.netlist#//@element.0"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_vRO6Qeu1EfCgUInhCgb_mw" lineStyle="dot" sourceArrow="FillDiamondWithDot" targetArrow="Diamond" size="2" routingStyle="manhattan">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/netlist.design/description/netlist.odesign#//@ownedViewpoints[name='netlistViewpoint']/@ownedRepresentations[name='NetlistDiagram']/@defaultLayer/@edgeMappings[name='CompCnxRelation']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_vRO6Quu1EfCgUInhCgb_mw" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/netlist.design/description/netlist.odesign#//@ownedViewpoints[name='netlistViewpoint']/@ownedRepresentations[name='NetlistDiagram']/@defaultLayer/@edgeMappings[name='CompCnxRelation']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_vRPhUuu1EfCgUInhCgb_mw" sourceNode="_iR06Aeu0EfCgUInhCgb_mw" targetNode="_iR2IIuu0EfCgUInhCgb_mw">
+      <target xmi:type="netlist:Instancecomp" href="test.netlist#//@element.3"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_vRPhU-u1EfCgUInhCgb_mw" lineStyle="dot" sourceArrow="FillDiamondWithDot" targetArrow="Diamond" size="2" routingStyle="manhattan">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/netlist.design/description/netlist.odesign#//@ownedViewpoints[name='netlistViewpoint']/@ownedRepresentations[name='NetlistDiagram']/@defaultLayer/@edgeMappings[name='CompCnxRelation']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_vRPhVOu1EfCgUInhCgb_mw" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/netlist.design/description/netlist.odesign#//@ownedViewpoints[name='netlistViewpoint']/@ownedRepresentations[name='NetlistDiagram']/@defaultLayer/@edgeMappings[name='CompCnxRelation']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_zYnJ6Ou2EfCgUInhCgb_mw" sourceNode="_553xwOgkEfCsdotvCH9OYQ" targetNode="_NDZ5UOgjEfCsdotvCH9OYQ">
+      <target xmi:type="netlist:Commentaire" href="test.netlist#//@element.2"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_zYnJ6eu2EfCgUInhCgb_mw" lineStyle="dot" sourceArrow="Dot" targetArrow="Dot" size="2" routingStyle="manhattan" strokeColor="154,103,23">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/netlist.design/description/netlist.odesign#//@ownedViewpoints[name='netlistViewpoint']/@ownedRepresentations[name='NetlistDiagram']/@defaultLayer/@edgeMappings[name='CompCmntRelation']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_zYnJ6uu2EfCgUInhCgb_mw" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/netlist.design/description/netlist.odesign#//@ownedViewpoints[name='netlistViewpoint']/@ownedRepresentations[name='NetlistDiagram']/@defaultLayer/@edgeMappings[name='CompCmntRelation']"/>
+    </ownedDiagramElements>
+    <description xmi:type="description_1:DiagramDescription" href="platform:/resource/netlist.design/description/netlist.odesign#//@ownedViewpoints[name='netlistViewpoint']/@ownedRepresentations[name='NetlistDiagram']"/>
+    <filterVariableHistory xmi:type="diagram:FilterVariableHistory" uid="_AGnIMOgiEfCsdotvCH9OYQ"/>
+    <activatedLayers xmi:type="description_1:Layer" href="platform:/resource/netlist.design/description/netlist.odesign#//@ownedViewpoints[name='netlistViewpoint']/@ownedRepresentations[name='NetlistDiagram']/@defaultLayer"/>
+    <target xmi:type="netlist:Netlist" href="test.netlist#/"/>
+  </diagram:DSemanticDiagram>
+  <diagram:DSemanticDiagram uid="_3mPqMO1yEfCCr8Duag4OSQ">
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_3mRfYO1yEfCCr8Duag4OSQ" source="GMF_DIAGRAMS">
+      <data xmi:type="notation:Diagram" xmi:id="_3mRfYe1yEfCCr8Duag4OSQ" type="Sirius" element="_3mPqMO1yEfCCr8Duag4OSQ" measurementUnit="Pixel">
+        <children xmi:type="notation:Node" xmi:id="_3mXmAO1yEfCCr8Duag4OSQ" type="2001" element="_3mSGcO1yEfCCr8Duag4OSQ">
+          <children xmi:type="notation:Node" xmi:id="_3mYNEO1yEfCCr8Duag4OSQ" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_3mYNEe1yEfCCr8Duag4OSQ" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_3maCRe1yEfCCr8Duag4OSQ" type="3003" element="_3mStgO1yEfCCr8Duag4OSQ">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_3maCRu1yEfCCr8Duag4OSQ" fontName="Segoe UI"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_3maCR-1yEfCCr8Duag4OSQ"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_3mXmAe1yEfCCr8Duag4OSQ" fontName="Segoe UI" fontHeight="30"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_3mXmAu1yEfCCr8Duag4OSQ" x="45" y="74" width="120" height="122"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_3mY0IO1yEfCCr8Duag4OSQ" type="2001" element="_3mStgu1yEfCCr8Duag4OSQ">
+          <children xmi:type="notation:Node" xmi:id="_3mY0I-1yEfCCr8Duag4OSQ" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_3mY0JO1yEfCCr8Duag4OSQ" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_3mapUO1yEfCCr8Duag4OSQ" type="3003" element="_3mStg-1yEfCCr8Duag4OSQ">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_3mapUe1yEfCCr8Duag4OSQ" fontName="Segoe UI"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_3mapUu1yEfCCr8Duag4OSQ"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_3mY0Ie1yEfCCr8Duag4OSQ" fontName="Segoe UI" fontHeight="30"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_3mY0Iu1yEfCCr8Duag4OSQ" x="495" y="105" width="136" height="76"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_3mY0Je1yEfCCr8Duag4OSQ" type="2001" element="_3mTUke1yEfCCr8Duag4OSQ">
+          <children xmi:type="notation:Node" xmi:id="_3mZbMO1yEfCCr8Duag4OSQ" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_3mZbMe1yEfCCr8Duag4OSQ" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_3mapU-1yEfCCr8Duag4OSQ" type="3016" element="_3mTUku1yEfCCr8Duag4OSQ">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_3mapVO1yEfCCr8Duag4OSQ" fontName="Segoe UI"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_3mapVe1yEfCCr8Duag4OSQ"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_3mY0Ju1yEfCCr8Duag4OSQ" fontName="Segoe UI" fontHeight="20"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_3mY0J-1yEfCCr8Duag4OSQ" x="150" y="210" width="30" height="30"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_3mZbMu1yEfCCr8Duag4OSQ" type="2001" element="_3mT7oO1yEfCCr8Duag4OSQ">
+          <children xmi:type="notation:Node" xmi:id="_3mZbNe1yEfCCr8Duag4OSQ" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_3mZbNu1yEfCCr8Duag4OSQ" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_3mapVu1yEfCCr8Duag4OSQ" type="3016" element="_3mT7oe1yEfCCr8Duag4OSQ">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_3mapV-1yEfCCr8Duag4OSQ" fontName="Segoe UI"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_3mapWO1yEfCCr8Duag4OSQ"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_3mZbM-1yEfCCr8Duag4OSQ" fontName="Segoe UI" fontHeight="20"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_3mZbNO1yEfCCr8Duag4OSQ" x="480" y="210" width="30" height="30"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_3maCQO1yEfCCr8Duag4OSQ" type="2001" element="_3mT7o-1yEfCCr8Duag4OSQ">
+          <children xmi:type="notation:Node" xmi:id="_3maCQ-1yEfCCr8Duag4OSQ" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_3maCRO1yEfCCr8Duag4OSQ" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_3mb3cO1yEfCCr8Duag4OSQ" type="3013" element="_3mT7pO1yEfCCr8Duag4OSQ">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_3mb3ce1yEfCCr8Duag4OSQ" fontName="Segoe UI"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_3mb3cu1yEfCCr8Duag4OSQ"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_3maCQe1yEfCCr8Duag4OSQ" fontName="Segoe UI" fontHeight="10"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_3maCQu1yEfCCr8Duag4OSQ" x="15" y="-135" width="210" height="90"/>
+        </children>
+        <styles xmi:type="notation:DiagramStyle" xmi:id="_3mRfYu1yEfCCr8Duag4OSQ"/>
+        <edges xmi:type="notation:Edge" xmi:id="_3mdFkO1yEfCCr8Duag4OSQ" type="4001" element="_3mVJwO1yEfCCr8Duag4OSQ" source="_3mY0Je1yEfCCr8Duag4OSQ" target="_3mZbMu1yEfCCr8Duag4OSQ">
+          <children xmi:type="notation:Node" xmi:id="_3mdsoO1yEfCCr8Duag4OSQ" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_3mdsoe1yEfCCr8Duag4OSQ" x="20" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_3meTsO1yEfCCr8Duag4OSQ" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_3meTse1yEfCCr8Duag4OSQ" x="11" y="4"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_3me6wO1yEfCCr8Duag4OSQ" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_3me6we1yEfCCr8Duag4OSQ" x="-9" y="6"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_3mdFke1yEfCCr8Duag4OSQ"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_3mdFku1yEfCCr8Duag4OSQ" fontName="Segoe UI" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_3mdFk-1yEfCCr8Duag4OSQ" points="[15, 0, -315, 0]$[315, 0, -15, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_3mhXAO1yEfCCr8Duag4OSQ" id="(0.5,0.5)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_3mhXAe1yEfCCr8Duag4OSQ" id="(0.5,0.5)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_3mh-EO1yEfCCr8Duag4OSQ" type="4001" element="_3mVw0O1yEfCCr8Duag4OSQ" source="_3mXmAO1yEfCCr8Duag4OSQ" target="_3mY0Je1yEfCCr8Duag4OSQ">
+          <children xmi:type="notation:Node" xmi:id="_3mh-FO1yEfCCr8Duag4OSQ" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_3mh-Fe1yEfCCr8Duag4OSQ" x="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_3mh-Fu1yEfCCr8Duag4OSQ" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_3mh-F-1yEfCCr8Duag4OSQ" x="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_3mh-GO1yEfCCr8Duag4OSQ" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_3mh-Ge1yEfCCr8Duag4OSQ" x="-5" y="6"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_3mh-Ee1yEfCCr8Duag4OSQ" routing="Rectilinear"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_3mh-Eu1yEfCCr8Duag4OSQ" fontName="Segoe UI" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_3mh-E-1yEfCCr8Duag4OSQ" points="[10, 107, -5, -29]$[10, 121, -5, -15]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_3milIO1yEfCCr8Duag4OSQ" id="(0.875,0.12295081967213115)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_3milIe1yEfCCr8Duag4OSQ" id="(0.5,0.5)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_3milIu1yEfCCr8Duag4OSQ" type="4001" element="_3mVw1e1yEfCCr8Duag4OSQ" source="_3mY0IO1yEfCCr8Duag4OSQ" target="_3mZbMu1yEfCCr8Duag4OSQ">
+          <children xmi:type="notation:Node" xmi:id="_3milJu1yEfCCr8Duag4OSQ" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_3milJ-1yEfCCr8Duag4OSQ" x="-8" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_3milKO1yEfCCr8Duag4OSQ" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_3milKe1yEfCCr8Duag4OSQ" x="22" y="1"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_3milKu1yEfCCr8Duag4OSQ" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_3milK-1yEfCCr8Duag4OSQ" x="8" y="-5"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_3milI-1yEfCCr8Duag4OSQ" routing="Rectilinear"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_3milJO1yEfCCr8Duag4OSQ" fontName="Segoe UI" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_3milJe1yEfCCr8Duag4OSQ" points="[-1, 61, 14, -44]$[-30, 107, -15, 2]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_3mjMMO1yEfCCr8Duag4OSQ" id="(0.11029411764705882,0.19736842105263158)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_3mjMMe1yEfCCr8Duag4OSQ" id="(0.5,0.5)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_3mjMMu1yEfCCr8Duag4OSQ" type="4001" element="_3mWX5O1yEfCCr8Duag4OSQ" source="_3maCQO1yEfCCr8Duag4OSQ" target="_3mXmAO1yEfCCr8Duag4OSQ">
+          <children xmi:type="notation:Node" xmi:id="_3mjMNu1yEfCCr8Duag4OSQ" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_3mjMN-1yEfCCr8Duag4OSQ" x="53" y="25"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_3mjMOO1yEfCCr8Duag4OSQ" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_3mjMOe1yEfCCr8Duag4OSQ" x="111" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_3mjMOu1yEfCCr8Duag4OSQ" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_3mjMO-1yEfCCr8Duag4OSQ" x="22"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_3mjMM-1yEfCCr8Duag4OSQ" routing="Rectilinear"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_3mjMNO1yEfCCr8Duag4OSQ" fontName="Segoe UI" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_3mjMNe1yEfCCr8Duag4OSQ" points="[-15, 15, 45, -134]$[-15, 150, 45, 1]$[-45, 150, 15, 1]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_3mjzQO1yEfCCr8Duag4OSQ" id="(0.9285714285714286,0.8333333333333334)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_3mjzQe1yEfCCr8Duag4OSQ" id="(0.875,0.12295081967213115)"/>
+        </edges>
+      </data>
+    </ownedAnnotationEntries>
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_3mWX6e1yEfCCr8Duag4OSQ" source="DANNOTATION_CUSTOMIZATION_KEY">
+      <data xmi:type="diagram:ComputedStyleDescriptionRegistry" uid="_3mW-8O1yEfCCr8Duag4OSQ"/>
+    </ownedAnnotationEntries>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_3mSGcO1yEfCCr8Duag4OSQ" name="R1" outgoingEdges="_3mVw0O1yEfCCr8Duag4OSQ" incomingEdges="_3mWX5O1yEfCCr8Duag4OSQ" width="3" height="3" resizeKind="NSEW">
+      <target xmi:type="netlist:Instancecomp" href="test.netlist#//@element.0"/>
+      <semanticElements xmi:type="netlist:Instancecomp" href="test.netlist#//@element.0"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Square" uid="_3mStgO1yEfCCr8Duag4OSQ" labelSize="30" labelPosition="node" color="238,201,142">
+        <description xmi:type="style:SquareDescription" href="platform:/resource/netlist.design/description/netlist.odesign#//@ownedViewpoints[name='netlistViewpoint']/@ownedRepresentations[name='NetlistDiagram']/@defaultLayer/@nodeMappings[name='InstancecompNode']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/netlist.design/description/netlist.odesign#//@ownedViewpoints[name='netlistViewpoint']/@ownedRepresentations[name='NetlistDiagram']/@defaultLayer/@nodeMappings[name='InstancecompNode']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_3mStgu1yEfCCr8Duag4OSQ" name="R2" outgoingEdges="_3mVw1e1yEfCCr8Duag4OSQ" width="3" height="3" resizeKind="NSEW">
+      <target xmi:type="netlist:Instancecomp" href="test.netlist#//@element.3"/>
+      <semanticElements xmi:type="netlist:Instancecomp" href="test.netlist#//@element.3"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Square" uid="_3mStg-1yEfCCr8Duag4OSQ" labelSize="30" labelPosition="node" color="238,201,142">
+        <description xmi:type="style:SquareDescription" href="platform:/resource/netlist.design/description/netlist.odesign#//@ownedViewpoints[name='netlistViewpoint']/@ownedRepresentations[name='NetlistDiagram']/@defaultLayer/@nodeMappings[name='InstancecompNode']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/netlist.design/description/netlist.odesign#//@ownedViewpoints[name='netlistViewpoint']/@ownedRepresentations[name='NetlistDiagram']/@defaultLayer/@nodeMappings[name='InstancecompNode']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_3mTUke1yEfCCr8Duag4OSQ" name="1" outgoingEdges="_3mVJwO1yEfCCr8Duag4OSQ" incomingEdges="_3mVw0O1yEfCCr8Duag4OSQ" width="3" height="3" resizeKind="NSEW">
+      <target xmi:type="netlist:Port" href="test.netlist#//@element.0/@port.0"/>
+      <semanticElements xmi:type="netlist:Port" href="test.netlist#//@element.0/@port.0"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Ellipse" uid="_3mTUku1yEfCCr8Duag4OSQ" labelSize="20" labelPosition="node" color="217,196,215">
+        <description xmi:type="style:EllipseNodeDescription" href="platform:/resource/netlist.design/description/netlist.odesign#//@ownedViewpoints[name='netlistViewpoint']/@ownedRepresentations[name='NetlistDiagram']/@defaultLayer/@nodeMappings[name='PortNode']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/netlist.design/description/netlist.odesign#//@ownedViewpoints[name='netlistViewpoint']/@ownedRepresentations[name='NetlistDiagram']/@defaultLayer/@nodeMappings[name='PortNode']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_3mT7oO1yEfCCr8Duag4OSQ" name="2" incomingEdges="_3mVJwO1yEfCCr8Duag4OSQ _3mVw1e1yEfCCr8Duag4OSQ" width="3" height="3" resizeKind="NSEW">
+      <target xmi:type="netlist:Port" href="test.netlist#//@element.3/@port.0"/>
+      <semanticElements xmi:type="netlist:Port" href="test.netlist#//@element.3/@port.0"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Ellipse" uid="_3mT7oe1yEfCCr8Duag4OSQ" labelSize="20" labelPosition="node" color="217,196,215">
+        <description xmi:type="style:EllipseNodeDescription" href="platform:/resource/netlist.design/description/netlist.odesign#//@ownedViewpoints[name='netlistViewpoint']/@ownedRepresentations[name='NetlistDiagram']/@defaultLayer/@nodeMappings[name='PortNode']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/netlist.design/description/netlist.odesign#//@ownedViewpoints[name='netlistViewpoint']/@ownedRepresentations[name='NetlistDiagram']/@defaultLayer/@nodeMappings[name='PortNode']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_3mT7o-1yEfCCr8Duag4OSQ" name="temp 80deg" outgoingEdges="_3mWX5O1yEfCCr8Duag4OSQ" width="3" height="3" resizeKind="NSEW">
+      <target xmi:type="netlist:Commentaire" href="test.netlist#//@element.2"/>
+      <semanticElements xmi:type="netlist:Commentaire" href="test.netlist#//@element.2"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Note" uid="_3mT7pO1yEfCCr8Duag4OSQ" labelSize="10" labelPosition="node">
+        <customFeatures>labelSize</customFeatures>
+        <description xmi:type="style:NoteDescription" href="platform:/resource/netlist.design/description/netlist.odesign#//@ownedViewpoints[name='netlistViewpoint']/@ownedRepresentations[name='NetlistDiagram']/@defaultLayer/@nodeMappings[name='CommentaireNode']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/netlist.design/description/netlist.odesign#//@ownedViewpoints[name='netlistViewpoint']/@ownedRepresentations[name='NetlistDiagram']/@defaultLayer/@nodeMappings[name='CommentaireNode']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_3mVJwO1yEfCCr8Duag4OSQ" sourceNode="_3mTUke1yEfCCr8Duag4OSQ" targetNode="_3mT7oO1yEfCCr8Duag4OSQ">
+      <target xmi:type="netlist:Connexion" href="test.netlist#//@element.1"/>
+      <semanticElements xmi:type="netlist:Connexion" href="test.netlist#//@element.1"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_3mVJwe1yEfCCr8Duag4OSQ" targetArrow="NoDecoration" size="2">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/netlist.design/description/netlist.odesign#//@ownedViewpoints[name='netlistViewpoint']/@ownedRepresentations[name='NetlistDiagram']/@defaultLayer/@edgeMappings[name='ConnexionEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_3mVJwu1yEfCCr8Duag4OSQ" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/netlist.design/description/netlist.odesign#//@ownedViewpoints[name='netlistViewpoint']/@ownedRepresentations[name='NetlistDiagram']/@defaultLayer/@edgeMappings[name='ConnexionEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_3mVw0O1yEfCCr8Duag4OSQ" sourceNode="_3mSGcO1yEfCCr8Duag4OSQ" targetNode="_3mTUke1yEfCCr8Duag4OSQ">
+      <target xmi:type="netlist:Instancecomp" href="test.netlist#//@element.0"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_3mVw0e1yEfCCr8Duag4OSQ" lineStyle="dot" sourceArrow="FillDiamondWithDot" targetArrow="Diamond" size="2" routingStyle="manhattan">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/netlist.design/description/netlist.odesign#//@ownedViewpoints[name='netlistViewpoint']/@ownedRepresentations[name='NetlistDiagram']/@defaultLayer/@edgeMappings[name='CompCnxRelation']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_3mVw0u1yEfCCr8Duag4OSQ" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/netlist.design/description/netlist.odesign#//@ownedViewpoints[name='netlistViewpoint']/@ownedRepresentations[name='NetlistDiagram']/@defaultLayer/@edgeMappings[name='CompCnxRelation']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_3mVw1e1yEfCCr8Duag4OSQ" sourceNode="_3mStgu1yEfCCr8Duag4OSQ" targetNode="_3mT7oO1yEfCCr8Duag4OSQ">
+      <target xmi:type="netlist:Instancecomp" href="test.netlist#//@element.3"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_3mWX4O1yEfCCr8Duag4OSQ" lineStyle="dot" sourceArrow="FillDiamondWithDot" targetArrow="Diamond" size="2" routingStyle="manhattan">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/netlist.design/description/netlist.odesign#//@ownedViewpoints[name='netlistViewpoint']/@ownedRepresentations[name='NetlistDiagram']/@defaultLayer/@edgeMappings[name='CompCnxRelation']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_3mWX4e1yEfCCr8Duag4OSQ" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/netlist.design/description/netlist.odesign#//@ownedViewpoints[name='netlistViewpoint']/@ownedRepresentations[name='NetlistDiagram']/@defaultLayer/@edgeMappings[name='CompCnxRelation']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_3mWX5O1yEfCCr8Duag4OSQ" sourceNode="_3mT7o-1yEfCCr8Duag4OSQ" targetNode="_3mSGcO1yEfCCr8Duag4OSQ">
+      <target xmi:type="netlist:Commentaire" href="test.netlist#//@element.2"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_3mWX5e1yEfCCr8Duag4OSQ" lineStyle="dot" sourceArrow="Dot" targetArrow="Dot" size="2" routingStyle="manhattan" strokeColor="154,103,23">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/netlist.design/description/netlist.odesign#//@ownedViewpoints[name='netlistViewpoint']/@ownedRepresentations[name='NetlistDiagram']/@defaultLayer/@edgeMappings[name='CompCmntRelation']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_3mWX5u1yEfCCr8Duag4OSQ" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/netlist.design/description/netlist.odesign#//@ownedViewpoints[name='netlistViewpoint']/@ownedRepresentations[name='NetlistDiagram']/@defaultLayer/@edgeMappings[name='CompCmntRelation']"/>
+    </ownedDiagramElements>
+    <description xmi:type="description_1:DiagramDescription" href="platform:/resource/netlist.design/description/netlist.odesign#//@ownedViewpoints[name='netlistViewpoint']/@ownedRepresentations[name='NetlistDiagram']"/>
+    <filterVariableHistory xmi:type="diagram:FilterVariableHistory" uid="_3mQRQO1yEfCCr8Duag4OSQ"/>
+    <activatedLayers xmi:type="description_1:Layer" href="platform:/resource/netlist.design/description/netlist.odesign#//@ownedViewpoints[name='netlistViewpoint']/@ownedRepresentations[name='NetlistDiagram']/@defaultLayer"/>
+    <target xmi:type="netlist:Netlist" href="test.netlist#/"/>
+  </diagram:DSemanticDiagram>
+</xmi:XMI>

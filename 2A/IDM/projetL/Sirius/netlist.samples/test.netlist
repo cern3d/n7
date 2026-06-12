@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<netlist:Netlist xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:netlist="https://netlist">
+  <element xsi:type="netlist:Instancecomp" id="R1">
+    <port connexion="//@element.1" nom="1"/>
+  </element>
+  <element xsi:type="netlist:Connexion" id="fe" porta="//@element.0/@port.0" portb="//@element.3/@port.0"/>
+  <element xsi:type="netlist:Commentaire" id="fd" instancecomp="//@element.0" texte="temp 80deg"/>
+  <element xsi:type="netlist:Instancecomp" id="R2">
+    <port connexion="//@element.1" nom="2"/>
+  </element>
+</netlist:Netlist>

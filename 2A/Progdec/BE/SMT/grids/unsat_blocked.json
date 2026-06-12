@@ -1,0 +1,8 @@
+{
+  "name": "unsat_blocked",
+  "width": 4,
+  "height": 4,
+  "start": [0, 0],
+  "goal": [3, 3],
+  "obstacles": [[1, 0], [0, 1]]
+}

@@ -1,8 +1,0 @@
-net machin
-pl A (7)
-pl B (3)
-pl C
-pl D
-tr t1 A*3 B*2 -> C
-tr t2 A B -> D
-tr t3 C D -> A*4 B*3

@@ -83,27 +83,28 @@ public class TextureShader extends Shader {
         }
         // The Fragment may not have texture coordinates
         try {
-            // TODO
+            if (texture != null) {
+                // récupère les coordonnées de texture
+                double u = fragment.getAttribute(Fragment.TEXTURE_U);
+                double v = fragment.getAttribute(Fragment.TEXTURE_V);
 
+                // échantillonne la texture
+                Color texColor = texture.sample(u, v);
 
+                if (combineWithBaseColor) {
+                    // combine avec la couleur originale du fragment
+                    Color baseColor = fragment.getColor();
+                    int r = Math.min(255, (baseColor.getRed() + texColor.getRed()) / 2);
+                    int g = Math.min(255, (baseColor.getGreen() + texColor.getGreen()) / 2);
+                    int b = Math.min(255, (baseColor.getBlue() + texColor.getBlue()) / 2);
+                    fragment.setColor(new Color(r, g, b));
+                } else {
+                    // utilise directement la couleur de la texture
+                    fragment.setColor(texColor);
+                }
+            }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+            screen.setPixel(fragment.getX(), fragment.getY(), fragment.getColor());
 
         } catch (ArrayIndexOutOfBoundsException e) {
             screen.setPixel(fragment.getX(), fragment.getY(), fragment.getColor());
@@ -119,9 +120,9 @@ public class TextureShader extends Shader {
         depth.clear();
     }
 
-
     /**
      * Gets whether the color has to be combined with the base color.
+     * 
      * @return whether the color has to be combined with the base color
      */
     public boolean getCombineWithBaseColor() {

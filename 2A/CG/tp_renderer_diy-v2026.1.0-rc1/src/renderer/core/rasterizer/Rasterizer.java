@@ -268,47 +268,49 @@ public class Rasterizer {
         // iterate over the triangle's bounding box
         // TODO
 
+        int minX = Math.min(v1.getX(), Math.min(v2.getX(), v3.getX()));
+        int maxX = Math.max(v1.getX(), Math.max(v2.getX(), v3.getX()));
+        int minY = Math.min(v1.getY(), Math.min(v2.getY(), v3.getY()));
+        int maxY = Math.max(v1.getY(), Math.max(v2.getY(), v3.getY()));
 
+        for (int y = minY; y <= maxY; y++) {
+            for (int x = minX; x <= maxX; x++) {
 
+                Vector p = new Vector(3);
+                p.set(0, 1.0);
+                p.set(1, x);
+                p.set(2, y);
 
+                Vector bary = cMat.multiply(p);
 
+                double alpha = bary.get(0);
+                double beta = bary.get(1);
+                double gamma = bary.get(2);
 
+                if (alpha >= 0.0 && beta >= 0.0 && gamma >= 0.0) {
 
+                    Fragment fragment = new Fragment(x, y);
 
+                    int numAttributes = fragment.getNumAttributes();
 
+                    for (int i = 0; i < numAttributes ; i++) {
 
+                        double interpolated = alpha * v1.getAttribute(i) +
+                                beta * v2.getAttribute(i) +
+                                gamma * v3.getAttribute(i);
 
+                        if (i >= Fragment.COLOR_R && i <= Fragment.COLOR_B) {
+                            interpolated = MathUtils.clamp(interpolated, 0.0, 1.0);
+                        }
 
+                        fragment.setAttribute(i, interpolated);
+                    }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+                    if (!shader.isClipped(fragment)) {
+                        shader.shade(fragment);
+                    }
+                }
+            }
+        }
     }
 }

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout:Layout xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:layout="https://layout">
+  <board>
+    <couche_interne>
+      <piste/>
+    </couche_interne>
+    <couche_externe>
+      <instancecomp name="Resistance"/>
+      <instancecomp name="Capacite"/>
+    </couche_externe>
+  </board>
+</layout:Layout>

@@ -1,0 +1,76 @@
+package n7.facade;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.ArrayList;
+import java.util.Collection;
+
+import java.sql.Statement;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
+
+
+
+@RestController
+public class Facade {
+
+    private ArrayList<Personne> personnes = new ArrayList<>();
+    private ArrayList<Adresse> adresses = new ArrayList<>();
+
+    
+
+    public Facade() {
+        
+    }
+
+
+    @PostMapping("/addpersonne")
+    public void ajoutPersonne(@RequestParam("nom") String nom, @RequestParam("prenom") String prenom) {
+        Personne newMember = new Personne(nom, prenom);
+        newMember.setId(personnes.size() + 1);
+        this.personnes.add(newMember);
+    }
+
+
+    @PostMapping("/addadresse")
+    public void ajoutAdresse(@RequestParam("rue") String rue, @RequestParam("ville") String ville) {
+        Adresse newAdresse = new Adresse(rue, ville);
+        newAdresse.setId(adresses.size() + 1);
+        this.adresses.add(newAdresse);
+    }
+
+
+    @GetMapping("/listerpersonnes")
+    public Collection<Personne> listePersonnes() {
+        return this.personnes;
+    }
+
+    @GetMapping("/listeradresses")
+    public Collection<Adresse> listeAdresses() {
+        return this.adresses;
+    }
+    
+
+
+    @PostMapping("/associer")
+    public void associer(@RequestParam("personneId") int personneId, @RequestParam("adresseId") int adresseId) {
+
+        for (Personne p : this.personnes) {
+            if (p.getId() == personneId) {
+                p.ajouterAdresse(this.adresses.get(adresseId - 1));
+            }
+        }
+        
+    }
+
+
+    
+}
+
+

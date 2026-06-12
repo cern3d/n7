@@ -1,0 +1,68 @@
+4. teapot appears to be smaller for bigger values of fov, and bigger for smaller values of fov. why?
+
+5. we start seeing inside the teapot til we lost it completely and stop seeing it for bigger values
+
+6. the teapot is flipped upside down
+
+7. image une: (0.0, 0.0, 2.2, 0.0, 0.0, -1.0, 1.0, 1.0, 0.0)
+image deux: (0, 2.0, 0, 0.0, -1.0, 0, 1, 0.0, 0.0),
+ il faut changer up pour qu il ne soit pas parallele a lookat et selon quel angle on veux regarder
+
+
+8. If you remove the second glPopMatrix(), the scene will initially look fine, but after:
+
+resizing the window, or
+covering/uncovering it (forcing redraws),
+
+you’ll see objects drifting, duplicating, or moving incorrectly over time or disappearing even.
+
+Why?
+
+Because:
+
+Every call to display() does a glPushMatrix() without a matching glPopMatrix().
+The modelview stack grows indefinitely.
+More importantly, the current matrix is not restored, so transformations accumulate between frames.
+
+
+9. Originally, gluLookAt is applied once in main, setting the base modelview matrix.
+
+If you move it inside display() after a glPushMatrix(), then:
+
+The viewing transformation becomes part of the pushed matrix state
+It is not applied globally, but only within that pushed scope
+
+So now:
+
+You push the current matrix
+Apply gluLookAt (camera transform)
+Apply object transforms
+Pop → camera transform disappears
+
+This breaks the intended separation:
+
+Camera transform should be the base (bottom) of the stack
+Object transforms should be applied on top of it
+
+10. What happens?
+
+The scene changes dramatically:
+
+The camera effect from gluLookAt disappears
+Objects appear as if viewed from the origin
+You may not even see the teapots properly (they could be clipped or too close)
+Why?
+
+glLoadIdentity() resets the current matrix to the identity matrix:
+
+M = I
+
+If you call it in display() before drawing:
+
+You wipe out the viewing transformation set by gluLookAt in main
+So all drawing happens in camera-at-origin space
+
+Result:
+
+No camera offset (you’re effectively inside or too close to the scene)
+The perspective still exists, but the view transform is gone

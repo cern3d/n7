@@ -1,0 +1,82 @@
+grammar org.example.ComponentConstraint with org.eclipse.xtext.common.Terminals
+
+generate componentConstraint "http://www.example.org/ComponentConstraint"
+
+Constraint:
+    expr=OrExpr
+;
+
+OrExpr returns Expr:
+    left = AndExpr ( '||' right = AndExpr )*
+;
+
+AndExpr returns Expr:
+    left = NotExpr ( '&&' right = NotExpr )*
+;
+
+NotExpr returns Expr:
+      '!' atom=Atom
+    | atom=Atom
+;
+
+
+Atom returns Expr:
+      DistanceConstraint
+    | AreaConstraint
+    | RedundancyConstraint
+    | BoardConstraint
+    | '(' OrExpr ')'
+;
+
+/* d(self, resistance) > 4 mm */
+DistanceConstraint:
+    'd' '(' from=ComponentRef ',' to=ComponentSelector ')'
+    op=CompareOp
+    value=Value
+;
+
+/* emptyArea(self) > 10 mm */
+AreaConstraint:
+    'emptyArea' '(' ComponentRef ')'
+    op=CompareOp
+    value=Value
+;
+
+/* redundancy(self) >= 2 */
+RedundancyConstraint:
+    'redundancy' '(' ComponentRef ')'
+    op=CompareOp
+    count=INT
+;
+
+/* distanceToBoard(self) > 5 mm */
+BoardConstraint:
+    'distanceToBoard' '(' ComponentRef ')'
+    op=CompareOp
+    value=Value
+;
+
+
+ComponentRef:
+      'self'
+    | ID
+;
+
+
+ComponentSelector:
+      ID
+;
+
+
+CompareOp:
+      '>=' | '<=' | '>' | '<' | '==' | '!='
+;
+
+Value:
+    amount=INT unit=Unit
+;
+
+enum Unit:
+      mm
+    | cm
+;

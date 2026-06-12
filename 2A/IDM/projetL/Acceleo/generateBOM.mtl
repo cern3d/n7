@@ -1,0 +1,53 @@
+[comment encoding = UTF-8 /]
+[module generateBOM('https://netlist')]
+
+[template public main(aNetlist : Netlist)]
+[comment @main /]
+[file ('bom.html', false, 'UTF-8')]
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bill of Materials</title>
+    <style>
+        table { width: 100%; border-collapse: collapse; }
+        th, td { border: 1px solid black; padding: 8px; text-align: left; }
+        th { background-color: #f2f2f2; }
+    </style>
+</head>
+<body>
+
+<h2>Bill of Materials</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Type</th>
+            <th>Value</th>
+            <th>Contraintes</th>
+            <th>Remarques</th>
+        </tr>
+    </thead>
+    <tbody>
+        [for (ic : Instancecomp | aNetlist.element->select(e | e.oclIsKindOf(Instancecomp)))]
+        <tr>
+            <td>[ic.id/]</td>
+            <td>[ic.composant.nom/]</td>
+            <td>[ic.composant.marque/]</td>
+            <td>[ic.composant.contrainte.texte/]</td>
+			<td>[for (comm : Commentaire |
+    aNetlist.element
+        ->selectByKind(Commentaire)
+        ->select(c | c.instancecomp = ic)
+)]
+[comm.texte/]<br/>
+[/for]</td>
+        </tr>
+        [/for]
+    </tbody>
+</table>
+
+</body>
+</html>
+[/file]
+[/template]

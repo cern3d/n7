@@ -1,0 +1,59 @@
+module netlisttolayout;
+create OUT : layout from IN : netlist, CAT : catalogue;
+
+helper def: allNetlistInstances : Sequence(netlist!Instancecomp) = 
+    netlist!Instancecomp.allInstances()->asSequence();
+
+helper context netlist!Instancecomp def: index() : Integer =
+    thisModule.allNetlistInstances.indexOf(self);
+
+helper context netlist!Instancecomp def: xPos() : Integer =
+    let w : Integer = self.composant.empreinte.largeur.floor() in
+    (self.index()) * w;
+
+helper context netlist!Instancecomp def: yPos() : Integer =
+    let h : Integer = self.composant.empreinte.longueur.floor() in
+    (self.index()) * h;
+
+
+rule Netlist2Layout {
+    from
+        nl : netlist!Netlist
+    to
+        l : layout!Layout (
+            board <- b
+        ),
+        b : layout!Board (
+            layout <- l,
+            couche_externe <- ce
+        ),
+        ce : layout!Couche_externe (
+instancecomp <- 
+    nl.element
+      ->select(e | e.oclIsKindOf(netlist!Instancecomp))
+      ->collect(e | thisModule.resolveTemp(e, 'lic')),
+piste <- 
+    nl.element
+      ->select(e | e.oclIsKindOf(netlist!Connexion))
+      ->collect(e | thisModule.resolveTemp(e, 'pi'))
+	  )
+}
+
+rule PlaceInstance {
+    from
+        ic : netlist!Instancecomp
+    to
+        lic : layout!Instancecomp (
+            name <- ic.id,
+            x <- ic.xPos(),
+            y <- ic.yPos()
+        )
+}
+
+rule Piste {
+    from
+        con : netlist!Connexion
+    to
+        pi : layout!Piste (
+        )
+}

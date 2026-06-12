@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" name="layout" version="12.0.0.2017041100">
+  <ownedViewpoints name="LayoutViewpoint">
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="LayoutDiagram" domainClass="layout::Layout" enablePopupBars="true">
+      <defaultLayer name="Default">
+        <nodeMappings name="BoardNode" domainClass="layout::Board">
+          <style xsi:type="style:SquareDescription" labelSize="12" labelExpression="" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="CoucheInterneNode" domainClass="layout::Couche_interne">
+          <style xsi:type="style:EllipseNodeDescription" labelSize="12" labelExpression="" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_purple']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="CoucheExterneNode" domainClass="layout::Couche_externe">
+          <style xsi:type="style:EllipseNodeDescription" labelSize="12" labelExpression="" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_orange']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="PisteNode" domainClass="layout::Piste">
+          <style xsi:type="style:SquareDescription" labelSize="12" labelExpression="" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="InstancecompNode" domainClass="layout::Instancecomp">
+          <style xsi:type="style:SquareDescription" labelSize="12" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_yellow']"/>
+          </style>
+        </nodeMappings>
+        <toolSections name="LayoutTools">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="CreateBoard" nodeMappings="//@ownedViewpoints[name='LayoutViewpoint']/@ownedRepresentations[name='LayoutDiagram']/@defaultLayer/@nodeMappings[name='BoardNode']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="layout::Board" referenceName="board" variableName="newBoard"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="CreateCoucheInterne" nodeMappings="//@ownedViewpoints[name='LayoutViewpoint']/@ownedRepresentations[name='LayoutDiagram']/@defaultLayer/@nodeMappings[name='CoucheInterneNode']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="layout::Couche_interne" referenceName="couche_interne" variableName="newCI"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="CreateCoucheExterne" nodeMappings="//@ownedViewpoints[name='LayoutViewpoint']/@ownedRepresentations[name='LayoutDiagram']/@defaultLayer/@nodeMappings[name='CoucheExterneNode']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="layout::Couche_externe" referenceName="couche_externe " variableName="newCE"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="CreatePiste" nodeMappings="//@ownedViewpoints[name='LayoutViewpoint']/@ownedRepresentations[name='LayoutDiagram']/@defaultLayer/@nodeMappings[name='PisteNode']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="layout::Piste" referenceName="piste" variableName="newPiste"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="CreateInstancecomp" nodeMappings="//@ownedViewpoints[name='LayoutViewpoint']/@ownedRepresentations[name='LayoutDiagram']/@defaultLayer/@nodeMappings[name='InstancecompNode']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="layout::Instancecomp" referenceName="instancecomp" variableName="newIC"/>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+      </defaultLayer>
+    </ownedRepresentations>
+    <ownedJavaExtensions qualifiedClassName="layout.design.Services"/>
+  </ownedViewpoints>
+</description:Group>

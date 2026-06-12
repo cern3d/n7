@@ -1,4 +1,0 @@
-INDEX VERSION 1.134+/home/abi7287/2A/MetaProg/Eclipse/.metadata/.plugins/org.eclipse.jdt.core
-1865797976.index
-2567467902.index
-3455495784.index

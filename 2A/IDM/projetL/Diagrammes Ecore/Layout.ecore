@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="layout" nsURI="https://layout" nsPrefix="layout">
+  <eClassifiers xsi:type="ecore:EClass" name="Layout">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="board" upperBound="-1"
+        eType="#//Board" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Board">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="layout" lowerBound="1"
+        eType="#//Layout"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="couche_interne" upperBound="-1"
+        eType="#//Couche_interne" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="couche_externe" upperBound="2"
+        eType="#//Couche_externe" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Couche_externe" eSuperTypes="#//Couche">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="instancecomp" upperBound="-1"
+        eType="#//Instancecomp" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Couche" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="piste" upperBound="-1"
+        eType="#//Piste" containment="true" eOpposite="#//Piste/couche"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Couche_interne" eSuperTypes="#//Couche"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Piste">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="couche" lowerBound="1"
+        eType="#//Couche" eOpposite="#//Couche/piste"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="connexion" eType="ecore:EClass ../netlist/Netlist.ecore#//Connexion"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Instancecomp">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="x" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="y" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="composant" eType="ecore:EClass ../netlist/Netlist.ecore#//Instancecomp"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+</ecore:EPackage>

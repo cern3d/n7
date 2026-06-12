@@ -52,17 +52,17 @@ public class Transformation {
             Matrix view = new Matrix(4, 4);
 
             // Rotation
-            view.set(0, 0, x.getX());
-            view.set(1, 0, x.getY());
-            view.set(2, 0, x.getZ());
+            view.set( 0,0, x.getX());
+            view.set( 0,1, x.getY());
+            view.set( 0,2, x.getZ());
 
-            view.set(0, 1, y.getX());
-            view.set(1, 1, y.getY());
-            view.set(2, 1, y.getZ());
+            view.set( 1,0, y.getX());
+            view.set( 1,1, y.getY());
+            view.set( 1,2, y.getZ());
 
-            view.set(0, 2, z.getX());
-            view.set(1, 2, z.getY());
-            view.set(2, 2, z.getZ());
+            view.set( 2,0, z.getX());
+            view.set( 2,1, z.getY());
+            view.set( 2,2, z.getZ());
 
             // compute translation
             view.set(0, 3, -x.dot(eye));
@@ -93,14 +93,16 @@ public class Transformation {
         // Copy rotation (3x3 part)
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
-                projection.set(i, j, worldToCamera.get(i, j));
+                projection.set(i, j, 0);
             }
         }
 
         // Copy translation column
-        projection.set(0, 3, worldToCamera.get(0, 3));
-        projection.set(1, 3, worldToCamera.get(1, 3));
-        projection.set(2, 3, worldToCamera.get(2, 3));
+        projection.set(0, 0, 1);
+        projection.set(1, 1, 1);
+        projection.set(2, 2, 1);
+
+        this.projection = projection;
 
 
         System.out.println("Projection matrix:\n" + projection);

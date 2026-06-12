@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<netlist:Netlist xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:netlist="https://netlist">
+  <element xsi:type="netlist:Instancecomp" id="R1">
+    <composant href="Catalogue.xmi#//@composant.0"/>
+    <port connexion="//@element.3" nom="1 res2"/>
+    <port nom="2"/>
+  </element>
+  <element xsi:type="netlist:Commentaire" id="comm R1" instancecomp="//@element.0" texte="temp max 80deg"/>
+  <element xsi:type="netlist:Instancecomp" id="R2">
+    <composant href="Catalogue.xmi#//@composant.0"/>
+    <port connexion="//@element.3" nom="res"/>
+    <port nom="2"/>
+  </element>
+  <element xsi:type="netlist:Connexion" id="2" porta="//@element.0/@port.0" portb="//@element.2/@port.0"/>
+  <element xsi:type="netlist:Instancecomp" id="C1">
+    <composant href="Catalogue.xmi#//@composant.1"/>
+    <port nom="1 cap"/>
+    <port nom="2"/>
+  </element>
+  <element xsi:type="netlist:Connexion" id="1" porta="//@element.4/@port.0" portb="//@element.2/@port.1"/>
+</netlist:Netlist>

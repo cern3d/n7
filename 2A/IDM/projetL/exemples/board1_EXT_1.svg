@@ -1,0 +1,196 @@
+
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="1400" height="900"
+     viewBox="-1000 -1000 20000 20000">
+
+  <!-- Fond -->
+  <rect x="-1000" y="-1000" width="20000" height="20000"
+        fill="white" stroke="black"/>
+
+  <!-- Titre -->
+  <text x="-900" y="-850" font-size="40" fill="black">
+    Board 1 - Couche externe 1
+  </text>
+
+  <text x="-900" y="-780" font-size="28" fill="black">
+    Nb composants: 3 | Nb pistes: 2
+  </text>
+
+  <!-- Grille -->
+    <line x1="0" y1="-1000" x2="0" y2="19000"
+          stroke="lightgray" stroke-width="2"/>
+    <line x1="-1000" y1="0" x2="19000" y2="0"
+          stroke="lightgray" stroke-width="2"/>
+    <line x1="1000" y1="-1000" x2="1000" y2="19000"
+          stroke="lightgray" stroke-width="2"/>
+    <line x1="-1000" y1="1000" x2="19000" y2="1000"
+          stroke="lightgray" stroke-width="2"/>
+    <line x1="2000" y1="-1000" x2="2000" y2="19000"
+          stroke="lightgray" stroke-width="2"/>
+    <line x1="-1000" y1="2000" x2="19000" y2="2000"
+          stroke="lightgray" stroke-width="2"/>
+    <line x1="3000" y1="-1000" x2="3000" y2="19000"
+          stroke="lightgray" stroke-width="2"/>
+    <line x1="-1000" y1="3000" x2="19000" y2="3000"
+          stroke="lightgray" stroke-width="2"/>
+    <line x1="4000" y1="-1000" x2="4000" y2="19000"
+          stroke="lightgray" stroke-width="2"/>
+    <line x1="-1000" y1="4000" x2="19000" y2="4000"
+          stroke="lightgray" stroke-width="2"/>
+    <line x1="5000" y1="-1000" x2="5000" y2="19000"
+          stroke="lightgray" stroke-width="2"/>
+    <line x1="-1000" y1="5000" x2="19000" y2="5000"
+          stroke="lightgray" stroke-width="2"/>
+    <line x1="6000" y1="-1000" x2="6000" y2="19000"
+          stroke="lightgray" stroke-width="2"/>
+    <line x1="-1000" y1="6000" x2="19000" y2="6000"
+          stroke="lightgray" stroke-width="2"/>
+    <line x1="7000" y1="-1000" x2="7000" y2="19000"
+          stroke="lightgray" stroke-width="2"/>
+    <line x1="-1000" y1="7000" x2="19000" y2="7000"
+          stroke="lightgray" stroke-width="2"/>
+    <line x1="8000" y1="-1000" x2="8000" y2="19000"
+          stroke="lightgray" stroke-width="2"/>
+    <line x1="-1000" y1="8000" x2="19000" y2="8000"
+          stroke="lightgray" stroke-width="2"/>
+    <line x1="9000" y1="-1000" x2="9000" y2="19000"
+          stroke="lightgray" stroke-width="2"/>
+    <line x1="-1000" y1="9000" x2="19000" y2="9000"
+          stroke="lightgray" stroke-width="2"/>
+    <line x1="10000" y1="-1000" x2="10000" y2="19000"
+          stroke="lightgray" stroke-width="2"/>
+    <line x1="-1000" y1="10000" x2="19000" y2="10000"
+          stroke="lightgray" stroke-width="2"/>
+    <line x1="11000" y1="-1000" x2="11000" y2="19000"
+          stroke="lightgray" stroke-width="2"/>
+    <line x1="-1000" y1="11000" x2="19000" y2="11000"
+          stroke="lightgray" stroke-width="2"/>
+    <line x1="12000" y1="-1000" x2="12000" y2="19000"
+          stroke="lightgray" stroke-width="2"/>
+    <line x1="-1000" y1="12000" x2="19000" y2="12000"
+          stroke="lightgray" stroke-width="2"/>
+    <line x1="13000" y1="-1000" x2="13000" y2="19000"
+          stroke="lightgray" stroke-width="2"/>
+    <line x1="-1000" y1="13000" x2="19000" y2="13000"
+          stroke="lightgray" stroke-width="2"/>
+    <line x1="14000" y1="-1000" x2="14000" y2="19000"
+          stroke="lightgray" stroke-width="2"/>
+    <line x1="-1000" y1="14000" x2="19000" y2="14000"
+          stroke="lightgray" stroke-width="2"/>
+    <line x1="15000" y1="-1000" x2="15000" y2="19000"
+          stroke="lightgray" stroke-width="2"/>
+    <line x1="-1000" y1="15000" x2="19000" y2="15000"
+          stroke="lightgray" stroke-width="2"/>
+    <line x1="16000" y1="-1000" x2="16000" y2="19000"
+          stroke="lightgray" stroke-width="2"/>
+    <line x1="-1000" y1="16000" x2="19000" y2="16000"
+          stroke="lightgray" stroke-width="2"/>
+    <line x1="17000" y1="-1000" x2="17000" y2="19000"
+          stroke="lightgray" stroke-width="2"/>
+    <line x1="-1000" y1="17000" x2="19000" y2="17000"
+          stroke="lightgray" stroke-width="2"/>
+    <line x1="18000" y1="-1000" x2="18000" y2="19000"
+          stroke="lightgray" stroke-width="2"/>
+    <line x1="-1000" y1="18000" x2="19000" y2="18000"
+          stroke="lightgray" stroke-width="2"/>
+
+  <!-- ========================= -->
+  <!-- PISTES : CENTRE -> CENTRE -->
+  <!-- ========================= -->
+
+
+                          <line x1="1000.0" y1="2000.0"
+                                x2="1500.0" y2="3000.0"
+                                stroke="red" stroke-width="6" opacity="0.75"/>
+
+                            <text x="1260.0"
+                                  y="2490.0"
+                                  font-size="22" fill="red">
+                              1
+                            </text>
+
+
+
+
+                          <line x1="1500.0" y1="3000.0"
+                                x2="500.0" y2="1000.0"
+                                stroke="red" stroke-width="6" opacity="0.75"/>
+
+                            <text x="1010.0"
+                                  y="1990.0"
+                                  font-size="22" fill="red">
+                              2
+                            </text>
+
+
+
+  <!-- ========================= -->
+  <!-- COMPOSANTS (SANS PORTS) -->
+  <!-- ========================= -->
+
+        <!-- Rectangle centré -->
+        <rect x="0.0"
+              y="750.0"
+              width="1000.0" height="500.0"
+              fill="none" stroke="blue" stroke-width="6"/>
+
+        <!-- Nom -->
+        <text x="10.0"
+              y="810.0"
+              font-size="48" fill="blue">
+          R1
+        </text>
+
+        <!-- Debug -->
+        <text x="10.0"
+              y="860.0"
+              font-size="26" fill="black">
+          x=500 y=1000 w=1000.0 h=500.0
+        </text>
+
+
+        <!-- Rectangle centré -->
+        <rect x="500.0"
+              y="1750.0"
+              width="1000.0" height="500.0"
+              fill="none" stroke="blue" stroke-width="6"/>
+
+        <!-- Nom -->
+        <text x="510.0"
+              y="1810.0"
+              font-size="48" fill="blue">
+          R2
+        </text>
+
+        <!-- Debug -->
+        <text x="510.0"
+              y="1860.0"
+              font-size="26" fill="black">
+          x=1000 y=2000 w=1000.0 h=500.0
+        </text>
+
+
+        <!-- Rectangle centré -->
+        <rect x="1000.0"
+              y="2750.0"
+              width="1000.0" height="500.0"
+              fill="none" stroke="blue" stroke-width="6"/>
+
+        <!-- Nom -->
+        <text x="1010.0"
+              y="2810.0"
+              font-size="48" fill="blue">
+          C1
+        </text>
+
+        <!-- Debug -->
+        <text x="1010.0"
+              y="2860.0"
+              font-size="26" fill="black">
+          x=1500 y=3000 w=1000.0 h=500.0
+        </text>
+
+
+
+</svg>
+

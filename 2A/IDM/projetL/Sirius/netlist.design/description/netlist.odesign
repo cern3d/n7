@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" name="netlist" version="12.0.0.2017041100">
+  <ownedViewpoints name="netlistViewpoint" modelFileExtension="netlist">
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="NetlistDiagram" domainClass="netlist::Netlist" enablePopupBars="true">
+      <defaultLayer name="Default">
+        <nodeMappings name="InstancecompNode" domainClass="netlist::Instancecomp">
+          <style xsi:type="style:SquareDescription" labelSize="30" labelExpression="feature:id" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_chocolate']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="PortNode" domainClass="netlist::Port">
+          <style xsi:type="style:EllipseNodeDescription" labelSize="20" labelExpression="feature:nom" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_purple']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="CommentaireNode" domainClass="netlist::Commentaire">
+          <style xsi:type="style:NoteDescription" labelSize="30" labelExpression="feature:texte" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='yellow']"/>
+          </style>
+        </nodeMappings>
+        <edgeMappings name="ConnexionEdge" sourceMapping="//@ownedViewpoints[name='netlistViewpoint']/@ownedRepresentations[name='NetlistDiagram']/@defaultLayer/@nodeMappings[name='PortNode']" targetMapping="//@ownedViewpoints[name='netlistViewpoint']/@ownedRepresentations[name='NetlistDiagram']/@defaultLayer/@nodeMappings[name='PortNode']" targetFinderExpression="feature:portb" sourceFinderExpression="feature:porta" domainClass="netlist::Connexion" useDomainElement="true">
+          <style targetArrow="NoDecoration" sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="CompCnxRelation" sourceMapping="//@ownedViewpoints[name='netlistViewpoint']/@ownedRepresentations[name='NetlistDiagram']/@defaultLayer/@nodeMappings[name='InstancecompNode']" targetMapping="//@ownedViewpoints[name='netlistViewpoint']/@ownedRepresentations[name='NetlistDiagram']/@defaultLayer/@nodeMappings[name='PortNode']" targetFinderExpression="feature:port">
+          <style lineStyle="dot" sourceArrow="FillDiamondWithDot" targetArrow="Diamond" sizeComputationExpression="2" routingStyle="manhattan">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="CompCmntRelation" sourceMapping="//@ownedViewpoints[name='netlistViewpoint']/@ownedRepresentations[name='NetlistDiagram']/@defaultLayer/@nodeMappings[name='CommentaireNode']" targetMapping="//@ownedViewpoints[name='netlistViewpoint']/@ownedRepresentations[name='NetlistDiagram']/@defaultLayer/@nodeMappings[name='InstancecompNode']" targetFinderExpression="feature:instancecomp">
+          <style lineStyle="dot" sourceArrow="Dot" targetArrow="Dot" sizeComputationExpression="2" routingStyle="manhattan">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_chocolate']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <toolSections name="NetlistTools">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="CreateInstancecomp" nodeMappings="//@ownedViewpoints[name='netlistViewpoint']/@ownedRepresentations[name='NetlistDiagram']/@defaultLayer/@nodeMappings[name='InstancecompNode']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="netlist::Instancecomp" referenceName="element" variableName="newInstancecomp"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="CreatePort" nodeMappings="//@ownedViewpoints[name='netlistViewpoint']/@ownedRepresentations[name='NetlistDiagram']/@defaultLayer/@nodeMappings[name='PortNode']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[container/]">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="netlist::Port" referenceName="port" variableName="newPort">
+                  <subModelOperations xsi:type="tool_1:ChangeContext"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="CreateCommentaire" nodeMappings="//@ownedViewpoints[name='netlistViewpoint']/@ownedRepresentations[name='NetlistDiagram']/@defaultLayer/@nodeMappings[name='CommentaireNode']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="netlist::Commentaire" referenceName="netlistcom" variableName="newCommentaire"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="ConnexionCreation" edgeMappings="//@ownedViewpoints[name='netlistViewpoint']/@ownedRepresentations[name='NetlistDiagram']/@defaultLayer/@edgeMappings[name='ConnexionEdge']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[self.eContainer()/]">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="netlist::Connexion" referenceName="element">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="porta" valueExpression="[source/]"/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="portb" valueExpression="[target/]"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+      </defaultLayer>
+    </ownedRepresentations>
+    <ownedJavaExtensions qualifiedClassName="netlist.design.Services"/>
+  </ownedViewpoints>
+</description:Group>

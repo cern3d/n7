@@ -54,7 +54,7 @@ public class DepthBuffer {
      */
     private boolean isWithinBounds(Fragment f) {
         return f.getX() >= 0 && f.getX() < width
-            && f.getY() >= 0 && f.getY() < height;
+                && f.getY() >= 0 && f.getY() < height;
     }
 
     /**
@@ -66,8 +66,11 @@ public class DepthBuffer {
      */
     public boolean testFragment(Fragment f) {
         if (isWithinBounds(f)) {
-            // TODO
-            return false;
+            double currentDepth = buffer.get(f.getY(), f.getX());
+            double fragmentDepth = f.getDepth();
+
+            // Smaller depth = closer to camera
+            return fragmentDepth < currentDepth;
         } else {
             return false;
         }
@@ -80,7 +83,7 @@ public class DepthBuffer {
      */
     public void writeFragment(Fragment f) {
         if (isWithinBounds(f)) {
-            // TODO
+            buffer.set(f.getY(), f.getX(), f.getDepth());
         }
     }
 

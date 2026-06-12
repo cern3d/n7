@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Gestion Personnes / Adresses</title>
+</head>
+<body>
+
+<h2>Ajouter une Personne</h2>
+<form action="Serv" method="post">
+    <input type="hidden" name="op" value="ajoutpersonne">
+    Nom: <input type="text" name="nom" required><br><br>
+    Prénom: <input type="text" name="prenom" required><br><br>
+    <input type="submit" value="Ajouter Personne">
+</form>
+
+<hr>
+
+<h2>Ajouter une Adresse</h2>
+<form action="Serv" method="post">
+    <input type="hidden" name="op" value="ajoutadresse">
+    Rue: <input type="text" name="rue" required><br><br>
+    Ville: <input type="text" name="ville" required><br><br>
+    <input type="submit" value="Ajouter Adresse">
+</form>
+
+<hr>
+
+<h2>Association Personne - Adresse</h2>
+<form action="Serv" method="post">
+    <input type="hidden" name="op" value="associer">
+    <input type="submit" value="Associer une Personne à une Adresse">
+</form>
+
+<hr>
+
+<h2>Liste des Personnes</h2>
+<form action="Serv" method="post">
+    <input type="hidden" name="op" value="lister">
+    <input type="submit" value="Lister les Personnes">
+</form>
+
+</body>
+</html>

@@ -1,0 +1,146 @@
+[comment encoding = UTF-8 /]
+[module generateSVG('https://layout')/]
+
+[template public generate(l : layout::Layout)]
+[comment @main/]
+
+
+
+[for (b : layout::Board | l.board)]
+  [for (ce : layout::Couche_externe | b.couche_externe)]
+    [file ('board'.concat(l.board->indexOf(b).toString())
+               .concat('_EXT_')
+               .concat(b.couche_externe->indexOf(ce).toString())
+               .concat('.svg'),
+           false, 'UTF-8')]
+
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="1400" height="900"
+     viewBox="-1000 -1000 20000 20000">
+
+  <!-- Fond -->
+  <rect x="-1000" y="-1000" width="20000" height="20000"
+        fill="white" stroke="black"/>
+
+  <!-- Titre -->
+  <text x="-900" y="-850" font-size="40" fill="black">
+    Board [l.board->indexOf(b)/] - Couche externe [b.couche_externe->indexOf(ce)/]
+  </text>
+
+  <text x="-900" y="-780" font-size="28" fill="black">
+    Nb composants: [ce.instancecomp->size()/] | Nb pistes: [ce.piste->size()/]
+  </text>
+
+  <!-- Grille -->
+  [for (i : Integer | Sequence{0..18})]
+    <line x1="[i*1000/]" y1="-1000" x2="[i*1000/]" y2="19000"
+          stroke="lightgray" stroke-width="2"/>
+    <line x1="-1000" y1="[i*1000/]" x2="19000" y2="[i*1000/]"
+          stroke="lightgray" stroke-width="2"/>
+  [/for]
+
+  <!-- ========================= -->
+  <!-- PISTES : CENTRE -> CENTRE -->
+  <!-- ========================= -->
+  [if (ce.instancecomp->size() >= 2)]
+    [for (p : layout::Piste | ce.piste)]
+      [let idx : Integer = ce.piste->indexOf(p)]
+        [let nC : Integer = ce.instancecomp->size()]
+          [let ia : Integer = (idx.mod(nC)) + 1]
+            [let ib : Integer = ((idx + 1).mod(nC)) + 1]
+              [let a : layout::Instancecomp = ce.instancecomp->at(ia)]
+                [let b2 : layout::Instancecomp = ce.instancecomp->at(ib)]
+
+                  [let x1 : Real = a.x + 0.0]
+                    [let y1 : Real = a.y + 0.0]
+                      [let x2 : Real = b2.x + 0.0]
+                        [let y2 : Real = b2.y + 0.0]
+
+                          <line x1="[x1/]" y1="[y1/]"
+                                x2="[x2/]" y2="[y2/]"
+                                stroke="red" stroke-width="6" opacity="0.75"/>
+
+                          [if (p.connexion <> null and p.connexion.id <> null)]
+                            <text x="[(x1 + x2)/2 + 10/]"
+                                  y="[(y1 + y2)/2 - 10/]"
+                                  font-size="22" fill="red">
+                              [p.connexion.id/]
+                            </text>
+                          [/if]
+
+                        [/let]
+                      [/let]
+                    [/let]
+                  [/let]
+
+                [/let]
+              [/let]
+            [/let]
+          [/let]
+        [/let]
+      [/let]
+    [/for]
+  [/if]
+
+  <!-- ========================= -->
+  <!-- COMPOSANTS (SANS PORTS) -->
+  <!-- ========================= -->
+  [for (ic : layout::Instancecomp | ce.instancecomp)]
+    [let w : Real = compWidth(ic)]
+      [let h : Real = compHeight(ic)]
+
+        <!-- Rectangle centré -->
+        <rect x="[ic.x - (w/2)/]"
+              y="[ic.y - (h/2)/]"
+              width="[w/]" height="[h/]"
+              fill="none" stroke="blue" stroke-width="6"/>
+
+        <!-- Nom -->
+        <text x="[ic.x - (w/2) + 10/]"
+              y="[ic.y - (h/2) + 60/]"
+              font-size="48" fill="blue">
+          [ic.name/]
+        </text>
+
+        <!-- Debug -->
+        <text x="[ic.x - (w/2) + 10/]"
+              y="[ic.y - (h/2) + 110/]"
+              font-size="26" fill="black">
+          x=[ic.x/] y=[ic.y/] w=[w/] h=[h/]
+        </text>
+
+      [/let]
+    [/let]
+  [/for]
+
+  [if (ce.instancecomp->isEmpty())]
+    <text x="-900" y="-650" font-size="32" fill="red">
+      AUCUN composant dans cette couche
+    </text>
+  [/if]
+
+</svg>
+
+    [/file]
+  [/for]
+[/for]
+
+[/template]
+
+
+
+[query public compWidth(ic : layout::Instancecomp) : Real =
+  if ic.composant <> null and ic.composant.composant <> null
+     and ic.composant.composant.empreinte <> null
+  then ic.composant.composant.empreinte.longueur + 0.0
+  else 500.0
+  endif
+/]
+
+[query public compHeight(ic : layout::Instancecomp) : Real =
+  if ic.composant <> null and ic.composant.composant <> null
+     and ic.composant.composant.empreinte <> null
+  then ic.composant.composant.empreinte.largeur + 0.0
+  else 1000.0
+  endif
+/]
